@@ -82,7 +82,7 @@ export default function CarrosselEmpresas() {
             {[...logosBottom, ...logosBottom].map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-32 h-16 grayscale hover:grayscale-0 transition-all duration-500 bg-white/10 rounded-full flex items-center justify-center hover:brightness-110 px-8"
+                className="flex-shrink-0 w-32 h-16  duration-500 bg-white/10 rounded-full flex items-center justify-center hover:brightness-110 px-8"
               >
                 <Image
                   src={logo}
