@@ -1,11 +1,11 @@
-declare namespace JSX {
-  interface IntrinsicElements {
-    "lord-icon": {
-      src?: string;
-      trigger?: string;
-      colors?: string;
-      style?: React.CSSProperties;
-      [key: string]: any; 
-    };
+declare module "lord-icon-element" {
+  import React from "react";
+
+  interface LordIconProps extends React.HTMLAttributes<HTMLElement> {
+    src?: string;
+    trigger?: string;
+    colors?: string;
   }
+
+  export class LordIconElement extends HTMLElement {}
 }
