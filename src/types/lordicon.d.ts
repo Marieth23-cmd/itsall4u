@@ -1,11 +1,18 @@
-declare module "lord-icon-element" {
-  import React from "react";
+import React from "react";
 
-  interface LordIconProps extends React.HTMLAttributes<HTMLElement> {
-    src?: string;
-    trigger?: string;
-    colors?: string;
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "lord-icon": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > & {
+        src?: string;
+        trigger?: string;
+        colors?: string;
+      };
+    }
   }
-
-  export class LordIconElement extends HTMLElement {}
 }
+
+export {};
