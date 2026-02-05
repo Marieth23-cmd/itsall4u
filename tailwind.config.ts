@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans:["'Funnel Sans', 'sans-serif'"],
+        
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
