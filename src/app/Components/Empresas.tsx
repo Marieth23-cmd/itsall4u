@@ -34,62 +34,50 @@ const logosBottom = [
 
 export default function CarrosselEmpresas() {
   return (
-    <section
-      className="relative py-20 overflow-hidden"
-      style={{ background: "var(--background)" }}
-    >
-      {/* FADES LATERAIS */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0b0350] to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0b0350] to-transparent z-10" />
+    <section className="relative py-20 overflow-hidden">
+      {/* Fades laterais */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10 " />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10 " />
 
       <div className="max-w-[1500px] mx-auto flex flex-col gap-12 px-4">
-        <h1 className="text-center text-4xl font-extrabold text-white">
-          Empresas que confiam no nosso trabalho
+        <h1 className=" text-center text-2xl lg:text-4xl font-extrabold text-black">
+          Nossos Clientes
         </h1>
 
-        {/* LINHA SUPERIOR */}
+        {/* Linha Superior */}
         <div className="group flex overflow-hidden">
-          <div className="flex gap-12 px-8 animate-scrollLeft group-hover:[animation-play-state:paused]">
+          <div className="flex gap-8 px-4 animate-scrollLeft group-hover:[animation-play-state:paused]">
             {[...logosTop, ...logosTop].map((logo, idx) => (
               <div
                 key={idx}
-                 className="
-                            flex-shrink-0 w-32 h-16
-                           
-                            rounded-lg
-                            flex items-center justify-center
-                            grayscale hover:grayscale-0
-                            transition-all duration-500
-                            hover:brightness-110
-                            px-8
-                          "
+                className="flex-shrink-0 w-[70px] h-[70px] bg-white hover:grayscale-0 grayscale rounded-full flex items-center justify-center p-[6px] transition-all duration-500 hover:scale-105 hover:brightness-105"
               >
                 <Image
                   src={logo}
                   alt={`Logo ${idx}`}
-                  width={120}
-                  height={64}
-                  className="object-contain w-full h-full"
+                  width={70}
+                  height={70}
+                  className="object-contain w-auto h-full"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        {/* LINHA INFERIOR */}
+        {/* Linha Inferior */}
         <div className="group flex overflow-hidden">
-          <div className="flex gap-12 px-8 animate-scrollRight group-hover:[animation-play-state:paused]">
+          <div className="flex gap-8 px-4 animate-scrollRight group-hover:[animation-play-state:paused]">
             {[...logosBottom, ...logosBottom].map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-32 h-16  duration-500 bg-white/10 rounded-full flex items-center justify-center hover:brightness-110 px-8"
-              >
+               className="flex-shrink-0 w-[70px] h-[70px] bg-white hover:grayscale-0 grayscale rounded-full flex items-center justify-center p-[6px] transition-all duration-500 hover:scale-105 hover:brightness-105"
+          >
                 <Image
                   src={logo}
                   alt={`Logo ${idx}`}
-                  width={120}
-                  height={64}
-                  className="object-contain w-full h-full"
+                  width={70}
+                  height={70}
+                  className="object-contain w-auto h-full"
                 />
               </div>
             ))}
@@ -97,7 +85,7 @@ export default function CarrosselEmpresas() {
         </div>
       </div>
 
-      {/* ANIMAÇÕES */}
+      {/* Animações */}
       <style jsx>{`
         @keyframes scrollLeft {
           0% {

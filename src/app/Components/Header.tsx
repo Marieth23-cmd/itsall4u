@@ -1,16 +1,12 @@
 import Image from "next/image";
 import { CgArrowLongRight } from "react-icons/cg";
+import { FaBars } from "react-icons/fa";
 
 export default function Header() {
   return (
     <div
       className="
-        fixed top-4 left-1/2 -translate-x-1/2
-        w-full max-w-[1500px]
-        bg-white rounded-2xl shadow-md
-        px-6 py-3
-        z-20
-      "
+       top-0 fixed w-full bg-white shadow-md px-6 py-3 z-20 "
     >
       <div className="flex items-center justify-between">
         
@@ -26,7 +22,12 @@ export default function Header() {
           /></a> 
 
         
-            <a className=" ml-6 text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block" href="/OqueFizemos">O que fazemos</a>
+           
+        </div>
+
+        {/* RIGHT */}
+        <div className="flex items-center gap-6 whitespace-nowrap"> 
+          <a className=" ml-6 text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block" href="/OqueFizemos">O que fazemos</a>
           
         
             <a className="text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block " href="/SobreNos">Sobre nós</a>
@@ -34,10 +35,6 @@ export default function Header() {
           
             <a className="text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block " href="/portfolio">Portfólio</a>
           
-        </div>
-
-        {/* RIGHT */}
-        <div className="flex items-center gap-6 whitespace-nowrap">
           <span className="text-blue-800 text-lg hover:text-blue-600  hidden lg:block ">FR</span>
 
         <button
@@ -55,6 +52,9 @@ export default function Header() {
   Entre em contacto
   <CgArrowLongRight className="text-3xl" />
 </button>
+
+<FaBars className="text-2xl text-black lg:hidden cursor-pointer" />
+
 
         </div>
 

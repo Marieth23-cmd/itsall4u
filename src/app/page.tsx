@@ -12,8 +12,9 @@ export default function Home() {
      <Header/>
      <Hero/>
      <Apresentacao/>
+      <Empresas/>
      <Visao/>
-     <Empresas/>
+    
       <Convite/>
      <Footer/>
     </div>

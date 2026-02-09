@@ -23,16 +23,16 @@ export default function Apresentacao() {
         >
           {/* TEXTO */}
           <div className="flex-1 max-w-[700px]">
-            <h1 className="text-white text-4xl leading-tight mb-6">
+            <h1 className="text-black text-4xl leading-tight mb-6">
               Criamos experiências de marca que geram crescimento
             </h1>
 
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
+            <p className="text-black text-lg leading-relaxed mb-4">
              Não somos apenas uma agência digital. Somos uma empresa de marketing 
              e estratégia que ajuda marcas a crescer, vender mais e comunicar melhor.
             </p>
 
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-black text-lg leading-relaxed mb-8">
                  Unimos estratégia, criatividade e tecnologia para transformar 
                 ideias em resultados mensuráveis — leads, vendas e posicionamento
                 sólido no mercado.”
@@ -40,12 +40,14 @@ export default function Apresentacao() {
 
             <button
               className="
-                bg-white text-black
+                bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800
                 px-8 py-3
                 rounded-lg
-                font-semibold
-                hover:bg-gray-200
-                transition whitespace-nowrap items-center gap-2 flex
+                hidden lg:flex
+                items-center gap-3
+                text-white text-lg
+                whitespace-nowrap
+                hover:from-blue-700 hover:via-blue-800 hover:to-blue-900
               "
             >
               Nossos Serviços
@@ -53,16 +55,7 @@ export default function Apresentacao() {
             </button>
           </div>
 
-          {/* LORD ICON */}
-          <div className="flex-1 flex justify-center">
-            <lord-icon
-              src="https://cdn.lordicon.com/xowcggal.json"
-              trigger="hover"
-              colors="primary:#e63946,secondary:#2ec4b6,tertiary:#2ecc71,quaternary:#2ecc71"
-              style={{ width: '300px', height: '300px' }}
-            ></lord-icon>
-
-          </div>
+         
         </div>
       </section>
     </>
