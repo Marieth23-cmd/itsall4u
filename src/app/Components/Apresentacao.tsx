@@ -24,16 +24,17 @@ export default function Apresentacao() {
             comunicar melhor.
           </p>
 
-          <button
+          <a
+            href="/OqueFizemos"
             className="
               inline-flex items-center gap-3
               text-blue-700 font-medium text-lg
-              hover:text-blue-900 transition
+              hover:text-blue-900 transition cursor-pointer
             "
           >
             Conheça nossos serviços
             <CgArrowLongRight className="text-2xl" />
-          </button>
+          </a>
         </div>
 
         {/* COLUNA DIREITA */}

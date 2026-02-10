@@ -53,27 +53,27 @@ const CloseMenuOpen = ()=>{
 
           <a
             href="/OqueFizemos"
-            className="hidden lg:block text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
+            className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition"
           >
             O que fazemos
           </a>
 
           <a
             href="/SobreNos"
-            className="hidden lg:block text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
+            className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition"
           >
             Sobre nós
           </a>
 
           <a
             href="/portfolio"
-            className="hidden lg:block text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
+            className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition"
           >
             Portfólio
           </a>
 
           {/* IDIOMA */}
-          <span className="hidden lg:block text-sm font-medium text-blue-900/70 hover:text-blue-900 cursor-pointer transition">
+          <span className="hidden lg:block text-[16px] font-medium text-blue-900/70 hover:text-blue-900 cursor-pointer transition">
             FR
           </span>
 
@@ -84,7 +84,7 @@ const CloseMenuOpen = ()=>{
               px-7 py-3
               rounded-full
               bg-gradient-to-r from-blue-600 to-blue-800
-              text-white text-sm font-medium
+              text-white text-[16px] font-medium
               hover:from-blue-700 hover:to-blue-900
               transition
             "
@@ -105,8 +105,8 @@ const CloseMenuOpen = ()=>{
     className="
       absolute top-full right-0 mt-1
       w-64
-      rounded-xl
-      bg-white
+      rounded-lg
+      bg-[#f9fafb]
       shadow-xl
       border border-gray-100
       z-30"
@@ -118,7 +118,7 @@ const CloseMenuOpen = ()=>{
         href="/OqueFizemos"
         onClick={CloseMenuOpen}
         className="
-          text-[16px]
+          text-[15px]
           font-medium
           text-blue-900
           hover:text-blue-600
@@ -131,7 +131,7 @@ const CloseMenuOpen = ()=>{
       <a
         href="/SobreNos"
         onClick={CloseMenuOpen}
-        className="text-[16px] font-medium text-blue-900 hover:text-blue-600 transition"
+        className="text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
       >
         Sobre nós
       </a>
@@ -139,7 +139,7 @@ const CloseMenuOpen = ()=>{
       <a
         href="/portfolio"
         onClick={CloseMenuOpen}
-        className="text-[16px] font-medium text-blue-900 hover:text-blue-600 transition"
+        className="text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
       >
         Portfólio
       </a>

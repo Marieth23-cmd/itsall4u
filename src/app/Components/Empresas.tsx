@@ -37,10 +37,25 @@ const logosBottom = [
 export default function CarrosselEmpresas() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [rightClicked, setRightClicked] = useState(false);
+  const [isAtEnd, setIsAtEnd] = useState(false);
+  const [isAtStart, setIsAtStart] = useState(true);
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      
+      // Verifica se está no início
+      setIsAtStart(scrollLeft <= 10);
+      
+      // Verifica se está no final
+      setIsAtEnd(scrollLeft + clientWidth >= scrollWidth - 10);
+    }
+  };
 
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      setTimeout(checkScroll, 300);
     }
   };
 
@@ -48,6 +63,7 @@ export default function CarrosselEmpresas() {
     setRightClicked(true);
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      setTimeout(checkScroll, 300);
     }
   };
 
@@ -63,7 +79,7 @@ export default function CarrosselEmpresas() {
         {/* CARROSSEL */}
         <div className="relative">
           {/* Botão esquerda */}
-          {rightClicked && (
+          {rightClicked && !isAtStart && (
             <button
               onClick={scrollLeft}
               className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
@@ -75,6 +91,7 @@ export default function CarrosselEmpresas() {
           {/* Área de scroll */}
           <div
             ref={scrollRef}
+            onScroll={checkScroll}
             className="flex gap-8 overflow-x-auto scroll-smooth px-10"
             style={{
               scrollbarWidth: 'thin',
@@ -98,12 +115,14 @@ export default function CarrosselEmpresas() {
           </div>
 
           {/* Botão direita */}
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
-          >
-            <CgChevronRight className="text-2xl" />
-          </button>
+          {!isAtEnd && (
+            <button
+              onClick={scrollRight}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
+            >
+              <CgChevronRight className="text-2xl" />
+            </button>
+          )}
         </div>
       </div>
 
