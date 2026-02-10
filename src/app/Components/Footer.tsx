@@ -1,62 +1,78 @@
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <footer className="mx-auto mt-16 px-8 py-12 bg-black shadow-md">
-      
-      {/* CONTEÚDO */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-start">
-        
-        {/* LOGO / BRAND */}
-        <div>
-          <h2 className="text-white font-extrabold text-3xl mb-3">
-            ItsAll4U
-          </h2>
-          <p className="text-white max-w-xs">
-            Transformando ideias em resultados.
+    <footer className="bg-black ">
+      <div className="max-w-[1500px] mx-auto px-8 py-16">
+
+        {/* CONTEÚDO */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+
+          {/* BRAND */}
+          <div>
+            <h2 className="text-white font-extrabold text-2xl mb-4">
+              ItsAll4U
+            </h2>
+            <p className="text-gray-300 max-w-xs leading-relaxed">
+              Transformamos ideias em experiências e resultados reais para marcas que querem crescer.
+            </p>
+          </div>
+
+          {/* EXPLORAR */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+              Explorar
+            </h3>
+            <ul className="space-y-3 text-gray-300">
+              <li className="hover:text-blue-500 cursor-pointer transition">Lar</li>
+              <li className="hover:text-blue-500 cursor-pointer transition">O que fazemos</li>
+              <li className="hover:text-blue-500 cursor-pointer transition">Sobre nós</li>
+              <li className="hover:text-blue-500 cursor-pointer transition">Contacto</li>
+            </ul>
+          </div>
+
+          {/* SOCIAL */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+              Seguir
+            </h3>
+            <div className="flex items-center gap-4 text-gray-300">
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition"
+              >
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+
+          {/* LOCALIZAÇÃO */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+              Localização
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              Zamba 2<br />
+              Bairro Azul<br />
+              Rua do Banco BFA
+            </p>
+          </div>
+
+        </div>
+
+        {/* DIVISOR */}
+        <div className="border-t border-gray-800 mt-16 pt-6 text-center">
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.
           </p>
         </div>
 
-        {/* EXPLORAR */}
-        <div>
-          <h2 className="text-white font-semibold text-lg mb-4">
-            Explorar
-          </h2>
-          <ul className="space-y-2">
-            <li className="text-white hover:text-blue-600 cursor-pointer">Lar</li>
-            <li className="text-white hover:text-blue-600 cursor-pointer">O que fazemos</li>
-            <li className="text-white hover:text-blue-600 cursor-pointer">Sobre nós</li>
-            <li className="text-white hover:text-blue-600 cursor-pointer">Contacto</li>
-          </ul>
-        </div>
-
-        {/* SOCIAL */}
-        <div>
-          <h2 className="text-white font-semibold text-lg mb-4">
-            Seguir
-          </h2>
-          <ul className="space-y-2">
-            <li className="text-white hover:text-blue-600 cursor-pointer">LinkedIn</li>
-            <li className="text-white hover:text-blue-600 cursor-pointer">Instagram</li>
-          </ul>
-        </div>
-
-        {/* ENDEREÇO */}
-        <div>
-          <h2 className="text-white font-semibold text-lg mb-4">
-            Zamba2
-          </h2>
-          <p className="text-white leading-relaxed">
-            Bairro Azul<br />
-            Rua do Banco BFA
-          </p>
-        </div>
-
-      </div>
-
-      {/* DIVISÃO */}
-      <div className="border-t border-gray-700 mt-12 pt-6 text-center">
-        <p className="text-gray-400 text-sm">
-          &copy; {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.
-        </p>
       </div>
     </footer>
   );

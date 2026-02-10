@@ -34,85 +34,47 @@ const logosBottom = [
 
 export default function CarrosselEmpresas() {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Fades laterais */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10 " />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10 " />
+    <section className="py-24">
+  <div className="max-w-7xl mx-auto px-6">
 
-      <div className="max-w-[1500px] mx-auto flex flex-col gap-12 px-4">
-        <h1 className=" text-center text-2xl lg:text-4xl font-extrabold text-black">
-          Nossos Clientes
-        </h1>
+    <div className="text-center mb-14">
+      <h2 className="text-3xl lg:text-4xl font-bold text-black">
+        Marcas que confiam no nosso trabalho
+      </h2>
+    </div>
 
-        {/* Linha Superior */}
-        <div className="group flex overflow-hidden">
-          <div className="flex gap-8 px-4 animate-scrollLeft group-hover:[animation-play-state:paused]">
-            {[...logosTop, ...logosTop].map((logo, idx) => (
-              <div
-                key={idx}
-                className="flex-shrink-0 w-[70px] h-[70px] bg-white hover:grayscale-0 grayscale rounded-full flex items-center justify-center p-[6px] transition-all duration-500 hover:scale-105 hover:brightness-105"
-              >
-                <Image
-                  src={logo}
-                  alt={`Logo ${idx}`}
-                  width={70}
-                  height={70}
-                  className="object-contain w-auto h-full"
-                />
-              </div>
-            ))}
+    <div
+      className="
+        grid
+        grid-cols-2
+        sm:grid-cols-3
+        md:grid-cols-4
+        lg:grid-cols-6
+        gap-x-12 gap-y-10
+        items-center
+      "
+    >
+      {[...logosTop, ...logosBottom].map((logo, idx) => (
+        <div
+          key={idx}
+          className="flex items-center justify-center opacity-80 hover:opacity-100 transition"
+        >
+          <div className="h-14 w-32 flex items-center justify-center">
+            <Image
+              src={logo}
+              alt={`Cliente ${idx}`}
+              width={150}
+              height={80}
+              className="max-h-full max-w-full object-contain"
+            />
           </div>
         </div>
+      ))}
+    </div>
 
-        {/* Linha Inferior */}
-        <div className="group flex overflow-hidden">
-          <div className="flex gap-8 px-4 animate-scrollRight group-hover:[animation-play-state:paused]">
-            {[...logosBottom, ...logosBottom].map((logo, idx) => (
-              <div
-                key={idx}
-               className="flex-shrink-0 w-[70px] h-[70px] bg-white hover:grayscale-0 grayscale rounded-full flex items-center justify-center p-[6px] transition-all duration-500 hover:scale-105 hover:brightness-105"
-          >
-                <Image
-                  src={logo}
-                  alt={`Logo ${idx}`}
-                  width={70}
-                  height={70}
-                  className="object-contain w-auto h-full"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+  </div>
+</section>
 
-      {/* Animações */}
-      <style jsx>{`
-        @keyframes scrollLeft {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
 
-        @keyframes scrollRight {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-
-        .animate-scrollLeft {
-          animation: scrollLeft 45s linear infinite;
-        }
-
-        .animate-scrollRight {
-          animation: scrollRight 45s linear infinite;
-        }
-      `}</style>
-    </section>
   );
 }

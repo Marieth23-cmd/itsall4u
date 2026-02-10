@@ -3,17 +3,20 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    image: "/equipa/hero1.jpg",
+    type: "image",
+    src: "/equipa/imageshero1.jpg",
     title: "Estratégia que impulsiona marcas",
     subtitle: "Criatividade, tecnologia e visão para gerar crescimento real.",
   },
   {
-    image: "/equipa/hero2.jpg",
+    type: "video",
+    src: "/equipa/videoHero.mp4",
     title: "Criatividade com propósito",
     subtitle: "Design e comunicação pensados para resultados.",
   },
   {
-    image: "/equipa/images3.jpg",
+    type: "image",
+    src: "/equipa/hero2.jpg",
     title: "Resultados que fazem a diferença",
     subtitle: "Transformamos desafios em soluções eficazes.",
   },
@@ -25,7 +28,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -40,13 +43,23 @@ export default function Hero() {
           `}
         >
           {/* BACKGROUND */}
-          <div
-            className="absolute inset-0 bg-cover bg-center animate-kenBurns"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          />
+          {slide.type === "image" ? (
+            <div
+              className="absolute inset-0 bg-cover bg-center animate-kenBurns"
+              style={{ backgroundImage: `url(${slide.src})` }}
+            />
+          ) : (
+            <video
+              src={slide.src}
+              autoPlay
+              loop
+              muted
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
 
           {/* OVERLAY */}
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/50" />
 
           {/* CONTEÚDO */}
           <div className="relative z-10 h-full flex items-center px-8 md:px-20">

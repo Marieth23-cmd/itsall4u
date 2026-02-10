@@ -4,61 +4,71 @@ import { FaBars } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <div
-      className="
-       top-0 fixed w-full bg-white shadow-md px-6 py-3 z-20 "
-    >
-      <div className="flex items-center justify-between">
-        
+    <header className="fixed top-0 w-full bg-white/95 backdrop-blur shadow-sm z-30">
+      <div className="max-w-[1500px] mx-auto px-6 py-4 flex items-center justify-between">
+
         {/* LEFT */}
-        <div className="flex items-center gap-6 whitespace-nowrap">
-         <a href="/">
+        <a href="/" className="flex items-center">
           <Image
             src="/itsall/logo.png"
             alt="Logo"
-            width={120}
+            width={140}
             height={50}
             className="object-contain"
-          /></a> 
-
-        
-           
-        </div>
+            priority
+          />
+        </a>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-6 whitespace-nowrap"> 
-          <a className=" ml-6 text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block" href="/OqueFizemos">O que fazemos</a>
-          
-        
-            <a className="text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block " href="/SobreNos">Sobre nós</a>
-        
-          
-            <a className="text-blue-800 hover:text-blue-600 text-lg cursor-pointer  hidden lg:block " href="/portfolio">Portfólio</a>
-          
-          <span className="text-blue-800 text-lg hover:text-blue-600  hidden lg:block ">FR</span>
+        <nav className="flex items-center gap-8 whitespace-nowrap">
 
-        <button
-  className="
-    bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800
-    px-8 py-3
-    rounded-lg
-    hidden lg:flex
-    items-center gap-3
-    text-white text-lg
-    whitespace-nowrap
-    hover:from-blue-700 hover:via-blue-800 hover:to-blue-900
-  "
->
-  Entre em contacto
-  <CgArrowLongRight className="text-3xl" />
-</button>
+          <a
+            href="/OqueFizemos"
+            className="hidden lg:block text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
+          >
+            O que fazemos
+          </a>
 
-<FaBars className="text-2xl text-black lg:hidden cursor-pointer" />
+          <a
+            href="/SobreNos"
+            className="hidden lg:block text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
+          >
+            Sobre nós
+          </a>
 
+          <a
+            href="/portfolio"
+            className="hidden lg:block text-[15px] font-medium text-blue-900 hover:text-blue-600 transition"
+          >
+            Portfólio
+          </a>
 
-        </div>
+          {/* IDIOMA */}
+          <span className="hidden lg:block text-sm font-medium text-blue-900/70 hover:text-blue-900 cursor-pointer transition">
+            FR
+          </span>
+
+          {/* CTA */}
+          <button
+            className="
+              hidden lg:flex items-center gap-3
+              px-7 py-3
+              rounded-full
+              bg-gradient-to-r from-blue-600 to-blue-800
+              text-white text-sm font-medium
+              hover:from-blue-700 hover:to-blue-900
+              transition
+            "
+          >
+            Entre em contacto
+            <CgArrowLongRight className="text-2xl" />
+          </button>
+
+          {/* MOBILE MENU */}
+          <FaBars className="lg:hidden text-2xl text-blue-900 cursor-pointer" />
+        </nav>
 
       </div>
-    </div>
+    </header>
   );
 }
