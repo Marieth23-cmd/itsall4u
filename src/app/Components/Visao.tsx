@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Visao() {
   return (
-    <div className="max-w-[1500px] mx-auto px-4 md:px-8 py-16 space-y-10">
+    <div className="max-w-[1500px] mx-auto px-4 md:px-8 py-6 md:py-8  space-y-6 md:space-y-8 lg:space-y-12">
 
       {[
         {
@@ -56,7 +56,7 @@ export default function Visao() {
             md:px-10 md:py-10
             text-white
           ">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-3">
+            <h2 className="text-xl md:text-3xl font-semibold mb-3">
               {item.title}
             </h2>
 

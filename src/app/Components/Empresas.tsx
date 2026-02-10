@@ -1,6 +1,8 @@
 "use client";
 
+import { useRef, useState } from "react";
 import Image from "next/image";
+import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
 const logosTop = [
   "/empresas/empresa1.png",
@@ -33,48 +35,93 @@ const logosBottom = [
 ];
 
 export default function CarrosselEmpresas() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [rightClicked, setRightClicked] = useState(false);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    setRightClicked(true);
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
+
+  const allLogos = [...logosTop, ...logosBottom];
+
   return (
-    <section className="py-24">
-  <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl lg:text-4xl font-bold text-black text-center mb-12">
+          Marcas que confiam no nosso trabalho
+        </h2>
 
-    <div className="text-center mb-14">
-      <h2 className="text-3xl lg:text-4xl font-bold text-black">
-        Marcas que confiam no nosso trabalho
-      </h2>
-    </div>
+        {/* CARROSSEL */}
+        <div className="relative">
+          {/* Botão esquerda */}
+          {rightClicked && (
+            <button
+              onClick={scrollLeft}
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
+            >
+              <CgChevronLeft className="text-2xl" />
+            </button>
+          )}
 
-    <div
-      className="
-        grid
-        grid-cols-2
-        sm:grid-cols-3
-        md:grid-cols-4
-        lg:grid-cols-6
-        gap-x-12 gap-y-10
-        items-center
-      "
-    >
-      {[...logosTop, ...logosBottom].map((logo, idx) => (
-        <div
-          key={idx}
-          className="flex items-center justify-center opacity-80 hover:opacity-100 transition"
-        >
-          <div className="h-14 w-32 flex items-center justify-center">
-            <Image
-              src={logo}
-              alt={`Cliente ${idx}`}
-              width={150}
-              height={80}
-              className="max-h-full max-w-full object-contain"
-            />
+          {/* Área de scroll */}
+          <div
+            ref={scrollRef}
+            className="flex gap-8 overflow-x-auto scroll-smooth px-10"
+            style={{
+              scrollbarWidth: 'thin',
+              scrollbarColor: 'white #f3f4f6'
+            }}
+          >
+            {allLogos.map((logo, idx) => (
+              <div
+                key={idx}
+                className="flex-shrink-0 flex items-center justify-center w-32 h-16 opacity-80 hover:opacity-100 transition mb-3"
+              >
+                <Image
+                  src={logo}
+                  alt={`Cliente ${idx}`}
+                  width={150}
+                  height={80}
+                  className="object-contain max-h-full max-w-full"
+                />
+              </div>
+            ))}
           </div>
+
+          {/* Botão direita */}
+          <button
+            onClick={scrollRight}
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
+          >
+            <CgChevronRight className="text-2xl" />
+          </button>
         </div>
-      ))}
-    </div>
+      </div>
 
-  </div>
-</section>
-
-
+      <style jsx>{`
+        div::-webkit-scrollbar {
+          height: 8px;
+        }
+        div::-webkit-scrollbar-track {
+          background: #f3f4f6;
+        }
+        div::-webkit-scrollbar-thumb {
+          background: white;
+          border-radius: 4px;
+        }
+        div::-webkit-scrollbar-thumb:hover {
+          background: #e5e7eb;
+        }
+      `}</style>
+    </section>
   );
 }

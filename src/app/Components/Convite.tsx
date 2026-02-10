@@ -22,7 +22,7 @@ export default function Convite() {
   }, [imagens.length]);
 
   return (
-    <section className="max-w-[1500px] mx-auto px-8 py-24">
+    <section className="max-w-[1500px] mx-auto px-8 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
 
         {/* CARD TEXTO */}
