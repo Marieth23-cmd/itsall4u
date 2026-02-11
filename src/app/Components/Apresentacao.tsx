@@ -14,7 +14,7 @@ export default function Apresentacao() {
       >
         {/* COLUNA ESQUERDA */}
         <div>
-          <h2 className="text-3xl md:text-4xl text-black font-semibold leading-tight mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl  text-black font-semibold leading-tight mb-6">
             Criamos experiências de marca que geram crescimento real
           </h2>
 

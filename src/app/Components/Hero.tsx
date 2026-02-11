@@ -64,7 +64,7 @@ export default function Hero() {
           {/* CONTEÚDO */}
           <div className="relative z-10 h-full flex items-center px-8 md:px-20">
             <div className="max-w-2xl text-white animate-fadeUp">
-              <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl  font-semibold leading-tight mb-4">
                 {slide.title}
               </h1>
               <p className="text-lg text-gray-200 mb-8">

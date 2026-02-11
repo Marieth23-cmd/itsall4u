@@ -28,7 +28,7 @@ export default function Convite() {
         {/* CARD TEXTO */}
         <div className="border border-blue-800/40 rounded-xl p-10 flex flex-col justify-between transition-all duration-300 hover:border-blue-800 hover:bg-blue-50 cursor-pointer">
           <div>
-            <h1 className="text-4xl font-bold text-black mb-4">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-black mb-4">
               Trabalhe Conosco
             </h1>
             <p className="text-gray-700 text-lg leading-relaxed max-w-md">
