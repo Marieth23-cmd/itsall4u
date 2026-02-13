@@ -1,71 +1,68 @@
-'use client';
+"use client";
 import { CgArrowLongRight } from "react-icons/cg";
 import Image from "next/image";
 import {motion} from "framer-motion"
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-
+import { HiOutlineChartBar, HiOutlineGlobeAlt, HiOutlineCode } from 'react-icons/hi';
+import { FiVideo } from 'react-icons/fi';
+import { MdEvent } from 'react-icons/md';
+import { AiOutlineLineChart } from 'react-icons/ai';
+import { RiGovernmentLine } from 'react-icons/ri';
+import { TfiPalette } from "react-icons/tfi";
 
 
 const servicos = [
   {
-    number: "01",
-    title: "Planeamento Estratégico",
-    image: "https://thumbs.dreamstime.com/b/reuni%C3%A3o-de-neg%C3%B3cio-apresenta%C3%A7%C3%A3o-das-habilidades-da-equipe-do-escrit%C3%B3rio-gest%C3%A3o-empresa-e-ilustra%C3%A7%C3%A3o-vetor-planeamento-d-140269961.jpg?w=576",
+    icone: <HiOutlineChartBar className="w-8 h-8 text-blue-800" />,
+    title: "Planeamento Estratégico", 
     description:
       "Desenvolvemos planos personalizados que unem inovação e foco em resultados, aproximando marcas do público certo.",
   },
-  {
-    number: "02",
+  { 
+    icone: <HiOutlineGlobeAlt className="w-8 h-8 text-blue-800" />,
     title: "Comunicação 360°",
-    image: "https://tse1.mm.bing.net/th/id/OIP.xUVnHVXozQk4yhTxuz9fWAHaDt?pid=Api&P=0&h=220",
-    description:
+     description:
       "Criamos campanhas integradas que conectam marcas e públicos de forma eficaz e impactante.",
   },
   {
-    number: "03",
+   icone: <TfiPalette className="w-8 h-8 text-blue-800" />, 
     title: "Design e Experiências Visuais",
-    image: "https://visualdesignjourney.com/wp-content/uploads/2023/06/studiologo.png",
     description:
       "Construímos identidades visuais marcantes e soluções de design aplicadas ao digital e físico, sempre com modernidade.",
   },
   {
-    number: "04",
-    title: "Eventos & Activação",
-    image: "https://media.licdn.com/dms/image/D4D12AQEt3l6ggPOniA/article-cover_image-shrink_720_1280/0/1683018733962?e=2147483647&v=beta&t=Mk_Ib8RIRbzFtRJvDHkrakJqOimQ_G97emG9MYMcGtA",
+    icone: <MdEvent className="w-8 h-8 text-blue-800" />,
+     title: "Eventos & Activação",
     description:
       "Criamos eventos que unem criatividade e organização, transformando interações em experiências memoráveis para as marcas.",
-  }, 
+  },
   {
-    number: "05",
-    title: "Media",
-    image: "https://tse2.mm.bing.net/th/id/OIP.b5NRz8qjrw4BC60xrlRQpgHaEK?pid=Api&P=0&h=220",
-    description:
+      icone: <FiVideo className="w-8 h-8 text-blue-800" />,
+       title: "Media",
+      description:
       "Planeamos canais eficazes e gerimos investimentos com inteligência, garantindo visibilidade e retorno sustentável.",
   },
   {
-    number: "06",
+    icone: <AiOutlineLineChart className="w-8 h-8 text-blue-800" />,
     title: "Gestão de Performance",
-    image: "https://tse4.mm.bing.net/th/id/OIP.7xm8e-KoNIyIh9zGFGPi3wHaD5?pid=Api&P=0&h=220",
     description:
       "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
   },
   {
-    number: "07",
-    title: "Comunicação Institucional",
-    image: "https://tse4.mm.bing.net/th/id/OIP.iWsMjE5ZjRQc9HLxPG3qkgHaFj?pid=Api&P=0&h=220",
+    icone: <RiGovernmentLine className="w-8 h-8 text-blue-800" />,
+     title: "Comunicação Institucional",
     description:
       "Desenvolvemos estratégias de comunicação que fortalecem a imagem e a reputação das marcas institucionais.",
   },
- 
   {
-    number: "08",
+   icone: <HiOutlineCode className="w-8 h-8 text-blue-800" />, 
     title: "Desenvolvimento Web",
-    image: "https://tse3.mm.bing.net/th/id/OIP.lzEqG1IXHCP-IldbwzNX7wHaE7?pid=Api&P=0&h=220",
     description:
-        "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
-    },
+      "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
+  },
 ];
+    
 
 const trabalhos = [
   {
@@ -81,161 +78,136 @@ const trabalhos = [
     image: "/services/servico4.jpg",
   },
   {
-    image: "/services/servico4.jpg",
+    image: "/services/servico5.jpg",
   },
   {
-    image: "/services/servico4.jpg",
+    image: "/services/servico6.jpg",
   },
   {
-    image: "/services/servico4.jpg",
+    image: "/services/servico7.jpg",
   },
   {
-    image: "/services/servico4.jpg",
+    image: "/services/servico8.jpg",
   },
 ];
 export default function OQueFazemos() {
   return (
-    <div>
+   
+<div className="bg-white">
       <Header />
 
-    
-      <section className="pt-40 pb-24 px-6 max-w-[1500px] mx-auto text-center">
+      {/* HERO */}
+      <section className="pt-36 pb-12 px-6 max-w-[1500px] mx-auto text-center">
         <div className="max-w-3xl mx-auto">
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl md:text-4xl font-bold  text-black"
+            transition={{ duration: 0.6 }}
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]"
           >
-            Criamos estratégia, design e comunicação
-            <br /> para marcas que querem crescer.
+            Serviços
           </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-gray-600 mt-6 text-lg"
-          >
-            Soluções inteligentes, execução criativa e foco absoluto em resultados.
-          </motion.p>
         </div>
       </section>
 
       {/* SERVIÇOS */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16">
-          {servicos.map((item: { number: string; title: string; image: string; description: string }, index: number) => (
+      <section className="pb-12 lg:pb-12 px-6 max-w-[1500px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {servicos.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="group border-b border-gray-200 pb-10"
+              whileHover={{ y: -6 }}
+              className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
             >
-              <span className="text-6xl font-light text-gray-200 group-hover:text-black transition">
-                {item.number}
-              </span>
+              <div className="mb-6 text-blue-800 transition-transform duration-300 group-hover:scale-110">
+                {item.icone}
+              </div>
 
-              <h3 className="text-2xl font-medium mt-4 mb-4 text-black">
+              <h3 className="text-lg md:text-xl font-semibold mb-4 text-[#0F172A] tracking-tight">
                 {item.title}
               </h3>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
           ))}
         </div>
       </section>
-      
-{/* TRABALHOS RECENTES - STACK HORIZONTAL */}
-<section className="py-32 px-6 bg-white">
-  <div className="max-w-[1400px] mx-auto">
 
-    <h2 className="text-3xl md:text-4xl font-semibold mb-20 text-center text-[#0F172A]">
-      Trabalhos Recentes
-    </h2>
+      {/* TRABALHOS RECENTES */}
+      <section className="py-16 px-6">
+        <div className="max-w-[1500px] mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-16 text-center text-[#0F172A]">
+            Trabalhos Recentes
+          </h2>
 
-    <div className="relative h-[500px] md:h-[800px]">
+          <div className="overflow-x-auto overflow-y-hidden scrollbar-hide">
+            <div className="flex items-center snap-x snap-mandatory">
+              {trabalhos.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative min-w-[260px] md:min-w-[480px] h-[360px] md:h-[600px] snap-center rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-[1.02] ${
+                    index !== 0 ? "-ml-14 md:-ml-24" : ""
+                  }`}
+                >
+                  <Image
+                    src={item.image}
+                    alt={`Trabalho ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
 
-      <div className="flex items-center h-full overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide">
-
-        {trabalhos.map((item, index) => (
-          <div
-            key={index}
-            className={`
-              relative 
-              min-w-[280px] 
-              md:min-w-[500px] 
-              h-[400px] 
-              md:h-[700px] 
-              snap-center
-              rounded-2xl 
-              overflow-hidden 
-              shadow-xl
-              transition-transform duration-500
-              hover:scale-[1.02]
-              ${index !== 0 ? "-ml-20 md:-ml-40" : ""}
-            `}
-          >
-            <Image
-              src={item.image}
-              alt={`Trabalho ${index + 1}`}
-              fill
-              className="object-cover"
-            />
+              <div className="relative min-w-[200px] md:min-w-[260px] h-[360px] md:h-[600px] -ml-20 md:-ml-24 flex items-center justify-center">
+                <a
+                  href="/portfolio"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-blue-800 flex items-center justify-center text-blue-800 text-3xl hover:bg-blue-800 hover:text-white transition"
+                >
+                  +
+                </a>
+              </div>
+            </div>
           </div>
-        ))}
-
-        {/* ÚLTIMO CARD - BOTÃO PORTFÓLIO */}
-        <div className="relative min-w-[200px] md:min-w-[300px] h-[400px] md:h-[700px] -ml-20 md:-ml-40 flex items-center justify-center">
-          <a
-            href="/portfolio"
-            className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-blue-900 flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition duration-300"
-          >
-            +
-          </a>
         </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
+      </section>
 
 
-      
-      <section className="mb-12 px-6">
-  <div className="max-w-[1500px] mx-auto rounded-lg overflow-hidden border border-gray-200 flex flex-col-reverse lg:flex-row">
+      {/*CTA*/}
+<section className="pb-16 px-6">
+  <div className="max-w-[1500px] mx-auto rounded-2xl border border-gray-200 flex flex-col-reverse lg:flex-row overflow-hidden">
 
-    {/* TEXTO */}
-    <div className="flex-1 bg-white px-12 lg:px-20 py-20 flex flex-col justify-center">
-      <h2 className="text-3xl md:text-4xl font-semibold text-[#0F172A] mb-6 leading-tight">
+    <div className="flex-1 px-8 lg:px-20 py-14 flex flex-col justify-center bg-white">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-6 leading-tight">
         Parcerias estratégicas que impulsionam crescimento.
       </h2>
 
-      <p className="text-gray-600 text-lg leading-relaxed max-w-xl mb-10">
+      <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mb-10">
         Trabalhamos lado a lado com marcas que procuram consistência,
-        posicionamento forte e crescimento sustentável através de estratégia e execução criativa.
+        posicionamento forte e crescimento sustentável através de
+        estratégia e execução criativa.
       </p>
-      <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
-            <span className="text-lg font-medium text-blue-800">
-              Entre em contacto
-            </span>
-            <CgArrowLongRight className="text-3xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />
-          </div>
-      
+
+      <a className="mt-6 inline-flex items-center gap-3 group cursor-pointer w-fit">
+        <span className="text-lg font-medium text-blue-800">
+          Entre em contacto
+        </span>
+        <CgArrowLongRight className="text-2xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />
+      </a>
     </div>
 
-    {/* IMAGEM */}
-    <div className="flex-1 relative h-[450px] lg:h-[600px] bg-[#F1F5F9]">
+    <div className="w-full lg:flex-1 relative h-[280px] sm:h-[320px] lg:h-[550px] bg-[#F8FAFC]">
       <Image
         src="/services/planeamento.png"
         alt="Planeamento estratégico"
         fill
         className="object-cover"
+        sizes="(max-width: 1024px) 100vw, 50vw"
       />
     </div>
 
@@ -243,8 +215,10 @@ export default function OQueFazemos() {
 </section>
 
 
-
       <Footer />
     </div>
+
+
+  
   );
 }

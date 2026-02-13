@@ -25,3 +25,13 @@ body {
     text-wrap: balance;
   }
 }
+::-webkit-scrollbar {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f172a20;
+  border-radius: 10px;
+}
