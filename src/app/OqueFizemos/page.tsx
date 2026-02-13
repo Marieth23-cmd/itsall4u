@@ -102,7 +102,7 @@ export default function OQueFazemos() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]"
           >
             Serviços
@@ -193,12 +193,12 @@ export default function OQueFazemos() {
         estratégia e execução criativa.
       </p>
 
-      <a className="mt-6 inline-flex items-center gap-3 group cursor-pointer w-fit">
-        <span className="text-lg font-medium text-blue-800">
+      <div className="mt-6 inline-flex items-center gap-3 group cursor-pointer w-fit">
+        <a href="/Contacto" className="text-lg font-medium text-blue-800">
           Entre em contacto
-        </span>
-        <CgArrowLongRight className="text-2xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />
-      </a>
+        <CgArrowLongRight className="text-2xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />  
+        </a>
+      </div>
     </div>
 
     <div className="w-full lg:flex-1 relative h-[280px] sm:h-[320px] lg:h-[550px] bg-[#F8FAFC]">

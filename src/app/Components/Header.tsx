@@ -43,7 +43,7 @@ const CloseMenuOpen = ()=>{
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed top-6 left-0 right-0 z-50">
+    <header className="fixed top-6 left-0 right-0 z-20">
   <div className="max-w-[1500px] mx-auto px-6 md:px-8 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md rounded-full shadow-sm">
 
     {/* LEFT */}
@@ -77,10 +77,10 @@ const CloseMenuOpen = ()=>{
         FR
       </span>
 
-      <button className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-[16px] font-medium hover:from-blue-700 hover:to-blue-900 transition">
+      <a href="/Contacto" className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-[16px] font-medium hover:from-blue-700 hover:to-blue-900 transition">
         Entre em contacto
         <CgArrowLongRight className="text-2xl" />
-      </button>
+      </a>
 
       <FaBars
         onClick={() => setIsMenuOpen(true)}
@@ -131,12 +131,12 @@ const CloseMenuOpen = ()=>{
           </button>
 
           <div className="mt-6">
-            <button
+            <a href="/Contacto"
               onClick={CloseMenuOpen}
               className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium"
             >
               Entre em contacto
-            </button>
+            </a>
           </div>
         </div>
 

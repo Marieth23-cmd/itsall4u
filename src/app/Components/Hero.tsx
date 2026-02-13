@@ -71,9 +71,9 @@ export default function Hero() {
                 {slide.subtitle}
               </p>
 
-              <button className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
+              <a href="/Contacto" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
                 Fale Connosco →
-              </button>
+              </a>
             </div>
           </div>
         </div>
