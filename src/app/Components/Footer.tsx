@@ -14,7 +14,7 @@ export default function Footer() {
               ItsAll4U
             </h2>
             <p className="text-gray-300 max-w-xs leading-relaxed">
-              Transformamos ideias em experiências e resultados reais para marcas que querem crescer.
+              Transformamos ideias em resultados reais para marcas que querem crescer .
             </p>
           </div>
 

@@ -1,71 +1,49 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
 
 export default function Visao() {
+  const items = [
+    {
+      title: "Visão",
+      text: "Ser referência em estratégia e comunicação, impulsionando marcas através de inovação e crescimento sustentável."
+    },
+    {
+      title: "Missão",
+      text: "Transformar ideias em soluções estratégicas que conectam marcas e pessoas de forma autêntica."
+    },
+    {
+      title: "Valores",
+      text: "Estratégia, criatividade, confiança e compromisso orientam cada projeto que desenvolvemos."
+    }
+  ];
+
   return (
-    <div className="max-w-[1500px] mx-auto px-4 md:px-8 py-6 md:py-8  space-y-6 md:space-y-8 lg:space-y-12">
+    <section className="bg-blue-800 py-14 lg:py-20 px-12">
+      <div className="max-w-[1500px] mx-auto">
 
-      {[
-        {
-          title: "Visão",
-          image: "/empresas/visao.png",
-          text:
-            "Ser a agência de marketing digital mais inovadora e centrada no cliente, reconhecida por transformar marcas e impulsionar o crescimento sustentável."
-        },
-        {
-          title: "Missão",
-          image: "/empresas/missao.png",
-          text:
-            "Transformar ideias em experiências que impactam pessoas e negócios, ajudando marcas a crescer de forma inteligente e humana."
-        },
-        {
-          title: "Valores",
-          image: "/empresas/valores.png",
-          text:
-            "Impacto, colaboração, confiança e paixão guiam nossa atuação e sustentam relações duradouras."
-        }
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="
-            relative overflow-hidden rounded-xl shadow-lg
-            min-h-[420px] sm:min-h-[480px] md:h-[520px] lg:h-[600px]
-          "
-        >
-          {/* IMAGEM */}
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover"
-            priority
-          />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-          {/* OVERLAY */}
-          <div className="absolute inset-0 bg-gradient-to-t 
-            from-black/80 
-            via-blue-900/40 
-            to-black/20
-          " />
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-white"
+            >
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">
+                {item.title}
+              </h3>
 
-          {/* CONTEÚDO */}
-          <div className="
-            relative z-10 h-full
-            flex flex-col justify-end
-            px-5 py-6
-            sm:px-8 sm:py-8
-            md:px-10 md:py-10
-            text-white
-          ">
-            <h2 className="text-xl md:text-3xl font-semibold mb-3">
-              {item.title}
-            </h2>
+              <p className="text-white/80 leading-relaxed text-base md:text-lg">
+                {item.text}
+              </p>
+            </motion.div>
+          ))}
 
-            <p className="text-base md:text-lg leading-relaxed max-w-[520px] text-gray-200">
-              {item.text}
-            </p>
-          </div>
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 }

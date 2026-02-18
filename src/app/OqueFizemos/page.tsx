@@ -114,15 +114,16 @@ export default function OQueFazemos() {
       <section className="pb-12 lg:pb-12 px-6 max-w-[1500px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {servicos.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -6 }}
-              className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
-            >
+             <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -4 }}
+            className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
+          >
+
               <div className="mb-6 text-blue-800 transition-transform duration-300 group-hover:scale-110">
                 {item.icone}
               </div>
@@ -139,43 +140,50 @@ export default function OQueFazemos() {
         </div>
       </section>
 
-      {/* TRABALHOS RECENTES */}
-      <section className="py-16 px-6">
-        <div className="max-w-[1500px] mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-16 text-center text-[#0F172A]">
-            Trabalhos Recentes
-          </h2>
+     <section className=" py-14 lg:py-20 px-6">
+  <div className="max-w-[1500px] mx-auto">
 
-          <div className="overflow-x-auto overflow-y-hidden scrollbar-hide">
-            <div className="flex items-center snap-x snap-mandatory">
-              {trabalhos.map((item, index) => (
-                <div
-                  key={index}
-                  className={`relative min-w-[260px] md:min-w-[480px] h-[360px] md:h-[600px] snap-center rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-[1.02] ${
-                    index !== 0 ? "-ml-14 md:-ml-24" : ""
-                  }`}
-                >
-                  <Image
-                    src={item.image}
-                    alt={`Trabalho ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
+    <div className="text-center max-w-2xl mx-auto mb-12">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-4">
+        Trabalhos Recentes
+      </h2>
+      <p className="text-gray-600 text-base md:text-lg">
+        Projetos que refletem estratégia, criatividade e impacto real.
+      </p>
+    </div>
 
-              <div className="relative min-w-[200px] md:min-w-[260px] h-[360px] md:h-[600px] -ml-20 md:-ml-24 flex items-center justify-center">
-                <a
-                  href="/portfolio"
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-blue-800 flex items-center justify-center text-blue-800 text-3xl hover:bg-blue-800 hover:text-white transition"
-                >
-                  +
-                </a>
-              </div>
-            </div>
+    <div className="overflow-x-auto overflow-y-hidden scrollbar-hide">
+      <div className="flex gap-4 snap-x snap-mandatory">
+
+        {trabalhos.map((item, index) => (
+          <div
+            key={index}
+            className="relative min-w-[250px] md:min-w-[400px] h-[320px] md:h-[560px] snap-center rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+          >
+            <Image
+              src={item.image}
+              alt={`Trabalho ${index + 1}`}
+              fill
+              className="object-cover"
+            />
           </div>
+        ))}
+
+        <div className="relative min-w-[200px] md:min-w-[260px] h-[280px] md:h-[520px] flex items-center justify-center">
+          <a
+            href="/portfolio"
+            className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-800 flex items-center justify-center text-white text-3xl hover:scale-105 transition"
+          >
+            +
+          </a>
         </div>
-      </section>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
       {/*CTA*/}
