@@ -82,7 +82,7 @@ export default function CarrosselEmpresas() {
           {rightClicked && !isAtStart && (
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-10"
             >
               <CgChevronLeft className="text-2xl" />
             </button>
@@ -118,7 +118,7 @@ export default function CarrosselEmpresas() {
           {!isAtEnd && (
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-20"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-10"
             >
               <CgChevronRight className="text-2xl" />
             </button>

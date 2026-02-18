@@ -114,15 +114,12 @@ export default function OQueFazemos() {
       <section className="pb-12 lg:pb-12 px-6 max-w-[1500px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {servicos.map((item, index) => (
-             <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -4 }}
-            className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
-          >
+           <motion.div
+              key={index}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.2 }}
+              className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
+            >
 
               <div className="mb-6 text-blue-800 transition-transform duration-300 group-hover:scale-110">
                 {item.icone}
