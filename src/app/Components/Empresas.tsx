@@ -1,10 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
 import Image from "next/image";
-import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
-const logosTop = [
+const logos = [
   "/empresas/empresa1.png",
   "/empresas/empresa2.png",
   "/empresas/empresa3.png",
@@ -15,11 +13,6 @@ const logosTop = [
   "/empresas/empresa8.png",
   "/empresas/empresa9.png",
   "/empresas/empresa10.png",
-  "/empresas/empresa21.png",
-  "/empresas/empresa22.png",
-];
-
-const logosBottom = [
   "/empresas/empresa11.png",
   "/empresas/empresa12.png",
   "/empresas/empresa13.png",
@@ -30,115 +23,85 @@ const logosBottom = [
   "/empresas/empresa18.png",
   "/empresas/empresa19.png",
   "/empresas/empresa20.png",
+  "/empresas/empresa21.png",
+  "/empresas/empresa22.png",
   "/empresas/empresa23.png",
   "/empresas/empresa24.png",
 ];
 
-export default function CarrosselEmpresas() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [rightClicked, setRightClicked] = useState(false);
-  const [isAtEnd, setIsAtEnd] = useState(false);
-  const [isAtStart, setIsAtStart] = useState(true);
-
-  const checkScroll = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      
-      // Verifica se está no início
-      setIsAtStart(scrollLeft <= 10);
-      
-      // Verifica se está no final
-      setIsAtEnd(scrollLeft + clientWidth >= scrollWidth - 10);
-    }
-  };
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-      setTimeout(checkScroll, 300);
-    }
-  };
-
-  const scrollRight = () => {
-    setRightClicked(true);
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-      setTimeout(checkScroll, 300);
-    }
-  };
-
-  const allLogos = [...logosTop, ...logosBottom];
-
+export default function FaixaLogos() {
   return (
-    <section className="py-16 relative">
+    <section className="py-20 overflow-hidden">
       <div className="max-w-[1500px] mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-12">
+
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center text-[#0F172A] mb-14">
           Marcas que confiam no nosso trabalho
         </h2>
 
-        {/* CARROSSEL */}
-        <div className="relative">
-          {/* Botão esquerda */}
-          {rightClicked && !isAtStart && (
-            <button
-              onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-10"
-            >
-              <CgChevronLeft className="text-2xl" />
-            </button>
-          )}
+        <div className="relative w-full overflow-hidden">
 
-          {/* Área de scroll */}
-          <div
-            ref={scrollRef}
-            onScroll={checkScroll}
-            className="flex gap-8 overflow-x-auto scroll-smooth px-10"
-            style={{
-              scrollbarWidth: 'thin',
-              scrollbarColor: 'white #f3f4f6'
-            }}
-          >
-            {allLogos.map((logo, idx) => (
-              <div
-                key={idx}
-                className="flex-shrink-0 flex items-center justify-center w-32 h-16 opacity-80 hover:opacity-100 transition mb-3"
-              >
-                <Image
-                  src={logo}
-                  alt={`Cliente ${idx}`}
-                  width={150}
-                  height={80}
-                  className="object-contain max-h-full max-w-full"
-                />
-              </div>
-            ))}
+          <div className="marquee">
+
+            <div className="marquee-track">
+              {[...logos, ...logos].map((logo, idx) => (
+                <div
+                  key={idx}
+                  className="logo-item"
+                >
+                  <Image
+                    src={logo}
+                    alt={`Cliente ${idx}`}
+                    width={160}
+                    height={80}
+                    className="object-contain max-h-full"
+                  />
+                </div>
+              ))}
+            </div>
+
           </div>
-
-          {/* Botão direita */}
-          {!isAtEnd && (
-            <button
-              onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg z-10"
-            >
-              <CgChevronRight className="text-2xl" />
-            </button>
-          )}
         </div>
+
       </div>
 
       <style jsx>{`
-        div::-webkit-scrollbar {
-          height: 8px;
+        .marquee {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
         }
-        div::-webkit-scrollbar-track {
-          background: #f3f4f6;
+
+        .marquee-track {
+          display: flex;
+          gap: 4rem;
+          width: max-content;
+          animation: scroll 45s linear infinite;
         }
-        div::-webkit-scrollbar-thumb {
-          background: white;
-          border-radius: 4px;
+
+        .logo-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 9rem;
+          height: 5rem;
+          flex-shrink: 0;
+          opacity: 0.6;
+          filter: grayscale(100%);
+          transition: all 0.3s ease;
         }
-        div::-webkit-scrollbar-thumb:hover {
-          background: #e5e7eb;
+
+        .logo-item:hover {
+          opacity: 1;
+          filter: grayscale(0%);
+        }
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
         }
       `}</style>
     </section>

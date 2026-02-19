@@ -18,31 +18,34 @@ export default function Visao() {
   ];
 
   return (
-    <section className="bg-blue-800 py-14 lg:py-20 px-12">
-      <div className="max-w-[1500px] mx-auto">
+    <section className="bg-[#27375c] py-20 lg:py-32 px-6 lg:h-[30rem]">
+      <div className="max-w-[1300px] mx-auto">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
 
           {items.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="text-white"
+              className="text-white max-w-md"
             >
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">
                 {item.title}
               </h3>
 
-              <p className="text-white/80 leading-relaxed text-base md:text-lg">
+              <div className="w-12 h-[2px] bg-white/20 mb-6"></div>
+
+              <p className="text-white/70 leading-relaxed text-base md:text-lg">
                 {item.text}
               </p>
             </motion.div>
           ))}
 
         </div>
+
       </div>
     </section>
   );

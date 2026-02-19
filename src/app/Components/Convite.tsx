@@ -23,7 +23,7 @@ export default function Convite() {
 
   return (
     <section className="max-w-[1500px] mx-auto px-8 py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
         {/* CARD TEXTO */}
         <div className="border border-blue-800/40 rounded-xl p-10 flex flex-col justify-between transition-all duration-300 hover:border-blue-800 hover:bg-blue-50 cursor-pointer">
@@ -48,7 +48,7 @@ export default function Convite() {
 
         {/* CARROSSEL */}
         <div className="flex flex-col gap-6">
-          <div className="relative rounded-xl overflow-hidden w-full h-[400px] lg:h-[450px] bg-gray-100">
+          <div className="relative rounded-xl overflow-hidden w-full h-[380px] lg:h-[450px] bg-gray-100">
             <Image
               key={currentIndex}
               src={imagens[currentIndex]}
