@@ -1,6 +1,5 @@
 import Footer from "@/app/Components/Footer"
 import Header from "@/app/Components/Header"
-import { div } from "framer-motion/client"
 import { notFound } from "next/navigation"
 
 type Props = {
