@@ -110,7 +110,7 @@ export default function Portfolio(){
                 <Link key={index} href={`/portfolio/${image.slug}`}>
                 <div
                  
-                 className="relative overflow-hidden h-[360px] w-[350px] lg:h-[500px] lg:w-[450px]">
+                 className="relative overflow-hidden h-[360px] w-[340px] lg:h-[500px] lg:w-[450px]">
             <Image 
                 src={image.image} 
                 alt={image.nome}
