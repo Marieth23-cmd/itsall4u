@@ -24,7 +24,7 @@ export default function Apresentacao() {
       </p>
 
       <a
-        href="/OqueFazemos"
+        href="/OqueFizemos"
         className="
           inline-flex items-center gap-3
           text-blue-700 font-medium text-lg

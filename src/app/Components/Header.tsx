@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { CgArrowLongRight } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from 'react-icons/ai';
@@ -69,9 +70,9 @@ const CloseMenuOpen = ()=>{
         Sobre nós
       </a>
 
-      <a href="/portfolio" className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition">
+      <Link href="/portfolio" className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition">
         Portfólio
-      </a>
+      </Link>
 
       <span className="hidden lg:block text-[16px] font-medium text-blue-900/70 hover:text-blue-900 cursor-pointer transition">
         FR

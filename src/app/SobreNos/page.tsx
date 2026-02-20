@@ -17,18 +17,19 @@ const equipa=[
    {
     image:"/equipa/Jorge.png",
     name:"Jorge Miranda",
-    funcao:"Motion Design"
+    funcao:"Design Gráfico"
+  },
+   {
+    image:"/equipa/Alicia.png",
+    name:"Alicia Vanessa",
+    funcao:"Design Gráfico"
   },
   {
     image:"/equipa/nicolas.png",
     name:"Nicolas Diogo",
     funcao:"Desenvolvedor Fullstack"
-  },
-   {
-    image:"/equipa/Alicia.png",
-    name:"Desenvolvedor Fullstack",
-    funcao:"Design Gráfico"
-  },
+  }
+  
 ]
 
 const asEquipa=[...equipa]
