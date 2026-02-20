@@ -123,13 +123,12 @@ export default function SobreNos() {
       >
 
         {/* Imagem */}
-        <div className="w-full lg:w-[380px] h-[420px] lg:h-[500px] rounded-2xl overflow-hidden">
+        <div className="relative h-[450px] w-full lg:h-[600px] rounded-2xl overflow-hidden">
           <Image
             src={member.image}
             alt={member.name}
-            width={500}
-            height={500}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
 

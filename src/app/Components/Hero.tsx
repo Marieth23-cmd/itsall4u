@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     type: "image",
-    src: "/equipa/imageshero1.jpg",
+    src: "/equipa/testehero.jpg",
     title: "Estratégia que impulsiona marcas",
     subtitle: "Criatividade, tecnologia e visão para gerar crescimento real.",
   },
@@ -59,7 +59,7 @@ export default function Hero() {
           )}
 
           {/* OVERLAY no hero */}
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/15" />
 
           {/* CONTEÚDO */}
           <div className="relative z-10 h-full flex items-center px-8 md:px-20">

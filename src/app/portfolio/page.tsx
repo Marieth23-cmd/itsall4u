@@ -110,21 +110,24 @@ export default function Portfolio(){
                 <Link key={index} href={`/portfolio/${image.slug}`}>
                 <div
                  
-                 className="relative overflow-hidden h-[360px] w-[340px] lg:h-[500px] lg:w-[450px]">
-            <Image 
+                 className="relative overflow-hidden h-[360px] w-full lg:h-[500px]">
+                <Image 
                 src={image.image} 
                 alt={image.nome}
                 fill
                 className="object-cover rounded-lg bg-red-500"
-             />
-             <div className="absolute insert-0 bg-gradient-to-t from-black/70 via-black-30 to-transparent"/>
-            
-            <div className="flex gap-2  absolute bottom-3 left-3 w-full items-center flex-shrink-0">
-            <h1 className="text-xl lg:text-2xl  text-white">{image.nome}</h1>
-            <span className="text-blue-600 font-bold text-2xl md:text-3xl lg:4xl"> {image.icone} </span>
-           </div> 
-           </div>
-           </Link>
+                    />
+            <div className="absolute bottom-4 left-4 right-8 flex items-end justify-between">
+                <h2 className="text-lg lg:text-2xl text-white font-medium leading-tight max-w-[85%]">
+                    {image.nome}
+                </h2>
+
+                <span className="text-blue-500 font-bold text-2xl lg:text-3xl shrink-0">
+                    {image.icone}
+                </span>
+                </div>
+                </div>
+            </Link>
 
 
             ))}
@@ -134,4 +137,4 @@ export default function Portfolio(){
            <Footer/>
         </div>
     )
-}
+}       
