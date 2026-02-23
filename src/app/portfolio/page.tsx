@@ -5,81 +5,81 @@ import Link from "next/link"
 
  const imagensEmpresas =[
     {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/lucrum.jpg",
         nome:"LUCRUM TRUST",
         icone:"→",
         slug:"lucrum-trust"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/aipex.png",
         nome:"AIPEX ",
         icone:"→",
         slug:"aipex"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/cabship.png",
         nome:"CABSHIB ",
         icone:"→",
         slug:"cabship"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/mangais.png",
         nome:"MANGAIS GOLF RISORT ",
         icone:"→",
         slug:"mangais-resort"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/Farmaclinic.png",
         nome:"FARMACLINIC ",
         icone:"→",
         slug:"farmaclinic"
     },
 
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/flyhotel.png",
         nome:"FLYHOTEL",
         icone:"→",
         slug:"fly-hotel"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/hidraulicaangola.png",
         nome:"HIDRAULICA DE ANGOLA",
         icone:"→",
-        slug:"hidraulia-angola"
+        slug:"hidraulica-angola"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/alianca.png",
         nome:"ALIANÇA SEGUROS ",
         icone:"→",
-        slug:"aliança-seguros"
+        slug:"alianca-seguros"
     },
     {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/conhecerangola.jpg",
         nome:"CONHECER ANGOLA ",
         icone:"→",
         slug:"conhecer-angola"
     },
     {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/academia.jpg",
         nome:"ACADEMIA DE LIDERENÇA E GESTÃO DE LUANDA ",
         icone:"→",
         slug:"academia-luanda"
     },
     {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/waaa.png",
         nome:"WHATABOUT AGENCY ANGOLA",
         icone:"→",
         slug:"waa"
     },
      {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/Bwizer.png",
         nome:"BWIZER",
         icone:"→",
         slug:"bwizer"
         
     },
     {
-        image:"/equipa/Alicia.png",
+        image:"/CapaEmpresas/geo.png",
         nome:"GEOSURVEYS",
         icone:"→",
         slug:"geosurveys"
@@ -95,7 +95,7 @@ export default function Portfolio(){
             <Header/>
             <div className="pt-36 px-6 max-w-[1500px] mx-auto">
                 <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-snug mb-8">
-                     Portfolio
+                     Portfólio
                   </h1>
                   <p className="max-w-2xl text-gray-600">
                     Combinamos criatividade, inovação e estratégia para fortalecer marcas, 
@@ -110,7 +110,7 @@ export default function Portfolio(){
                 <Link key={index} href={`/portfolio/${image.slug}`}>
                 <div
                  
-                 className="relative overflow-hidden h-[360px] w-full lg:h-[500px]">
+                 className="relative overflow-hidden h-[400px] w-full lg:h-[600px]">
                 <Image 
                 src={image.image} 
                 alt={image.nome}
@@ -122,7 +122,7 @@ export default function Portfolio(){
                     {image.nome}
                 </h2>
 
-                <span className="text-blue-500 font-bold text-2xl lg:text-3xl shrink-0">
+                <span className="text-blue-400 font-bold text-2xl lg:text-3xl shrink-0">
                     {image.icone}
                 </span>
                 </div>

@@ -102,7 +102,7 @@ export default function OQueFazemos() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.2 }}
             className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]"
           >
             Serviços
@@ -199,7 +199,7 @@ export default function OQueFazemos() {
       </p>
 
       <div className="mt-6 inline-flex items-center gap-3 group cursor-pointer w-fit">
-        <a href="/Contacto" className="text-lg font-medium text-blue-800">
+        <a href="/enviarEmail" className="text-lg font-medium text-blue-800">
           Entre em contacto
         <CgArrowLongRight className="text-2xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />  
         </a>

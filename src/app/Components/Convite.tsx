@@ -39,7 +39,7 @@ export default function Convite() {
           </div>
 
           <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
-            <a href="/Contacto" className="text-lg font-medium text-blue-800">
+            <a href="/enviarEmail" className="text-lg font-medium text-blue-800">
               Entre em contacto
             </a>
             <CgArrowLongRight className="text-3xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />

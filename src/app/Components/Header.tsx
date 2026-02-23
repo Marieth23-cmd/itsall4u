@@ -78,7 +78,7 @@ const CloseMenuOpen = ()=>{
         FR
       </span>
 
-      <a href="/Contacto" className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-[16px] font-medium hover:from-blue-700 hover:to-blue-900 transition">
+      <a href="/enviarEmail" className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-[16px] font-medium hover:from-blue-700 hover:to-blue-900 transition">
         Entre em contacto
         <CgArrowLongRight className="text-2xl" />
       </a>

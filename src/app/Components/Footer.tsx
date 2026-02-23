@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -24,10 +25,10 @@ export default function Footer() {
               Explorar
             </h3>
             <ul className="space-y-3 text-gray-300">
-              <li className="hover:text-blue-500 cursor-pointer transition">Lar</li>
-              <li className="hover:text-blue-500 cursor-pointer transition">O que fazemos</li>
-              <li className="hover:text-blue-500 cursor-pointer transition">Sobre nós</li>
-              <li className="hover:text-blue-500 cursor-pointer transition">Contacto</li>
+              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/">Lar</Link></li>
+              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/OqueFizemos">O que fazemos</Link></li>
+              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/SobreNos">Sobre nós</Link></li>
+              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/enviarEmail">Contacto</Link></li>
             </ul>
           </div>
 
@@ -38,13 +39,13 @@ export default function Footer() {
             </h3>
             <div className="flex items-center gap-4 text-gray-300">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/itsall4u"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition"
               >
                 <FaLinkedinIn />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/itsall4u.ao/"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition"
               >
                 <FaInstagram />

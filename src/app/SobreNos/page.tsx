@@ -57,7 +57,7 @@ export default function SobreNos() {
         <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6 max-w-md mx-auto md:mx-0">
           Estratégia, design e comunicação para marcas que procuram crescimento sustentável.
         </p>
-        <a href="/Contacto" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
+        <a href="/enviarEmail" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
           Fale Connosco →
         </a>
       </div>
@@ -69,13 +69,13 @@ export default function SobreNos() {
 
 
      {/* CONTEÚDO */}
-<div className="max-w-[1500px] mx-auto flex flex-col lg:flex-row gap-16 items-center py-14 lg:py-20 px-6">
+<div className="max-w-[1500px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center py-14 lg:py-20 px-6">
 
   {/* VIDEO */}
   <div className="w-full lg:w-1/2">
     <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
       <video
-        src="/equipa/equipa.mp4"
+        src="/equipa/showreel.mp4"
         controls
         muted
         playsInline
@@ -108,7 +108,7 @@ export default function SobreNos() {
   </h1>
   <p className="text-gray-600 max-w-xl leading-relaxed mb-10 ">
   Somos uma equipa multidisciplinar movida por estratégia,
-  criatividade e propósito. Atuamos em Angola há quase três anos,
+  criatividade e propósito. Actuamos em Angola há quase três anos,
   desenvolvendo projetos que conectam marcas e pessoas de forma
   autêntica e impactante.
 </p>
