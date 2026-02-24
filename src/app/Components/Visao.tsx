@@ -18,9 +18,11 @@ export default function Visao() {
   ];
 
   return (
+   
     <section className="bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 py-20 lg:py-32 px-6 lg:h-[30rem]">
       <div className="max-w-[1300px] mx-auto">
 
+         {/*enviando commit */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
 
           {items.map((item, index) => (
