@@ -70,7 +70,7 @@ export default function CarrosselEmpresas() {
   const allLogos = [...logosTop, ...logosBottom];
 
   return (
-    <section className="py-16 relative">
+    <section className="py-20 relative">
       <div className="max-w-[1500px] mx-auto px-6">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-12">
           Marcas que confiam no nosso trabalho
@@ -97,7 +97,7 @@ export default function CarrosselEmpresas() {
             {allLogos.map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 flex items-center justify-center w-32 h-16 lg:w-36 lg:h-20 opacity-80 hover:opacity-100 transition mb-3"
+                className="flex-shrink-0 flex  flex-col items-center justify-center w-28 h-14 lg:w-36 lg:h-20 opacity-80 hover:opacity-100 transition mb-3 "
               >
                 <Image
                   src={logo}

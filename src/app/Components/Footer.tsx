@@ -1,5 +1,7 @@
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
+import { BiBriefcase, BiEnvelope, BiHome, BiUser } from "react-icons/bi";
 
 export default function Footer() {
   return (
@@ -11,12 +13,15 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <h2 className="text-white font-extrabold text-2xl mb-4">
-              ItsAll4U
-            </h2>
-            <p className="text-gray-300 max-w-xs leading-relaxed">
-              Transformamos ideias em resultados reais para marcas que querem crescer .
-            </p>
+            <Image
+                    src="/itsall/logo.png"
+                    alt="Logo"
+                    width={250}
+                    height={150}
+                    className="object-contain bg-white invert mb-4"
+                    priority
+                  />
+           
           </div>
 
           {/* EXPLORAR */}
@@ -25,10 +30,35 @@ export default function Footer() {
               Explorar
             </h3>
             <ul className="space-y-3 text-gray-300">
-              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/">Lar</Link></li>
-              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/OqueFizemos">O que fazemos</Link></li>
-              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/SobreNos">Sobre nós</Link></li>
-              <li className="hover:text-blue-500 cursor-pointer transition"><Link href="/enviarEmail">Contacto</Link></li>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li>
+                  <Link href="/" className="flex items-center gap-3 hover:text-blue-500 transition">
+                    <BiHome size={18} />
+                    Lar
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/OqueFizemos" className="flex items-center gap-3 hover:text-blue-500 transition">
+                    <BiBriefcase size={18} />
+                    O que fazemos
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/SobreNos" className="flex items-center gap-3 hover:text-blue-500 transition">
+                    <BiUser size={18} />
+                    Sobre nós
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/enviarEmail" className="flex items-center gap-3 hover:text-blue-500 transition">
+                    <BiEnvelope size={18} />
+                    Contacto
+                  </Link>
+                </li>
+              </ul>
             </ul>
           </div>
 
@@ -69,9 +99,12 @@ export default function Footer() {
 
         {/* DIVISOR */}
         <div className="border-t border-gray-800 mt-16 pt-6 text-center">
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.
-          </p>
+          <div className="text-gray-400 text-sm">
+            <p className="mb-4 lg:mb-1 font-semibold">Transformamos ideias em resultados reais para marcas que querem crescer .</p>
+             <p>© {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.</p>  
+        
+            </div>
+          
         </div>
 
       </div>

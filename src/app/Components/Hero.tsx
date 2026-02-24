@@ -61,21 +61,30 @@ export default function Hero() {
           {/* OVERLAY no hero */}
           <div className="absolute inset-0 bg-black/15" />
 
-          {/* CONTEÚDO */}
-          <div className="relative z-10 h-full flex items-center px-8 md:px-20">
-            <div className="max-w-2xl text-white animate-fadeUp">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
-                {slide.title}
-              </h1>
-              <p className="text-lg text-gray-200 mb-8">
-                {slide.subtitle}
-              </p>
+      
+         {/* CONTEÚDO */}
+              <div className="absolute inset-0 flex items-center">
+                <div className="max-w-[1500px] mx-auto px-6 w-full">
+                  <div className="max-w-2xl text-white animate-fadeUp">
 
-              <a href="/Contacto" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
-                Fale Connosco →
-              </a>
-            </div>
-          </div>
+                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight mb-4">
+                      {slide.title}
+                    </h1>
+
+                    <p className="text-lg text-gray-200 mb-8">
+                      {slide.subtitle}
+                    </p>
+
+                    <a
+                      href="/Contacto"
+                      className="inline-block px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
+                    >
+                      Fale Connosco →
+                    </a>
+
+                  </div>
+                </div>
+              </div>
         </div>
       ))}
 

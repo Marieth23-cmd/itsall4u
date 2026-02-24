@@ -26,7 +26,8 @@ export default function Convite() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
         {/* CARD TEXTO */}
-        <div className="border border-blue-800/40 rounded-xl p-10 flex flex-col justify-between transition-all duration-300 hover:border-blue-800 hover:bg-blue-50 cursor-pointer">
+        <div className="border border-blue-800/60 rounded-xl p-10 flex flex-col justify-between transition-all 
+        duration-300 hover:border-blue-800 hover:bg-blue-50 cursor-pointer">
           <div>
             <h1 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-black mb-4">
               Trabalhe Conosco

@@ -44,11 +44,11 @@ const CloseMenuOpen = ()=>{
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed top-6 left-0 right-0 z-20">
-  <div className="max-w-[1500px] mx-auto px-6 md:px-8 py-4 flex items-center justify-between bg-white/90 backdrop-blur-md rounded-full shadow-sm">
+    <header className="fixed left-0 right-0 z-20">
+  <div className=" mx-auto px-6 md:px-8 py-4 flex items-center justify-between bg-white backdrop-blur-md  shadow-sm">
 
     {/* LEFT */}
-    <a href="/" className="flex items-center">
+    <a href="/" className="lg:ml-44">
       <Image
         src="/itsall/logo.png"
         alt="Logo"

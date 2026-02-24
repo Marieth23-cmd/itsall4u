@@ -12,9 +12,10 @@ export default function Home() {
      <Header/>
      <Hero/>
      <Apresentacao/>
-      <Empresas/>
+     
+       <Empresas/>
      <Visao/>
-    
+   
       <Convite/>
      <Footer/>
     </div>

@@ -48,21 +48,30 @@ export default function SobreNos() {
       fill
       className="object-cover"
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
-    <div className="absolute inset-0 flex items-center justify-center md:justify-start px-6 md:px-20">
-      <div className="max-w-full md:max-w-3xl text-center md:text-left py-10 md:py-0">
-        <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-snug mb-4">
-          Somos uma agência criativa moderna e estratégica
-        </h1>
-        <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6 max-w-md mx-auto md:mx-0">
-          Estratégia, design e comunicação para marcas que procuram crescimento sustentável.
-        </p>
-        <a href="/enviarEmail" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition">
-          Fale Connosco →
-        </a>
-      </div>
+    <div className="absolute inset-0 flex items-center">
+  <div className="max-w-[1500px] mx-auto px-6 w-full">
+    <div className="max-w-3xl text-center md:text-left">
+
+      <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-snug mb-4">
+        Somos uma agência criativa moderna e estratégica
+      </h1>
+
+      <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6">
+        Estratégia, design e comunicação para marcas que procuram crescimento sustentável.
+      </p>
+
+      <a
+        href="/enviarEmail"
+        className="inline-block px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
+      >
+        Fale Connosco →
+      </a>
+
     </div>
   </div>
+</div>
+</div>
+    
 </div>
 
 
@@ -86,7 +95,7 @@ export default function SobreNos() {
 
   {/* TEXTO */}
   <div className="w-full lg:w-1/2 flex flex-col justify-center">
-    <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-6">
+    <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl leading-tight text-black mb-6">
       NÓS SOMOS O PARCEIRO CERTO PARA A SUA MARCA
     </h1>
 
