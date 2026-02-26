@@ -15,7 +15,7 @@ export default function Email() {
 
             <h1 className="text-3xl lg:text-5xl font-semibold leading-tight text-black mb-6">
               Prontos para elevar
-              <span className="block text-[#C6A75E]">
+              <span className="block text-yellow-400">
                 a sua marca?
               </span>
             </h1>
