@@ -57,7 +57,7 @@ export default function Convite() {
 
         {/* CARROSSEL */}
         <div className="flex flex-col gap-6">
-          <div className="relative rounded-xl overflow-hidden w-full h-[380px] lg:h-[450px] bg-gray-100">
+          <div className="relative rounded-xl overflow-hidden w-full h-[500px] lg:h-[650px] bg-gray-100">
             <Image
               key={currentIndex}
               src={imagens[currentIndex]}

@@ -1,8 +1,10 @@
+"use client"
 import Footer from "@/app/Components/Footer"
 import Header from "@/app/Components/Header"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { CgArrowLongRight } from "react-icons/cg"
+import { useState } from "react"
 
 type Props = {
   params: {
@@ -15,7 +17,7 @@ const empresas = [
     slug: "lucrum-trust",
     nome: "LUCRUM TRUST",
     descricao: "Projetos de branding e website institucional.",
-    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772119468/lucrumcapa_ltibr1.jpg", 
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772125016/fotolucrum_pcx7tj.webp", 
     trabalhos: [
       "/trabalhosfeitosE/portlucrum1.png",
       "/trabalhosfeitosE/portlucrum2.png",
@@ -207,144 +209,137 @@ const empresas = [
 
 export default function EmpresaPage({ params }: Props) {
   const empresa = empresas.find(e => e.slug === params.slug)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   if (!empresa) {
     return notFound()
   }
 
+  const media = [
+    ...(empresa.trabalhos?.map(item => ({ type: "image", src: item })) || []),
+    ...(empresa.videos?.map(item => ({ type: "video", src: item })) || [])
+  ]
+
   return (
-    <div >
+    <div className="bg-white">
       <Header />
 
-      {/* HERO COM CAPA */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="max-w-[1500px] mx-auto">
-         
+      {/* HERO */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Foto + Descrição lado a lado */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Imagem à esquerda */}
-            <div className="overflow-hidden rounded-lg shadow-md">
-              <Image
-                src={empresa.fotoPerfil}
-                alt={empresa.nome}
-                width={400}
-                height={400}
-                className="w-full h-[350] lg:h-[600px] object-cover"
-              />
-            </div>
-
-            {/* Texto à direita */}
-            <div className="space-y-6">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
-                {empresa.nome}
-              </h1>
-
-              <p className="text-gray-600 text-lg leading-relaxed">
-                {empresa.descricao}
-              </p>
-
-              <p className="text-gray-500 text-lg">
-                Conheça alguns trabalhos e projetos desenvolvidos em parceria com esta marca. 
-                Apresentamos uma seleção cuidadosa de designs gráficos e vídeos editados 
-                que refletem nossa expertise e criatividade.
-              </p>
-
-             
-            </div>
+          <div className="overflow-hidden rounded-2xl shadow-lg ">
+            <Image
+              src={empresa.fotoPerfil}
+              alt={empresa.nome}
+              width={100}
+              height={100}
+              className="w-full h-[450px] lg:h-[600px] object-cover "
+            />
           </div>
+
+          <div className="space-y-8">
+            <h1 className="text-4xl lg:text-6xl font-semibold text-black">
+              {empresa.nome}
+            </h1>
+
+            {/* Linha amarela elegante */}
+            <div className="w-20 h-[3px] bg-yellow-400"></div>
+
+            <p className="text-gray-700 text-lg leading-relaxed max-w-xl">
+              {empresa.descricao}
+            </p>
+          </div>
+
         </div>
       </section>
 
+      {/* WEBSITE */}
       {empresa.website && (
-  <section className="py-20 px-6 ">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="lg:text-4xl font-light mb-6">
-        Website Desenvolvido
-      </h2>
+        <section className="pb-24 px-6 text-center">
+          <h2 className="text-3xl font-light mb-6">
+            Website Desenvolvido
+          </h2>
 
-      <a
-        href={empresa.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r
-         from-blue-600 to-blue-800 text-white text-[14px] lg:text-[16px] font-medium text-center 
-          hover:from-blue-700 hover:to-blue-900 transition max-w-56 mx-auto"
-      >
-        Visitar Website
-         <CgArrowLongRight className="text-2xl" />
-      </a>
-    </div>
-  </section>
-)}
-      
-
-
-      {/* SEÇÃO DE TRABALHOS - DESIGN GRÁFICO */}
-      
-     {empresa.trabalhos && empresa.trabalhos.length > 0 && (
-  <section className="py-14 lg:py-20 px-6">
-    <div className="max-w-[1500px] mx-auto">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-black mb-4">
-        Trabalhos de Design
-      </h2>
-
-      <p className="text-gray-600 mb-12 text-lg">
-        Seleção de designs gráficos criados para esta marca
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {empresa.trabalhos.map((trabalho, idx) => (
-          <div
-            key={idx}
-            className="group overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer bg-white"
+          <a
+            href={empresa.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full
+            bg-black text-white font-medium tracking-wide
+            transition-all duration-300
+            hover:bg-[#C6A75E] hover:text-black"
           >
-            <div className="relative overflow-hidden w-full h-[450px] lg:h-[600px]">
-              <Image
-                src={trabalho}
-                alt={`Trabalho ${idx + 1}`}
-                width={300}
-                height={300}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+            Visitar Website
+            <CgArrowLongRight className="text-2xl" />
+          </a>
+        </section>
+      )}
+
+      {/* GALERIA UNIFORME */}
+      {media.length > 0 && (
+        <section className="pb-28 px-6">
+          <div className="max-w-[1500px] mx-auto">
+
+            <h2 className="text-3xl lg:text-4xl font-semibold text-black mb-4">
+              Projetos Desenvolvidos
+            </h2>
+
+            <div className="w-16 h-[3px] bg-yellow-400 mb-12"></div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {media.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative overflow-hidden rounded-2xl shadow-md
+                  group cursor-pointer bg-white"
+                >
+                  {item.type === "image" ? (
+                    <Image
+                      src={item.src}
+                      alt={`Projeto ${index + 1}`}
+                      width={600}
+                      height={600}
+                      onClick={() => setSelectedImage(item.src)}
+                      className="w-full h-[600px] object-cover
+                      group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <video
+                      controls
+                      className="w-full h-[350px] object-cover"
+                    >
+                      <source
+                        src={item.src}
+                        type={`video/${item.src.split(".").pop()}`}
+                      />
+                    </video>
+                  )}
+                </div>
+              ))}
             </div>
+
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
+        </section>
+      )}
 
-      {empresa.videos && empresa.videos.length > 0 && (
-  <section className="py-14 lg:py-20 px-6 bg-white">
-    <div className="max-w-[1500px] mx-auto">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-black mb-4">
-        Vídeos Editados
-      </h2>
-
-      <p className="text-gray-600 mb-12 text-lg">
-        Vídeos corporativos editados para esta marca
-      </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {empresa.videos.map((video, idx) => (
-          <div key={idx}>
-            <video
-              controls
-              className="w-full aspect-video rounded-lg shadow-md"
-            >
-              <source
-                src={video}
-                type={`video/${video.split(".").pop()}`}
-              />
-              Seu navegador não suporta vídeo.
-            </video>
+      {/* MODAL GALERIA */}
+      {selectedImage && (
+        <div
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-30 p-6"
+        >
+          <div className="relative max-w-4xl w-full">
+            <Image
+              src={selectedImage}
+              alt="Preview"
+              width={600}
+              height={100}
+              className=" w-full lg:w-[700px]  lg:h-[800px] rounded-xl"
+            />
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
+        </div>
+      )}
 
       <Footer />
     </div>
