@@ -239,14 +239,14 @@ export default function EmpresaPage({ params }: Props) {
           </div>
 
           <div className="space-y-8">
-            <h1 className="text-4xl lg:text-6xl font-semibold text-black">
+            <h1 className="text-2xl lg:text-4xl font-semibold text-black">
               {empresa.nome}
             </h1>
 
             {/* Linha amarela elegante */}
             <div className="w-20 h-[3px] bg-yellow-400"></div>
 
-            <p className="text-gray-700 text-lg leading-relaxed max-w-xl">
+            <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-xl">
               {empresa.descricao}
             </p>
           </div>
