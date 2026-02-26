@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
+
 export default function Visao() {
   const items = [
     {
@@ -18,37 +19,41 @@ export default function Visao() {
   ];
 
   return (
-   
-    <section className="bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 py-20 lg:py-32 px-6 lg:h-[30rem]">
-      <div className="max-w-[1300px] mx-auto">
+    <section className="relative py-24 lg:py-32 px-6 bg-[#0c0c0c] overflow-hidden">
+      
+      {/* Círculos decorativos */}
+      <div className="absolute -top-20 -left-20 w-60 h-60 rounded-full bg-yellow-500/10 blur-3xl"></div>
+      <div className="absolute top-1/2 right-10 w-72 h-72 rounded-full bg-yellow-400/5 blur-2xl"></div>
+      <div className="absolute bottom-10 -right-32 w-64 h-64 rounded-full bg-yellow-500/20 blur-3xl"></div>
 
-         {/*enviando commit */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-
-          {items.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="text-white max-w-md"
-            >
-              <h3 className="text-2xl md:text-3xl font-semibold mb-6 tracking-tight">
+      <div className="relative max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="group"
+          >
+            {/* Título + seta */}
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-yellow-400">
                 {item.title}
               </h3>
+             
+            </div>
 
-              <div className="w-12 h-[2px] bg-white/40 mb-6"></div>
+            {/* Linha dourada */}
+            <div className="w-14 h-[2px] bg-yellow-500/80 mb-6 transition-all duration-300 group-hover:w-24"></div>
 
-              <p className="text-white/90 leading-relaxed text-base md:text-lg">
-                {item.text}
-              </p>
-            </motion.div>
-          ))}
-
-        </div>
-
+            {/* Texto */}
+            <p className="text-gray-300 leading-relaxed text-4xl md:text-lg">
+              {item.text}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
-  );
+  )
 }

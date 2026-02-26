@@ -1,10 +1,10 @@
 import Header from './Components/Header';
 import Hero from './Components/Hero';
 import Apresentacao  from './Components/Apresentacao';
-import Visao from './Components/Visao';
-import Empresas from './Components/Empresas';
 import Footer from './Components/Footer';
 import Convite from './Components/Convite';
+import Beneficios from './Components/beneficios';
+import Empresas from "./Components/Empresas";
 
 export default function Home() {
   return (
@@ -12,10 +12,9 @@ export default function Home() {
      <Header/>
      <Hero/>
      <Apresentacao/>
+     <Empresas/>
+     <Beneficios/>
      
-       <Empresas/>
-     <Visao/>
-   
       <Convite/>
      <Footer/>
     </div>

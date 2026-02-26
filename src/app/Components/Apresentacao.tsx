@@ -6,7 +6,7 @@ export default function Apresentacao() {
       <div
         className="
           w-full max-w-[1500px]
-          mx-auto px-6 md:px-8 py-14 lg:py-20
+          mx-auto px-6 md:px-8 py-14 lg:py-16
         
           gap-12 lg:gap-20
           items-center
@@ -18,7 +18,7 @@ export default function Apresentacao() {
             Quem Somos
           </h2>
 
-          <p className="text-lg text-gray-700 mb-8 w-full max-w-6xl">
+          <p className="text-lg lg:text-xl text-gray-800 mb-6 w-full max-w-6xl">
             Somos uma empresa de marketing dedicada a conectar marcas e pessoas de forma criativa e eficaz. 
             Com uma equipa apaixonada e experiente, transformamos ideias em estratégias de sucesso, 
             ajudando empresas a crescerem, fortalecerem a sua presença digital e conquistarem novos públicos. 
@@ -30,8 +30,8 @@ export default function Apresentacao() {
             href="/OqueFizemos"
             className="
               group inline-flex items-center gap-3
-              text-blue-600 font-medium text-lg
-              hover:text-blue-900 transition
+              text-yellow-400 font-medium text-lg
+              hover:text-yellow-800 transition
             "
           >
             Conheça nossos serviços

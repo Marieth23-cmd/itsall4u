@@ -15,7 +15,7 @@ const empresas = [
     slug: "lucrum-trust",
     nome: "LUCRUM TRUST",
     descricao: "Projetos de branding e website institucional.",
-    fotoPerfil: "/CapaEmpresas/lucrum.jpg", 
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772119468/lucrumcapa_ltibr1.jpg", 
     trabalhos: [
       "/trabalhosfeitosE/portlucrum1.png",
       "/trabalhosfeitosE/portlucrum2.png",
@@ -24,15 +24,13 @@ const empresas = [
        "/trabalhosfeitosE/portlucrum5.png",
       "/trabalhosfeitosE/portlucrum6.png",
     ],
-    videos: [
-      "/video/videolucrum1.mp4"
-    ]
+   
   },
   {
     slug: "aipex",
     nome: "AIPEX",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/aipex.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117697/aipex_lvsazw.png",
     trabalhos: [
       "/trabalhosfeitosE/portbwizer6.png",
      "/trabalhosfeitosE/portbwizer2.png",
@@ -41,16 +39,13 @@ const empresas = [
      "/trabalhosfeitosE/portbwizer4.png",
      "/trabalhosfeitosE/portbwizer1.png",
     ],
-    videos: [
-     "/video/videolucrum1.mp4"
-      
-    ]
+   
   },
   {
     nome: "CABSHIP",
     slug: "cabship",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/Cabship.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117630/cabship_weem3b.png",
     trabalhos: [
       "/trabalhosfeitosE/portbwizer6.png",
      "/trabalhosfeitosE/portbwizer2.png",
@@ -60,16 +55,13 @@ const empresas = [
      "/trabalhosfeitosE/portbwizer1.png",
     
     ],
-    videos: [
-     "/video/videolucrum1.mp4"
-     
-    ]
+    
   },
   {
     nome: "MANGAIS GOLF RESORT",
     slug: "mangais-resort",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/mangais.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772118145/resortmangais_yvtelw.jpg",
      trabalhos: [
        "/trabalhosfeitosE/portbwizer6.png",
      "/trabalhosfeitosE/portbwizer2.png",
@@ -79,16 +71,13 @@ const empresas = [
      "/trabalhosfeitosE/portbwizer1.png",
       
     ],
-    videos: [
-     "/video/videolucrum1.mp4"
-     
-    ]
+   
   },
   {
     nome: "FARMACLINIC",
     slug: "farmaclinic",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/farmaclinic.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772118550/farmaclinic_azehky.png",
     trabalhos: [
       "/trabalhosfeitosE/portfarma1.png",
       "/trabalhosfeitosE/portfarma2.png",
@@ -98,16 +87,13 @@ const empresas = [
       "/trabalhosfeitosE/portfarma6.png",
       
     ],
-    videos: [
-      "/trabalhosfeitosE/Farmavideo1.mp4",
-     
-    ]
+    
   },
   {
     nome: "FLYHOTEL",
     slug: "fly-hotel",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/flyhotel.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772119213/flyhotel_rkl9ee.webp",
    trabalhos: [
       "/trabalhosfeitosE/portflyhotel1.png",
        "/trabalhosfeitosE/portflyhotel2.png",
@@ -117,16 +103,14 @@ const empresas = [
            "/trabalhosfeitosE/portfly6.png",
         
     ],
-    videos: [
-      "/video/videoflyhotel.mp4"
-    ]
+    
   },
   
   {
   nome: "HIDRAULICA DE ANGOLA",
   slug: "hidraulica-angola",
   descricao: "Desenvolvimento de website institucional.",
-  fotoPerfil: "/CapaEmpresas/hidraulicaangola.png",
+  fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117186/hidraulicaangola_pstvyl.png",
   website: "https://hidraulicadeangola.com/",
 },
  
@@ -134,7 +118,7 @@ const empresas = [
     nome: "ALIANÇA SEGUROS",
     slug: "alianca-seguros",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/portalianca6.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117185/portalianca6_eswn0i.png",
     trabalhos: [
       "/trabalhosfeitosE/portalianca1.png",
      "/trabalhosfeitosE/portalianca2.png",
@@ -145,15 +129,13 @@ const empresas = [
 
       
     ],
-    videos: [
-      "/video/videolucrum1.mp4"
-    ]
+    
   },
   {
     nome: "CONHECER ANGOLA",
     slug: "conhecer-angola",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/conhecerangola.jpg",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117394/conhecerangola_fq6mha.jpg",
      trabalhos: [
        "/trabalhosfeitosE/portbwizer6.png",
      "/trabalhosfeitosE/portbwizer2.png",
@@ -162,15 +144,13 @@ const empresas = [
      
       
     ],
-    videos: [
-      "/video/videolucrum1.mp4"
-    ]
+    
   },
   {
     nome: "ACADEMIA DE LIDERANÇA E GESTÃO DE LUANDA",
     slug: "academia-luanda",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/academia.jpg",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772116656/academia_rfpyw4.jpg",
      trabalhos: [
       "/trabalhosfeitosE/portacademia.png",
        "/trabalhosfeitosE/portacademia2.png",
@@ -183,12 +163,11 @@ const empresas = [
     nome: "WHATABOUT AGENCY ANGOLA",
     slug: "waa",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/waaa.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015011/waaa_xgirlm.png",
     videos:
      [
       "/video/videowaaa.mp4",
-       "/video/videowaaa.mp4",
-        "/video/videowaaa.mp4",
+      
       
     ]
   },
@@ -196,7 +175,7 @@ const empresas = [
     nome: "BWIZER",
     slug: "bwizer",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil: "/CapaEmpresas/Bwizer.png",
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117476/bwizer_ozgw1a.jpg",
      trabalhos: [
      "/trabalhosfeitosE/portbwizer6.png",
      "/trabalhosfeitosE/portbwizer2.png",
@@ -206,15 +185,13 @@ const empresas = [
      "/trabalhosfeitosE/portbwizer1.png",
       
     ],
-    videos: [
-      "/video/videolucrum1.mp4"
-    ]
+   
   },
   {
     nome: "GEOSURVEYS",
     slug: "geosurveys",
     descricao: "Campanhas estratégicas e marketing digital.",
-    fotoPerfil:"/CapaEmpresas/geo.png",
+    fotoPerfil:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117859/geo_m6jwld.png",
     trabalhos: [
        "/trabalhosfeitosE/portbwizer6.png",
      "/trabalhosfeitosE/portbwizer2.png",
@@ -224,9 +201,7 @@ const empresas = [
      "/trabalhosfeitosE/portbwizer1.png",
       
     ],
-    videos: [
-      "/video/videolucrum1.mp4"
-    ]
+   
   },
 ]
 
@@ -269,7 +244,7 @@ export default function EmpresaPage({ params }: Props) {
                 {empresa.descricao}
               </p>
 
-              <p className="text-gray-500 text-base">
+              <p className="text-gray-500 text-lg">
                 Conheça alguns trabalhos e projetos desenvolvidos em parceria com esta marca. 
                 Apresentamos uma seleção cuidadosa de designs gráficos e vídeos editados 
                 que refletem nossa expertise e criatividade.

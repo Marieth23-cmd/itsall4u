@@ -9,14 +9,14 @@ const slides = [
     subtitle: "Criatividade, tecnologia e visão para gerar crescimento real.",
   },
   {
-    type: "video",
-    src: "/equipa/videoHero.mp4",
+    type: "image",
+    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772011752/fixe_czzqa4.jpg",
     title: "Criatividade com propósito",
     subtitle: "Design e comunicação pensados para resultados.",
   },
   {
     type: "image",
-    src: "/equipa/hero2.jpg",
+    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015814/b1_wmvbtm.jpg",
     title: "Resultados que fazem a diferença",
     subtitle: "Transformamos desafios em soluções eficazes.",
   },
@@ -75,12 +75,7 @@ export default function Hero() {
                       {slide.subtitle}
                     </p>
 
-                    <a
-                      href="/Contacto"
-                      className="inline-block px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
-                    >
-                      Fale Connosco →
-                    </a>
+                  
 
                   </div>
                 </div>

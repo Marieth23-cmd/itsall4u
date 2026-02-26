@@ -62,30 +62,36 @@ const CloseMenuOpen = ()=>{
     {/* RIGHT */}
     <nav className="flex items-center gap-8 whitespace-nowrap">
 
-      <a href="/OqueFizemos" className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition">
+      <a href="/OqueFizemos" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
         O que fazemos
       </a>
 
-      <a href="/SobreNos" className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition">
+      <a href="/SobreNos" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
         Sobre nós
       </a>
 
-      <Link href="/portfolio" className="hidden lg:block text-[16px] font-medium text-blue-900 hover:text-blue-600 transition">
+      <Link href="/portfolio" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
         Portfólio
       </Link>
 
-      <span className="hidden lg:block text-[16px] font-medium text-blue-900/70 hover:text-blue-900 cursor-pointer transition">
+      <span className="hidden lg:block text-[16px] font-medium text-black/60 hover:text-text/80 cursor-pointer transition">
         FR
       </span>
 
-      <a href="/enviarEmail" className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white text-[16px] font-medium hover:from-blue-700 hover:to-blue-900 transition">
-        Entre em contacto
-        <CgArrowLongRight className="text-2xl" />
-      </a>
+          <a
+  href="/enviarEmail"
+  className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full 
+  bg-[#f5c044] text-black text-[16px] font-medium 
+  transition-all duration-300 
+  hover:opacity-90"
+>
+  Entre em contacto
+  <CgArrowLongRight className="text-2xl text-black" />
+</a>
 
       <FaBars
         onClick={() => setIsMenuOpen(true)}
-        className="lg:hidden text-2xl text-blue-900 cursor-pointer ml-4"
+        className="lg:hidden text-2xl text-black cursor-pointer ml-4"
       />
     </nav>
   </div>
@@ -118,9 +124,9 @@ const CloseMenuOpen = ()=>{
 
         <nav className="px-6 mt-6 flex-1">
           <ul className="flex flex-col gap-6 text-lg">
-            <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-blue-700">O que fazemos</a></li>
-            <li><a href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-blue-700">Sobre nós</a></li>
-            <li><a href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-blue-700">Portfólio</a></li>
+            <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">O que fazemos</a></li>
+            <li><a href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Sobre nós</a></li>
+            <li><a href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Portfólio</a></li>
           </ul>
         </nav>
 
@@ -132,9 +138,9 @@ const CloseMenuOpen = ()=>{
           </button>
 
           <div className="mt-6">
-            <a href="/Contacto"
+            <a href="/enviarEmail"
               onClick={CloseMenuOpen}
-              className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium"
+              className="w-full px-6 py-3 rounded-lg bg-yellow-400 text-white font-medium"
             >
               Entre em contacto
             </a>

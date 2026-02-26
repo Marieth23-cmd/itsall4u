@@ -14,49 +14,49 @@ import { TfiPalette } from "react-icons/tfi";
 
 const servicos = [
   {
-    icone: <HiOutlineChartBar className="w-8 h-8 text-blue-800" />,
+    icone: <HiOutlineChartBar className="w-8 h-8 text-yellow-500" />,
     title: "Planeamento Estratégico", 
     description:
       "Desenvolvemos planos personalizados que unem inovação e foco em resultados, aproximando marcas do público certo.",
   },
   { 
-    icone: <HiOutlineGlobeAlt className="w-8 h-8 text-blue-800" />,
+    icone: <HiOutlineGlobeAlt className="w-8 h-8 text-yellow-500" />,
     title: "Comunicação 360°",
      description:
       "Criamos campanhas integradas que conectam marcas e públicos de forma eficaz e impactante.",
   },
   {
-   icone: <TfiPalette className="w-8 h-8 text-blue-800" />, 
+   icone: <TfiPalette className="w-8 h-8 text-yellow-500" />, 
     title: "Design e Experiências Visuais",
     description:
       "Construímos identidades visuais marcantes e soluções de design aplicadas ao digital e físico, sempre com modernidade.",
   },
   {
-    icone: <MdEvent className="w-8 h-8 text-blue-800" />,
+    icone: <MdEvent className="w-8 h-8 text-yellow-500" />,
      title: "Eventos & Activação",
     description:
       "Criamos eventos que unem criatividade e organização, transformando interações em experiências memoráveis para as marcas.",
   },
   {
-      icone: <FiVideo className="w-8 h-8 text-blue-800" />,
+      icone: <FiVideo className="w-8 h-8 text-yellow-500" />,
        title: "Media",
       description:
       "Planeamos canais eficazes e gerimos investimentos com inteligência, garantindo visibilidade e retorno sustentável.",
   },
   {
-    icone: <AiOutlineLineChart className="w-8 h-8 text-blue-800" />,
+    icone: <AiOutlineLineChart className="w-8 h-8 text-yellow-500" />,
     title: "Gestão de Performance",
     description:
       "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
   },
   {
-    icone: <RiGovernmentLine className="w-8 h-8 text-blue-800" />,
+    icone: <RiGovernmentLine className="w-8 h-8 text-yellow-500" />,
      title: "Comunicação Institucional",
     description:
       "Desenvolvemos estratégias de comunicação que fortalecem a imagem e a reputação das marcas institucionais.",
   },
   {
-   icone: <HiOutlineCode className="w-8 h-8 text-blue-800" />, 
+   icone: <HiOutlineCode className="w-8 h-8 text-yellow-500" />, 
     title: "Desenvolvimento Web",
     description:
       "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
@@ -66,28 +66,28 @@ const servicos = [
 
 const trabalhos = [
   {
-    image: "/services/servico1.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014973/servico1_ujxll4.png",
   },
   {
-    image: "/services/servico2.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014974/servico2_zwjfap.png",
   },
   {
-    image: "/services/servico3.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014948/Natal_-_Bwizer_gbplhw.png",
   },
   {
-    image: "/services/servico4.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014970/portalianca2_umeqgj.png",
   },
   {
-    image: "/services/servico5.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117185/servico3_rlv2an.png",
   },
   {
-    image: "/services/servico6.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117185/portalianca6_eswn0i.png",
   },
   {
-    image: "/services/servico7.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117394/conhecerangola_fq6mha.jpg",
   },
   {
-    image: "/services/servico8.jpg",
+    image: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1771949559/portflyhotel4_rqpc4j.png",
   },
 ];
 export default function OQueFazemos() {
@@ -121,7 +121,7 @@ export default function OQueFazemos() {
               className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
             >
 
-              <div className="mb-6 text-blue-800 transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-6 text-yellow-400 transition-transform duration-300 group-hover:scale-110">
                 {item.icone}
               </div>
 
@@ -155,7 +155,8 @@ export default function OQueFazemos() {
         {trabalhos.map((item, index) => (
           <div
             key={index}
-            className="relative min-w-[250px] md:min-w-[400px] h-[320px] md:h-[560px] snap-center rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+            className="relative min-w-[250px] md:min-w-[400px] h-[320px] md:h-[560px] snap-center rounded-2xl overflow-hidden 
+            shadow-lg transition-transform duration-300 hover:scale-[1.02]"
           >
             <Image
               src={item.image}
@@ -169,7 +170,7 @@ export default function OQueFazemos() {
         <div className="relative min-w-[200px] md:min-w-[260px] h-[280px] md:h-[520px] flex items-center justify-center">
           <a
             href="/portfolio"
-            className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-800 flex items-center justify-center text-white text-3xl hover:scale-105 transition"
+            className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-yellow-500 flex items-center justify-center text-white text-3xl hover:scale-105 transition"
           >
             +
           </a>
@@ -198,17 +199,23 @@ export default function OQueFazemos() {
         estratégia e execução criativa.
       </p>
 
-      <div className="mt-6 inline-flex items-center gap-3 group cursor-pointer w-fit">
-        <a href="/enviarEmail" className="text-lg font-medium text-blue-800">
-          Entre em contacto
-        <CgArrowLongRight className="text-2xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />  
-        </a>
-      </div>
+       <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
+            <a 
+              href="/enviarEmail" 
+              className="text-lg font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
+            >
+              Entre em contacto
+            </a>
+
+            <CgArrowLongRight 
+              className="text-3xl text-yellow-400 transition-all duration-300 group-hover:translate-x-2" 
+            />
+          </div>
     </div>
 
     <div className="w-full lg:flex-1 relative h-[280px] sm:h-[320px] lg:h-[550px] bg-[#F8FAFC]">
       <Image
-        src="/services/planeamento.png"
+        src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1772123563/planeamento_auaq6b.webp"
         alt="Planeamento estratégico"
         fill
         className="object-cover"

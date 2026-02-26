@@ -4,85 +4,66 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
-const logosTop = [
-  "/empresas/empresa1.png",
-  "/empresas/empresa2.png",
-  "/empresas/empresa3.png",
-  "/empresas/empresa4.png",
-  "/empresas/empresa5.png",
-  "/empresas/empresa6.png",
-  "/empresas/empresa7.png",
-  "/empresas/empresa8.png",
-  "/empresas/empresa9.png",
-  "/empresas/empresa10.png",
-  "/empresas/empresa21.png",
-  "/empresas/empresa22.png",
-];
+const allLogos = [
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017961/empresawongo_p50zbs.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017959/empresawaa_d3jgar.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017953/empresaubri_yae8bm.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017953/empresasuper_vhceyu.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017952/empresarevitur_llqcf2.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017952/empresarise_u2865f.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017949/empresamuseo_zekqan.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017949/empresamakey_hmhfeg.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017943/empresahidraulica_oc9yf9.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017942/empresageo_vvyjkk.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017941/empresafarma_xcb9om.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017940/empresaequilibrium_rx7kvz.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017938/empresacabship_z4in4x.jpg",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017936/empresabwizer_gnabrt.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017932/empresabet_zthppi.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresa1_rlaokj.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017930/empresaalianca_e8q5w7.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresaangola_mgzcal.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresaacademia_krzita.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014945/oddm_tz1zoz.png"
 
-const logosBottom = [
-  "/empresas/empresa11.png",
-  "/empresas/empresa12.png",
-  "/empresas/empresa13.png",
-  "/empresas/empresa14.png",
-  "/empresas/empresa15.png",
-  "/empresas/empresa16.png",
-  "/empresas/empresa17.png",
-  "/empresas/empresa18.png",
-  "/empresas/empresa19.png",
-  "/empresas/empresa20.png",
-  "/empresas/empresa23.png",
-  "/empresas/empresa24.png",
 ];
 
 export default function CarrosselEmpresas() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [rightClicked, setRightClicked] = useState(false);
-  const [isAtEnd, setIsAtEnd] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false);
 
   const checkScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      
-      // Verifica se está no início
       setIsAtStart(scrollLeft <= 10);
-      
-      // Verifica se está no final
       setIsAtEnd(scrollLeft + clientWidth >= scrollWidth - 10);
     }
   };
 
   const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-      setTimeout(checkScroll, 300);
-    }
+    scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" });
+    setTimeout(checkScroll, 300);
   };
 
   const scrollRight = () => {
-    setRightClicked(true);
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-      setTimeout(checkScroll, 300);
-    }
+    scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" });
+    setTimeout(checkScroll, 300);
   };
 
-  const allLogos = [...logosTop, ...logosBottom];
-
   return (
-    <section className="py-20 relative">
+    <section className=" py-16 relative bg-white">
       <div className="max-w-[1500px] mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center mb-12 ">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-12">
           Marcas que confiam no nosso trabalho
         </h2>
 
-        {/* CARROSSEL */}
         <div className="relative">
           {/* Botão esquerda */}
-          {rightClicked && !isAtStart && (
+          {!isAtStart && (
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-white p-2 shadow-lg z-5"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-100 text-black p-4 rounded-full  z-10 transition shadow-lg hover:shadow-xl"
             >
               <CgChevronLeft className="text-2xl" />
             </button>
@@ -92,16 +73,17 @@ export default function CarrosselEmpresas() {
           <div
             ref={scrollRef}
             onScroll={checkScroll}
-            className="flex gap-4 overflow-x-auto scroll-smooth px-10 hide-scrollbar"
+            className="flex gap-8 overflow-x-auto scroll-smooth px-4 hide-scrollbar py-2"
           >
             {allLogos.map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 flex  flex-col items-center justify-center w-28 h-14 lg:w-36 lg:h-20 opacity-80 hover:opacity-100 transition mb-3 "
+                className="flex-shrink-0 w-28 h-28 flex items-center justify-center filter grayscale 
+                opacity-70 hover:grayscale-0  transition bg-black/5 rounded-full p-4"
               >
                 <Image
                   src={logo}
-                  alt={ `Cliente${idx}`}
+                  alt={`Cliente ${idx + 1}`}
                   width={150}
                   height={80}
                   className="object-contain max-h-full max-w-full"
@@ -114,15 +96,13 @@ export default function CarrosselEmpresas() {
           {!isAtEnd && (
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 hover:bg-gray-400 text-white p-2  shadow-lg z-5"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-black/20 text-black p-2 rounded-full shadow-md z-10 transition"
             >
               <CgChevronRight className="text-2xl" />
             </button>
           )}
         </div>
       </div>
-
-      
     </section>
   );
 }

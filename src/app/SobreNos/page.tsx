@@ -1,6 +1,7 @@
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Image from "next/image"
+import Visao from "../Components/Visao";
 
 const equipa=[
 
@@ -10,17 +11,17 @@ const equipa=[
     funcao:"CEO"
   },
  {
-    image:"/equipa/Jelson.png",
+    image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014954/Jelson_vkgii9.jpg",
     name:"Jelson Quizunda",
     funcao:"Director Criativo"
   },
    {
-    image:"/equipa/Jorge.png",
+    image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014954/Jorge_lrfrn2.jpg",
     name:"Jorge Miranda",
     funcao:"Design Gráfico"
   },
    {
-    image:"/equipa/Alicia.png",
+    image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772111593/Alicia_zzjgz2.jpg",
     name:"Alicia Vanessa",
     funcao:"Design Gráfico"
   },
@@ -40,10 +41,10 @@ export default function SobreNos() {
     <section>
       <Header />
 
-   <div className="relative w-full h-[80vh] lg:h-[90vh]">
-  <div className="relative h-[80vh] md:h-[90vh] w-full">
+   <div className="relative w-full h-[80vh] lg:h-[60vh]">
+  <div className="relative h-[80vh] md:h-[60vh] w-full">
     <Image
-      src="/equipa/hero2.jpg"
+      src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015814/b1_wmvbtm.jpg"
       alt="Equipe"
       fill
       className="object-cover"
@@ -62,7 +63,7 @@ export default function SobreNos() {
 
       <a
         href="/enviarEmail"
-        className="inline-block px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition"
+        className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition inline-block lg:hidden"
       >
         Fale Connosco →
       </a>
@@ -73,6 +74,8 @@ export default function SobreNos() {
 </div>
     
 </div>
+
+    
 
 
 
@@ -107,7 +110,7 @@ export default function SobreNos() {
 
 </div>
 
-
+  <Visao/>
 
 {/* Equipa */}
 <div className="max-w-[1500px] mx-auto py-14 lg:py-20 px-6">
@@ -147,13 +150,11 @@ export default function SobreNos() {
             <p className="font-semibold text-lg text-black">
               {member.name}
             </p>
-            <p className="text-sm text-blue-800">
+            <p className="text-base text-yellow-400">
               {member.funcao}
              
             </p> 
-            <span className="text-blue-600 text-3xl -ml-[1px] transition-transform duration-300 group-hover:translate-x-2">
-            →
-          </span>
+           
           </div>
 
           {/* Seta azul longa */}

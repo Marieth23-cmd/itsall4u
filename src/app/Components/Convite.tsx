@@ -8,9 +8,10 @@ export default function Convite() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const imagens = [
-    "/equipa/images1.jpg",
-    "/equipa/images2.jpg",
-    "/equipa/images3.jpg",
+    "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122795/equipa1_ig03u1.png",
+    "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122795/equipa2_o6voqi.png",
+    "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122794/equipa3_w2eoau.png",
+    
   ];
 
   useEffect(() => {
@@ -26,24 +27,31 @@ export default function Convite() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
         {/* CARD TEXTO */}
-        <div className="border border-blue-800/60 rounded-xl p-10 flex flex-col justify-between transition-all 
-        duration-300 hover:border-blue-800 hover:bg-blue-50 cursor-pointer">
+        <div className="border border-yellow-100 rounded-xl p-10 flex flex-col justify-between 
+        transition-all duration-300 hover:border-yellow-100 hover:bg-yellow-50 cursor-pointer">
+
           <div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl  font-bold text-black mb-4">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black mb-4">
               Trabalhe Conosco
             </h1>
-            <p className="text-gray-700 text-lg leading-relaxed max-w-md">
+
+            <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md">
               Potencie o seu negócio com estratégia e inovação.
               Conecte-se com uma equipa criativa que transforma desafios em soluções reais.
             </p>
-
           </div>
 
           <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
-            <a href="/enviarEmail" className="text-lg font-medium text-blue-800">
+            <a 
+              href="/enviarEmail" 
+              className="text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#d6b464]"
+            >
               Entre em contacto
             </a>
-            <CgArrowLongRight className="text-3xl text-blue-600 transition-transform duration-300 group-hover:translate-x-2" />
+
+            <CgArrowLongRight 
+              className="text-3xl text-yellow-400 transition-all duration-300 group-hover:translate-x-2" 
+            />
           </div>
         </div>
 
@@ -55,7 +63,7 @@ export default function Convite() {
               src={imagens[currentIndex]}
               alt={`Equipa ${currentIndex + 1}`}
               fill
-              className="object-cover rounded-xl transition-opacity duration-700"
+              className="object-cover transition-opacity duration-700"
               priority
             />
           </div>
@@ -68,8 +76,8 @@ export default function Convite() {
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "w-8 bg-blue-600"
-                    : "w-3 bg-blue-300/40 hover:bg-blue-400"
+                    ? "w-8 bg-yellow-400"
+                    : "w-3 bg-black/20 hover:bg-black/40"
                 }`}
                 aria-label={`Ir para imagem ${index + 1}`}
               />

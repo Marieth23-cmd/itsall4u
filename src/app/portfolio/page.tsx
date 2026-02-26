@@ -5,81 +5,81 @@ import Link from "next/link"
 
  const imagensEmpresas =[
     {
-        image:"/CapaEmpresas/lucrum.jpg",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772119468/lucrumcapa_ltibr1.jpg",
         nome:"LUCRUM TRUST",
         icone:"→",
         slug:"lucrum-trust"
     },
      {
-        image:"/CapaEmpresas/aipex.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117697/aipex_lvsazw.png",
         nome:"AIPEX ",
         icone:"→",
         slug:"aipex"
     },
      {
-        image:"/CapaEmpresas/cabship.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117630/cabship_weem3b.png",
         nome:"CABSHIB ",
         icone:"→",
         slug:"cabship"
     },
      {
-        image:"/CapaEmpresas/mangais.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772118145/resortmangais_yvtelw.jpg",
         nome:"MANGAIS GOLF RISORT ",
         icone:"→",
         slug:"mangais-resort"
     },
      {
-        image:"/CapaEmpresas/Farmaclinic.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772118550/farmaclinic_azehky.png",
         nome:"FARMACLINIC ",
         icone:"→",
         slug:"farmaclinic"
     },
 
      {
-        image:"/CapaEmpresas/flyhotel.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772119213/flyhotel_rkl9ee.webp",
         nome:"FLYHOTEL",
         icone:"→",
         slug:"fly-hotel"
     },
      {
-        image:"/CapaEmpresas/hidraulicaangola.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117186/hidraulicaangola_pstvyl.png",
         nome:"HIDRAULICA DE ANGOLA",
         icone:"→",
         slug:"hidraulica-angola"
     },
      {
-        image:"/CapaEmpresas/alianca.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117185/portalianca6_eswn0i.png",
         nome:"ALIANÇA SEGUROS ",
         icone:"→",
         slug:"alianca-seguros"
     },
     {
-        image:"/CapaEmpresas/conhecerangola.jpg",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117394/conhecerangola_fq6mha.jpg",
         nome:"CONHECER ANGOLA ",
         icone:"→",
         slug:"conhecer-angola"
     },
     {
-        image:"/CapaEmpresas/academia.jpg",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772116656/academia_rfpyw4.jpg",
         nome:"ACADEMIA DE LIDERENÇA E GESTÃO DE LUANDA ",
         icone:"→",
         slug:"academia-luanda"
     },
     {
-        image:"/CapaEmpresas/waaa.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015011/waaa_xgirlm.png",
         nome:"WHATABOUT AGENCY ANGOLA",
         icone:"→",
         slug:"waa"
     },
      {
-        image:"/CapaEmpresas/Bwizer.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117476/bwizer_ozgw1a.jpg",
         nome:"BWIZER",
         icone:"→",
         slug:"bwizer"
         
     },
     {
-        image:"/CapaEmpresas/geo.png",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117859/geo_m6jwld.png",
         nome:"GEOSURVEYS",
         icone:"→",
         slug:"geosurveys"
@@ -97,7 +97,7 @@ export default function Portfolio(){
                 <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-snug mb-8">
                      Portfólio
                   </h1>
-                  <p className="max-w-2xl text-gray-600">
+                  <p className="max-w-2xl text-gray-800 text-xl">
                     Combinamos criatividade, inovação e estratégia para fortalecer marcas, 
                     ampliar visibilidade e promover crescimento sustentável. 
                     Atuamos como parceiros de confiança, comprometidos em compreender 
@@ -122,7 +122,7 @@ export default function Portfolio(){
                     {image.nome}
                 </h2>
 
-                <span className="text-blue-400 font-bold text-2xl lg:text-3xl shrink-0">
+                <span className="text-yellow-400 font-bold text-2xl lg:text-3xl shrink-0">
                     {image.icone}
                 </span>
                 </div>
