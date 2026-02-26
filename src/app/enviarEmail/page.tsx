@@ -20,7 +20,7 @@ export default function Email() {
               </span>
             </h1>
 
-            <div className="w-16 h-[3px] bg-[#C6A75E] mb-8"></div>
+            <div className="w-16 h-[3px] bg-yellow-400 mb-8"></div>
 
             <p className="text-gray-700 text-lg leading-relaxed mb-12 max-w-md">
               Partilhe connosco os seus objetivos de negócio.
