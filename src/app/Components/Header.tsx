@@ -124,7 +124,7 @@ const CloseMenuOpen = ()=>{
 
         <nav className="px-6 mt-6 flex-1">
           <ul className="flex flex-col gap-6 text-lg">
-            <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">O que fazemos</a></li>
+            <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black ">O que fazemos</a></li>
             <li><a href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Sobre nós</a></li>
             <li><a href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Portfólio</a></li>
           </ul>

@@ -97,7 +97,7 @@ export default function OQueFazemos() {
       <Header />
 
       {/* HERO */}
-      <section className="pt-36 pb-12 px-6 max-w-[1500px] mx-auto text-center">
+      <section className="pt-28 lg:pt-36 pb-12 px-6 max-w-[1500px] mx-auto text-center">
         <div className="max-w-3xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -111,7 +111,7 @@ export default function OQueFazemos() {
       </section>
 
       {/* SERVIÇOS */}
-      <section className="pb-12 lg:pb-12 px-6 max-w-[1500px] mx-auto">
+      <section className="pb-10 lg:pb-12 px-6 max-w-[1500px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {servicos.map((item, index) => (
            <motion.div
@@ -129,7 +129,7 @@ export default function OQueFazemos() {
                 {item.title}
               </h3>
 
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
@@ -144,7 +144,7 @@ export default function OQueFazemos() {
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-4">
         Trabalhos Recentes
       </h2>
-      <p className="text-gray-600 text-base md:text-lg">
+      <p className="text-gray-700 text-lg md:text-xl">
         Projetos que refletem estratégia, criatividade e impacto real.
       </p>
     </div>
@@ -193,7 +193,7 @@ export default function OQueFazemos() {
         Parcerias estratégicas que impulsionam crescimento.
       </h2>
 
-      <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mb-10">
+      <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-xl mb-10">
         Trabalhamos lado a lado com marcas que procuram consistência,
         posicionamento forte e crescimento sustentável através de
         estratégia e execução criativa.
@@ -202,7 +202,7 @@ export default function OQueFazemos() {
        <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
             <a 
               href="/enviarEmail" 
-              className="text-lg font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
+              className="text-lg lg:text-xl font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
             >
               Entre em contacto
             </a>

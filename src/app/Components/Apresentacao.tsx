@@ -18,7 +18,7 @@ export default function Apresentacao() {
             Quem Somos
           </h2>
 
-          <p className="text-lg lg:text-xl text-gray-800 mb-6 w-full max-w-6xl">
+          <p className="text-lg lg:text-xl text-gray-700 mb-6 w-full max-w-6xl">
             Somos uma empresa de marketing dedicada a conectar marcas e pessoas de forma criativa e eficaz. 
             Com uma equipa apaixonada e experiente, transformamos ideias em estratégias de sucesso, 
             ajudando empresas a crescerem, fortalecerem a sua presença digital e conquistarem novos públicos. 

@@ -44,7 +44,7 @@ export default function Convite() {
           <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
             <a 
               href="/enviarEmail" 
-              className="text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#d6b464]"
+              className="text-lg lg:text-xl font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
             >
               Entre em contacto
             </a>

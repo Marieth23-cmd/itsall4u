@@ -99,8 +99,8 @@ export default function Footer() {
 
         {/* DIVISOR */}
         <div className="border-t border-gray-800 mt-16 pt-6 text-center">
-          <div className="text-gray-400 text-sm">
-            <p className="mb-4 lg:mb-1 text-sm">Transformamos ideias em resultados reais para marcas que querem crescer .</p>
+          <div className="text-gray-300 text-sm">
+            <p className="mb-4 lg:mb-1 text-sm lg:text-base">Transformamos ideias em resultados reais para marcas que querem crescer .</p>
              <p>© {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.</p>  
         
             </div>

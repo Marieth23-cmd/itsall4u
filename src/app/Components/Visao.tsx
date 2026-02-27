@@ -38,7 +38,7 @@ export default function Visao() {
           >
             {/* Título + seta */}
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-yellow-400">
+              <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-yellow-400">
                 {item.title}
               </h3>
              
@@ -48,7 +48,7 @@ export default function Visao() {
             <div className="w-14 h-[2px] bg-yellow-500/80 mb-6 transition-all duration-300 group-hover:w-24"></div>
 
             {/* Texto */}
-            <p className="text-gray-300 leading-relaxed text-4xl md:text-lg">
+            <p className="text-gray-300 leading-relaxed text-lg lg:text-xl md:text-lg">
               {item.text}
             </p>
           </motion.div>

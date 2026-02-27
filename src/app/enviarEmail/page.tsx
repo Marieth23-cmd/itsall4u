@@ -13,7 +13,7 @@ export default function Email() {
           {/* LADO ESQUERDO - INFORMAÇÕES */}
           <div className="flex flex-col justify-center">
 
-            <h1 className="text-3xl lg:text-5xl font-semibold leading-tight text-black mb-6">
+            <h1 className="text-2xl lg:text-4xl font-semibold leading-tight text-black mb-6">
               Prontos para elevar
               <span className="block text-yellow-400">
                 a sua marca?
@@ -22,13 +22,13 @@ export default function Email() {
 
             <div className="w-16 h-[3px] bg-yellow-400 mb-8"></div>
 
-            <p className="text-gray-700 text-lg leading-relaxed mb-12 max-w-md">
+            <p className="text-gray-700 text-lg lg:text-xl leading-relaxed mb-12 max-w-md">
               Partilhe connosco os seus objetivos de negócio.
               Desenvolvemos estratégias que conectam marca,
               posicionamento e resultados reais.
             </p>
 
-            <div className="space-y-4 text-gray-800">
+            <div className="space-y-4 text-gray-700">
               <p><span className="font-medium">Telefone:</span> + (244) 930 611 983</p>
               <p><span className="font-medium">Email:</span> geral@itsall4u.ao</p>
               <p>
@@ -53,7 +53,7 @@ export default function Email() {
                 placeholder="Nome completo"
                 className="border-b border-black/30 py-4 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300
-                placeholder:text-gray-500 text-gray-800"
+                placeholder:text-gray-700 text-gray-800"
               />
 
               <input

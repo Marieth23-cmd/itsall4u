@@ -278,14 +278,9 @@ export default function EmpresaPage({ params }: Props) {
 
       {/* GALERIA UNIFORME */}
       {media.length > 0 && (
-        <section className="pb-28 px-6">
+        <section className="pb-14  px-6">
           <div className="max-w-[1500px] mx-auto">
 
-            <h2 className="text-3xl lg:text-4xl font-semibold text-black mb-4">
-              Projetos Desenvolvidos
-            </h2>
-
-            <div className="w-16 h-[3px] bg-yellow-400 mb-12"></div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {media.map((item, index) => (
@@ -301,7 +296,7 @@ export default function EmpresaPage({ params }: Props) {
                       width={600}
                       height={600}
                       onClick={() => setSelectedImage(item.src)}
-                      className="w-full h-[600px] object-cover
+                      className="w-full lg:h-[600px] object-cover
                       group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (

@@ -36,7 +36,7 @@ export default function Beneficios() {
         </p>
 
         <a
-          href="/OqueFizemos"
+          href="/enviarEmail"
           className="px-10 py-4 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-all duration-300 rounded-full"
         >
           Fale Connosco

@@ -53,7 +53,7 @@ export default function SobreNos() {
   <div className="max-w-[1500px] mx-auto px-6 w-full">
     <div className="max-w-3xl text-center md:text-left">
 
-      <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-snug mb-4">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-snug mb-4">
         Somos uma agência criativa moderna e estratégica
       </h1>
 
@@ -61,12 +61,7 @@ export default function SobreNos() {
         Estratégia, design e comunicação para marcas que procuram crescimento sustentável.
       </p>
 
-      <a
-        href="/enviarEmail"
-        className="px-6 py-3 bg-white text-black rounded-full font-medium hover:scale-105 transition inline-block lg:hidden"
-      >
-        Fale Connosco →
-      </a>
+      
 
     </div>
   </div>
@@ -98,11 +93,11 @@ export default function SobreNos() {
 
   {/* TEXTO */}
   <div className="w-full lg:w-1/2 flex flex-col justify-center">
-    <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl leading-tight text-black mb-6">
+    <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-6">
       NÓS SOMOS O PARCEIRO CERTO PARA A SUA MARCA
     </h1>
 
-    <p className="text-lg leading-relaxed text-gray-600 max-w-xl">
+    <p className="text-lg lg:text-xl leading-relaxed text-gray-600 max-w-xl">
       Nós combinamos pensamento estratégico com execução criativa para entregar resultados mensuráveis. 
       Nossa equipa é especializada em criar experiências de marca que impactam audiências e geram crescimento.
     </p>
@@ -115,10 +110,10 @@ export default function SobreNos() {
 {/* Equipa */}
 <div className="max-w-[1500px] mx-auto py-14 lg:py-20 px-6">
 
-  <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-8">
+  <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-8">
     Conheça Nossa Equipa
   </h1>
-  <p className="text-gray-600 max-w-xl leading-relaxed mb-10 ">
+  <p className="text-gray-700 max-w-xl leading-relaxed mb-10 text-lg lg:text-xl">
   Somos uma equipa multidisciplinar movida por estratégia,
   criatividade e propósito. Actuamos em Angola há quase três anos,
   desenvolvendo projetos que conectam marcas e pessoas de forma
@@ -147,10 +142,10 @@ export default function SobreNos() {
         {/* Texto */}
         <div className="mt-6 flex items-center ">
           <div>
-            <p className="font-semibold text-lg text-black">
+            <p className="font-semibold text-lg lg:text-xl text-black">
               {member.name}
             </p>
-            <p className="text-base text-yellow-400">
+            <p className="text-base lg:text-lg text-yellow-400">
               {member.funcao}
              
             </p> 
