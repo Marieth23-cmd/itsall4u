@@ -3,6 +3,7 @@
 import { CgArrowLongRight } from "react-icons/cg";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Convite() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,7 +12,6 @@ export default function Convite() {
     "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122795/equipa1_ig03u1.png",
     "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122795/equipa2_o6voqi.png",
     "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122794/equipa3_w2eoau.png",
-    
   ];
 
   useEffect(() => {
@@ -23,13 +23,18 @@ export default function Convite() {
   }, [imagens.length]);
 
   return (
-    <section className="max-w-[1500px] mx-auto px-8 py-16">
+    <section className="max-w-[1500px] mx-auto px-8 py-16 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
         {/* CARD TEXTO */}
-        <div className="border border-yellow-100 rounded-xl p-10 flex flex-col justify-between 
-        transition-all duration-300 hover:border-yellow-100 hover:bg-yellow-50 cursor-pointer">
-
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }} // anima sempre que entra, não só 1 vez
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="border border-yellow-100 rounded-xl p-10 flex flex-col justify-between 
+                     hover:border-yellow-100 hover:bg-yellow-50 cursor-pointer"
+        >
           <div>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black mb-4">
               Trabalhe Conosco
@@ -53,10 +58,16 @@ export default function Convite() {
               className="text-3xl text-yellow-400 transition-all duration-300 group-hover:translate-x-2" 
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* CARROSSEL */}
-        <div className="flex flex-col gap-6">
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col gap-6"
+        >
           <div className="relative rounded-xl overflow-hidden w-full h-[500px] lg:h-[650px] bg-gray-100">
             <Image
               key={currentIndex}
@@ -83,7 +94,7 @@ export default function Convite() {
               />
             ))}
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

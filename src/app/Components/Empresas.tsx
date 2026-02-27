@@ -7,7 +7,7 @@ import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 const allLogos = [
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017961/empresawongo_p50zbs.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017959/empresawaa_d3jgar.png",
-  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017953/empresaubri_yae8bm.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772199298/empresaubri_wewwax.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017953/empresasuper_vhceyu.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017952/empresarevitur_llqcf2.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017952/empresarise_u2865f.png",
@@ -17,7 +17,7 @@ const allLogos = [
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017942/empresageo_vvyjkk.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017941/empresafarma_xcb9om.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017940/empresaequilibrium_rx7kvz.png",
-  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017938/empresacabship_z4in4x.jpg",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772198994/empresacabship_gjysce.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017936/empresabwizer_gnabrt.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017932/empresabet_zthppi.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresa1_rlaokj.png",
@@ -78,8 +78,8 @@ export default function CarrosselEmpresas() {
             {allLogos.map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-28 h-28 flex items-center justify-center filter grayscale 
-                opacity-70 hover:grayscale-0  transition bg-black/5 rounded-full p-4"
+                className="flex-shrink-0 w-28 h-28  lg:w-32 lg:h-32 flex items-center justify-center filter grayscale 
+                opacity-70 hover:grayscale-0  transition bg-black/5 rounded-full lg:p-4 p-6 "
               >
                 <Image
                   src={logo}

@@ -1,7 +1,9 @@
+"use client"
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Image from "next/image"
 import Visao from "../Components/Visao";
+import { motion } from "framer-motion"
 
 const equipa=[
 
@@ -106,61 +108,63 @@ export default function SobreNos() {
 </div>
 
   <Visao/>
+ <section className="max-w-[1500px] mx-auto py-14 lg:py-20 px-6 overflow-hidden">
 
-{/* Equipa */}
-<div className="max-w-[1500px] mx-auto py-14 lg:py-20 px-6">
-
-  <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-8">
-    Conheça Nossa Equipa
-  </h1>
-  <p className="text-gray-700 max-w-xl leading-relaxed mb-10 text-lg lg:text-xl">
-  Somos uma equipa multidisciplinar movida por estratégia,
-  criatividade e propósito. Actuamos em Angola há quase três anos,
-  desenvolvendo projetos que conectam marcas e pessoas de forma
-  autêntica e impactante.
-</p>
-
-
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-
-    {asEquipa.map((member, idx) => (
-      <div
-        key={idx}
-        className="group"
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6 }}
+        className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight text-black mb-8"
       >
+        Conheça Nossa Equipa
+      </motion.h1>
 
-        {/* Imagem */}
-        <div className="relative h-[450px] w-full lg:h-[600px] rounded-2xl overflow-hidden">
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="text-gray-700 max-w-xl leading-relaxed mb-10 text-lg lg:text-xl"
+      >
+        Somos uma equipa multidisciplinar movida por estratégia,
+        criatividade e propósito. Actuamos em Angola há quase três anos,
+        desenvolvendo projetos que conectam marcas e pessoas de forma
+        autêntica e impactante.
+      </motion.p>
 
-        {/* Texto */}
-        <div className="mt-6 flex items-center ">
-          <div>
-            <p className="font-semibold text-lg lg:text-xl text-black">
-              {member.name}
-            </p>
-            <p className="text-base lg:text-lg text-yellow-400">
-              {member.funcao}
-             
-            </p> 
-           
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {asEquipa.map((member, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            className="group"
+          >
+            <div className="relative h-[450px] w-full lg:h-[600px] rounded-2xl overflow-hidden">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
-          {/* Seta azul longa */}
-          
-        </div>
-
+            <div className="mt-6">
+              <p className="font-semibold text-lg lg:text-xl text-black">
+                {member.name}
+              </p>
+              <p className="text-base lg:text-lg text-yellow-400">
+                {member.funcao}
+              </p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    ))}
 
-  </div>
-</div>
+    </section>
 
 
 

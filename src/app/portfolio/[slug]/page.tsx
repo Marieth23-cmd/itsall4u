@@ -17,7 +17,7 @@ const empresas = [
     slug: "lucrum-trust",
     nome: "LUCRUM TRUST",
     descricao: "Projetos de branding e website institucional.",
-    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772125016/fotolucrum_pcx7tj.webp", 
+    fotoPerfil: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772208322/lucrumtrust_sw9s0g.png", 
     trabalhos: [
       "/trabalhosfeitosE/portlucrum1.png",
       "/trabalhosfeitosE/portlucrum2.png",

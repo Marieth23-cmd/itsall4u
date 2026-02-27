@@ -5,7 +5,7 @@ import Link from "next/link"
 
  const imagensEmpresas =[
     {
-        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772125016/fotolucrum_pcx7tj.webp",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772208322/lucrumtrust_sw9s0g.png",
         nome:"LUCRUM TRUST",
         icone:"→",
         slug:"lucrum-trust"
