@@ -72,7 +72,7 @@ import Link from "next/link"
         slug:"waa"
     },
      {
-        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772117476/bwizer_ozgw1a.jpg",
+        image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772628330/b_vyycbh.png",
         nome:"BWIZER",
         icone:"→",
         slug:"bwizer"

@@ -35,12 +35,12 @@ body {
   }
 }
 ::-webkit-scrollbar {
-  height: 6px;
+  height: 16px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0f172a20;
+  background: #01030820;
   border-radius: 10px;
 }

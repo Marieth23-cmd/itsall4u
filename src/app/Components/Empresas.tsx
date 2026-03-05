@@ -23,7 +23,7 @@ const allLogos = [
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresa1_rlaokj.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017930/empresaalianca_e8q5w7.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresaangola_mgzcal.png",
-  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772017929/empresaacademia_krzita.png",
+  "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772731028/LOGO_PRETO_f3lsaj.png",
   "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014945/oddm_tz1zoz.png"
 
 ];
@@ -73,13 +73,13 @@ export default function CarrosselEmpresas() {
           <div
             ref={scrollRef}
             onScroll={checkScroll}
-            className="flex gap-8 overflow-x-auto scroll-smooth px-4 hide-scrollbar py-2"
+            className="flex gap-4 overflow-x-auto scroll-smooth px-4 hide-scrollbar py-2"
           >
             {allLogos.map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-28 h-28  lg:w-32 lg:h-32 flex items-center justify-center filter grayscale 
-                opacity-70 hover:grayscale-0  transition bg-black/5 rounded-full lg:p-4 p-6 "
+                className="flex-shrink-0 w-24 h-24 lg:w-28 lg:h-28 flex items-center justify-center filter grayscale 
+                opacity-70 hover:grayscale-0  transition bg-black/5 rounded-full lg:p-4 p-2 "
               >
                 <Image
                   src={logo}

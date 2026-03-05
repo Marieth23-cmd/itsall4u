@@ -1,11 +1,46 @@
+"use client";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import {toast , ToastContainer} from "react-toastify";
+
 
 export default function Email() {
+
+  
+    
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const form=e.currentTarget as HTMLFormElement;
+    const data={
+      company:(form.elements.namedItem("company") as HTMLInputElement)?.value,
+      email:(form.elements.namedItem("email") as HTMLInputElement)?.value,
+      message:(form.elements.namedItem("message") as HTMLInputElement)?.value,
+      name:(form.elements.namedItem("name") as HTMLInputElement)?.value,
+      servico:(form.elements.namedItem("servico") as HTMLInputElement)?.value,
+    }
+
+    const res=await fetch("/api/send",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify(data)
+    });
+    if(res.ok){
+      toast.success("Email enviado com sucesso!");
+      form.reset();
+    }else{
+      toast.error("Erro ao enviar email. Por favor, tente novamente.");
+    }
+  }
+
+
+
   return (
     <div className="bg-[#F8F7F4]">
       <Header />
-
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
+     
       <div className="pt-36 pb-24 px-6 max-w-[1500px] mx-auto">
 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -40,7 +75,7 @@ export default function Email() {
           </div>
 
           {/* LADO DIREITO - FORMULÁRIO */}
-          <div className="bg-white border border-black/5 rounded-2xl p-12 shadow-[0_30px_70px_rgba(0,0,0,0.06)]">
+          <form onSubmit={handleSubmit} className="bg-white border border-black/5 rounded-2xl p-12 shadow-[0_30px_70px_rgba(0,0,0,0.06)]">
 
             <h2 className="text-2xl font-semibold mb-10 text-black">
               Inicie uma conversa
@@ -49,6 +84,8 @@ export default function Email() {
             <div className="flex flex-col gap-8">
 
               <input
+                name="name"
+                id="name"
                 type="text"
                 placeholder="Nome completo"
                 className="border-b border-black/30 py-4 outline-none
@@ -57,6 +94,8 @@ export default function Email() {
               />
 
               <input
+                id="email"
+               name="email"  
                 type="email"
                 placeholder="E-mail comercial"
                 className="border-b border-black/30 py-4 outline-none
@@ -65,6 +104,8 @@ export default function Email() {
               />
 
               <input
+                 id="company"
+                 name="company"
                 type="text"
                 placeholder="Nome da empresa"
                 className="border-b border-black/30 py-4 outline-none
@@ -73,7 +114,8 @@ export default function Email() {
               />
 
               <select
-                defaultValue=""
+                name="servico"
+                id="servico"
                 className="border-b border-black/30 py-4 bg-transparent
                 text-gray-700 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300"
@@ -91,6 +133,8 @@ export default function Email() {
               </select>
 
               <textarea
+                id="message"
+                name="message"
                 rows={4}
                 placeholder="Conte-nos sobre os seus objetivos"
                 className="border-b border-black/30 py-4 outline-none resize-none
@@ -99,6 +143,7 @@ export default function Email() {
               />
 
               <button
+                type="submit"
                 className="mt-10 px-10 py-4 rounded-full
                 bg-black text-white font-medium tracking-wide
                 transition-all duration-300
@@ -108,7 +153,7 @@ export default function Email() {
               </button>
 
             </div>
-          </div>
+          </form>
 
         </section>
 

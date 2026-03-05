@@ -59,7 +59,7 @@ export default function Hero() {
           )}
 
           {/* OVERLAY no hero */}
-          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-black/5" />
 
       
          {/* CONTEÚDO */}

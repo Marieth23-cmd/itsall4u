@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function Apresentacao() {
   return (
-    <section className="w-full flex justify-center py-16">
+    <section className="w-full flex justify-center pt-8">
       <div className="w-full max-w-[1500px] mx-auto px-6 md:px-8">
 
         <motion.div

@@ -111,7 +111,7 @@ export default function OQueFazemos() {
       </section>
 
       {/* SERVIÇOS */}
-      <section className="pb-10 lg:pb-12 px-6 max-w-[1500px] mx-auto">
+      <section className="px-6 max-w-[1500px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {servicos.map((item, index) => (
            <motion.div
