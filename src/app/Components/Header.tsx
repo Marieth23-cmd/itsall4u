@@ -5,6 +5,7 @@ import { CgArrowLongRight } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect, useCallback,useRef } from "react";
+import Multidioma from "./Multidioma";
 
 export default function Header() {
  const [isOpen, setIsOpen] = useState(false);
@@ -133,9 +134,7 @@ const CloseMenuOpen = ()=>{
         <div className="px-6 pb-8">
           <div className="h-px bg-gray-200 mb-6" />
 
-          <button onClick={CloseMenuOpen} className="text-sm font-medium text-gray-600">
-            FR
-          </button>
+          <Multidioma/>
 
           <div className="mt-6">
             <a href="/enviarEmail"

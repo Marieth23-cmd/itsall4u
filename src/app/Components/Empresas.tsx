@@ -96,7 +96,7 @@ export default function CarrosselEmpresas() {
           {!isAtEnd && (
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-black/20 text-black p-2 rounded-full shadow-md z-10 transition"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white  text-black p-2 rounded-full shadow-md z-10 transition"
             >
               <CgChevronRight className="text-2xl" />
             </button>
