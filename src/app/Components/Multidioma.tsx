@@ -4,9 +4,9 @@ import { useState } from "react";
 
 export default function LanguageSelect() {
     const languages = [
-    { code: "pt", label: "Português", flag: "https://flagcdn.com/w40/pt.png" },
-    { code: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
-    { code: "fr", label: "Français", flag: "https://flagcdn.com/w40/fr.png" },
+    { code: "pt", label: "PT", flag: "https://flagcdn.com/w40/pt.png" },
+    { code: "en", label: "EN", flag: "https://flagcdn.com/w40/gb.png" },
+    { code: "fr", label: "FR", flag: "https://flagcdn.com/w40/fr.png" },
   ];
 
   const [selected, setSelected] = useState(languages[0]);
@@ -28,8 +28,7 @@ export default function LanguageSelect() {
             <span className="text-sm hidden sm:inline">{selected.label}</span>
           </div>
        
-          <span>🌐 </span>
-      
+        
       </button>
 
      

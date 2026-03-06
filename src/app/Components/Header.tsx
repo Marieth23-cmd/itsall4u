@@ -75,9 +75,7 @@ const CloseMenuOpen = ()=>{
         Portfólio
       </Link>
 
-      <span className="hidden lg:block text-[16px] font-medium text-black/60 hover:text-text/80 cursor-pointer transition">
-        FR
-      </span>
+      <Multidioma />
 
           <a
   href="/enviarEmail"
