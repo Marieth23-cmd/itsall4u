@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function Beneficios() {
   return (
-    <section className="relative w-full h-[700px] flex items-start text-white overflow-hidden">
+    <section className="relative w-full min-h-[700px] flex items-start text-white overflow-hidden">
 
       {/* Imagem com leve efeito zoom */}
       <motion.div
@@ -28,7 +28,7 @@ export default function Beneficios() {
 
       {/* Conteúdo */}
       <div className="relative z-10 w-full">
-        <div className="max-w-[1500px] mx-auto px-6 pt-32">
+        <div className="max-w-[1500px] mx-auto px-6 pt-20 md:pt-32">
           <div className="max-w-3xl">
 
             <motion.span

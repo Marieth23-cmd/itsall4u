@@ -114,7 +114,7 @@ const CloseMenuOpen = ()=>{
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <div className="h-screen flex flex-col bg-white">
+      <div className="h-dvh flex flex-col bg-white">
 
         <div className="px-6 py-4 flex justify-end">
           <button onClick={CloseMenuOpen} className="p-2 rounded-md hover:bg-gray-100">
@@ -122,7 +122,7 @@ const CloseMenuOpen = ()=>{
           </button>
         </div>
 
-        <nav className="px-6 mt-6 flex-1">
+        <nav className="px-6 mt-6 flex-1 overflow-y-auto">
           <ul className="flex flex-col gap-6 text-lg">
             <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black ">O que fazemos</a></li>
             <li><a href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Sobre nós</a></li>
