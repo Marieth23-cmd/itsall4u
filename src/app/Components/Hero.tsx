@@ -63,15 +63,15 @@ export default function Hero() {
 
       
          {/* CONTEÚDO */}
-              <div className="absolute inset-0 flex items-center">
+              <div className="absolute inset-0 flex items-center ">
                 <div className="max-w-[1500px] mx-auto px-6 w-full">
                   <div className="max-w-2xl text-white animate-fadeUp">
 
-                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight mb-4">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
                       {slide.title}
                     </h1>
 
-                    <p className="text-lg text-gray-200 mb-8">
+                    <p className="text-base  md:text-lg text-gray-200 mb-8">
                       {slide.subtitle}
                     </p>
 

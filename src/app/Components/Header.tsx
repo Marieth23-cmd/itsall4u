@@ -61,7 +61,7 @@ const CloseMenuOpen = ()=>{
     </a>
 
     {/* RIGHT */}
-    <nav className="flex items-center gap-8 whitespace-nowrap">
+    <nav className="flex items-center gap-4 whitespace-nowrap">
 
       <a href="/OqueFizemos" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
         O que fazemos
@@ -90,7 +90,7 @@ const CloseMenuOpen = ()=>{
 
       <FaBars
         onClick={() => setIsMenuOpen(true)}
-        className="lg:hidden text-2xl text-black cursor-pointer ml-4"
+        className="lg:hidden text-2xl text-black cursor-pointer "
       />
     </nav>
   </div>
@@ -122,17 +122,20 @@ const CloseMenuOpen = ()=>{
         </div>
 
         <nav className="px-6 mt-6 flex-1 overflow-y-auto">
-          <ul className="flex flex-col gap-6 text-lg">
+          <ul className="flex flex-col gap-4 text-lg">
             <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black ">O que fazemos</a></li>
             <li><a href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Sobre nós</a></li>
             <li><a href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Portfólio</a></li>
+          <Multidioma />
           </ul>
-        </nav>
+         
+        </nav> 
+        
 
         <div className="px-6 pb-8">
           <div className="h-px bg-gray-200 mb-6" />
 
-          <Multidioma/>
+         
 
           <div className="mt-6">
             <a href="/enviarEmail"

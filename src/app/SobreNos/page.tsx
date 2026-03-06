@@ -53,13 +53,13 @@ export default function SobreNos() {
     />
     <div className="absolute inset-0 flex items-center">
   <div className="max-w-[1500px] mx-auto px-6 w-full">
-    <div className="max-w-3xl text-center md:text-left">
+    <div className="max-w-2xl lg:text-center md:text-left">
 
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-snug mb-4">
         Somos uma agência criativa moderna e estratégica
       </h1>
 
-      <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6">
+      <p className="text-white/90 text-base text-gray-200 md:text-lg mb-6">
         Estratégia, design e comunicação para marcas que procuram crescimento sustentável.
       </p>
 
