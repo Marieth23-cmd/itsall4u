@@ -140,7 +140,7 @@ const CloseMenuOpen = ()=>{
           <div className="mt-6">
             <a href="/enviarEmail"
               onClick={CloseMenuOpen}
-              className="w-full px-6 py-3 rounded-lg bg-yellow-400 text-white font-medium"
+              className="w-full px-6 py-3 rounded-lg bg-yellow-500 text-white font-medium"
             >
               Entre em contacto
             </a>
