@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function Apresentacao() {
   return (
     <section className="w-full flex justify-center pt-8">
-      <div className="w-full max-w-[1500px] mx-auto px-6 md:px-8">
+      <div className="w-full max-w-7xl mx-auto px-6 ">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -21,7 +21,7 @@ export default function Apresentacao() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl md:text-3xl lg:text-4xl text-black font-semibold leading-tight mb-6"
+            className="text-2xl lg:text-3xl text-black font-medium leading-tight mb-6"
           >
             Quem Somos
           </motion.h2>
@@ -32,7 +32,7 @@ export default function Apresentacao() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg lg:text-xl text-gray-700 mb-6 w-full max-w-6xl"
+            className="text-base lg:text-lg text-gray-700 mb-6 w-full max-w-7xl"
           >
             Somos uma empresa de marketing dedicada a conectar marcas e pessoas de forma criativa e eficaz. 
             Com uma equipa apaixonada e experiente, transformamos ideias em estratégias de sucesso, 
@@ -51,7 +51,7 @@ export default function Apresentacao() {
             whileHover={{ x: 5 }}
             className="
               group inline-flex items-center gap-3
-              text-yellow-400 font-medium text-lg lg:text-xl
+              text-yellow-400 font-medium text-base lg:text-lg
               hover:text-yellow-800 transition
             "
           >

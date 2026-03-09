@@ -41,23 +41,23 @@ export default function Email() {
       <Header />
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
      
-      <div className="pt-36 pb-24 px-6 max-w-[1500px] mx-auto">
+      <div className="pt-36 pb-16 px-6 max-w-7xl mx-auto">
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <section className="grid grid-cols-1 lg:grid-cols-2 ">
 
           {/* LADO ESQUERDO - INFORMAÇÕES */}
           <div className="flex flex-col justify-center">
 
-            <h1 className="text-2xl lg:text-4xl font-semibold leading-tight text-black mb-6">
+            <h1 className="text-2xl lg:text-3xl font-medium leading-tight text-black mb-6">
               Prontos para elevar
-              <span className="block text-yellow-400">
+              <span className="block text-yellow-500">
                 a sua marca?
               </span>
             </h1>
 
-            <div className="w-16 h-[3px] bg-yellow-400 mb-8"></div>
+            <div className="w-16 h-[3px] bg-yellow-500 mb-8"></div>
 
-            <p className="text-gray-700 text-lg lg:text-xl leading-relaxed mb-12 max-w-md">
+            <p className="text-gray-700 text-base lg:text-lg leading-relaxed mb-12 max-w-md">
               Partilhe connosco os seus objetivos de negócio.
               Desenvolvemos estratégias que conectam marca,
               posicionamento e resultados reais.
@@ -77,11 +77,11 @@ export default function Email() {
           {/* LADO DIREITO - FORMULÁRIO */}
           <form onSubmit={handleSubmit} className="bg-white border border-black/5 rounded-2xl p-12 shadow-[0_30px_70px_rgba(0,0,0,0.06)]">
 
-            <h2 className="text-2xl font-semibold mb-10 text-black">
+            <h2 className="text-2xl lg:text-3xl font-medium mb-10 text-black">
               Inicie uma conversa
             </h2>
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-2">
 
               <input
                 name="name"
@@ -147,7 +147,7 @@ export default function Email() {
                 className="mt-10 px-10 py-4 rounded-full
                 bg-black text-white font-medium tracking-wide
                 transition-all duration-300
-                hover:bg-yellow-400 hover:text-black"
+                hover:bg-yellow-500 hover:text-black"
               >
                 Enviar
               </button>

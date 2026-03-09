@@ -93,11 +93,11 @@ export default function Portfolio(){
     return(
         <div>
             <Header/>
-            <div className="pt-36 px-6 max-w-[1500px] mx-auto">
+            <div className="pt-36 px-6 max-w-7xl mx-auto">
                 <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-snug mb-8">
                      Portfólio
                   </h1>
-                  <p className="max-w-2xl text-gray-800 text-xl">
+                  <p className="max-w-2xl text-gray-800 text-base md:text-lg leading-relaxed ">
                     Combinamos criatividade, inovação e estratégia para fortalecer marcas, 
                     ampliar visibilidade e promover crescimento sustentável. 
                     Atuamos como parceiros de confiança, comprometidos em compreender 
@@ -105,12 +105,12 @@ export default function Portfolio(){
                     </p>
             </div>
             {/*Imagens das Empresas  */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-20 items-center px-6 max-w-[1500px] mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-20 items-center px-6 max-w-7xl mx-auto ">
             { asImagens.map((image,index)=>(
                 <Link key={index} href={`/portfolio/${image.slug}`}>
                 <div
                  
-                 className="relative overflow-hidden h-[400px] w-full lg:h-[600px]">
+                 className="relative overflow-hidden h-[400px] w-full ">
                 <Image 
                 src={image.image} 
                 alt={image.nome}

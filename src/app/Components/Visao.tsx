@@ -19,14 +19,14 @@ export default function Visao() {
   ];
 
   return (
-    <section className="relative py-24 lg:py-32 px-6 bg-[#0c0c0c] overflow-hidden">
+    <section className="relative py-12 lg:py-16 px-6 bg-[#0c0c0c] overflow-hidden">
       
       {/* Círculos decorativos */}
       <div className="absolute -top-20 -left-20 w-60 h-60 rounded-full bg-yellow-500/10 blur-3xl"></div>
       <div className="absolute top-1/2 right-10 w-72 h-72 rounded-full bg-yellow-400/5 blur-2xl"></div>
       <div className="absolute bottom-10 -right-32 w-64 h-64 rounded-full bg-yellow-500/20 blur-3xl"></div>
 
-      <div className="relative max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
         {items.map((item, index) => (
           <motion.div
             key={index}
@@ -38,7 +38,7 @@ export default function Visao() {
           >
             {/* Título + seta */}
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-yellow-400">
+              <h3 className="text-base md:text-lg font-medium tracking-tight text-yellow-400">
                 {item.title}
               </h3>
              
@@ -48,7 +48,7 @@ export default function Visao() {
             <div className="w-14 h-[2px] bg-yellow-500/80 mb-6 transition-all duration-300 group-hover:w-24"></div>
 
             {/* Texto */}
-            <p className="text-gray-300 leading-relaxed text-lg lg:text-xl md:text-lg">
+            <p className="text-gray-200 leading-relaxed text-base lg:text-lg">
               {item.text}
             </p>
           </motion.div>

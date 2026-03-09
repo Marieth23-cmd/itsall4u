@@ -34,13 +34,10 @@ body {
     display: none;
   }
 }
-::-webkit-scrollbar {
-  height: 16px;
-}
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #01030820;
-  border-radius: 10px;
+  background: #aebad620;
 }

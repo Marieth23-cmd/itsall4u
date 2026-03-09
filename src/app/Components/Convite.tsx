@@ -23,8 +23,8 @@ export default function Convite() {
   }, [imagens.length]);
 
   return (
-    <section className="max-w-[1500px] mx-auto px-8 py-16 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+    <section className="max-w-7xl mx-auto px-6 py-12 lg:py-16 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-strech">
 
         {/* CARD TEXTO */}
         <motion.div
@@ -36,11 +36,11 @@ export default function Convite() {
                      hover:border-yellow-100 hover:bg-yellow-50 cursor-pointer"
         >
           <div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black mb-4">
+            <h1 className="text-2xl lg:text-3xl font-medium text-black mb-4">
               Trabalhe Conosco
             </h1>
 
-            <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-md">
+            <p className="text-gray-700 text-base lg:text-lg leading-relaxed max-w-md">
               Potencie o seu negócio com estratégia e inovação.
               Conecte-se com uma equipa criativa que transforma desafios em soluções reais.
             </p>
@@ -68,7 +68,7 @@ export default function Convite() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col gap-6"
         >
-          <div className="relative rounded-xl overflow-hidden w-full h-[500px] lg:h-[650px] bg-gray-100">
+          <div className="relative rounded-xl overflow-hidden w-full h-[380px] sm:h-[420px] lg:h-[520px] bg-gray-100">
             <Image
               key={currentIndex}
               src={imagens[currentIndex]}

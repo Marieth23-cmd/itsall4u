@@ -34,12 +34,11 @@ export default function Hero() {
 
   return (
     <section className="relative h-[90vh] w-full overflow-hidden bg-black">
-
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000
-            ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}
+          className={`absolute inset-0 transition-transform duration-1000
+            ${index === current ? "translate-x-0" : "translate-x-full"}
           `}
         >
           {/* BACKGROUND */}
@@ -58,28 +57,22 @@ export default function Hero() {
             />
           )}
 
-          {/* OVERLAY no hero */}
+          {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/5" />
 
-      
-         {/* CONTEÚDO */}
-              <div className="absolute inset-0 flex items-center ">
-                <div className="max-w-[1500px] mx-auto px-6 w-full">
-                  <div className="max-w-2xl text-white animate-fadeUp">
-
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
-                      {slide.title}
-                    </h1>
-
-                    <p className="text-base  md:text-lg text-gray-200 mb-8">
-                      {slide.subtitle}
-                    </p>
-
-                  
-
-                  </div>
-                </div>
+          {/* CONTEÚDO */}
+          <div className="absolute inset-0 flex items-center">
+            <div className="max-w-7xl mx-auto px-6 w-full">
+              <div className="max-w-2xl text-white animate-fadeUp">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+                  {slide.title}
+                </h1>
+                <p className="text-base md:text-lg text-gray-200 mb-8">
+                  {slide.subtitle}
+                </p>
               </div>
+            </div>
+          </div>
         </div>
       ))}
 

@@ -97,39 +97,39 @@ export default function OQueFazemos() {
       <Header />
 
       {/* HERO */}
-      <section className="pt-28 lg:pt-36 pb-12 px-6 max-w-[1500px] mx-auto text-center">
+      <section className="pt-28 lg:pt-36 pb-12 px-6 max-w-7xl mx-auto text-center">
         <div className="max-w-3xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]"
+            className="text-2xl lg:text-3xl font-medium text-[#0F172A]"
           >
-            Serviços
+            Nossos Serviços
           </motion.h1>
         </div>
       </section>
 
       {/* SERVIÇOS */}
-      <section className="px-6 max-w-[1500px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <section className="px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {servicos.map((item, index) => (
            <motion.div
               key={index}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
-              className="group p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
+              className="group p-4 rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg "
             >
 
               <div className="mb-6 text-yellow-400 transition-transform duration-300 group-hover:scale-110">
                 {item.icone}
               </div>
 
-              <h3 className="text-lg md:text-xl font-semibold mb-4 text-[#0F172A] tracking-tight">
+              <h3 className="text-base md:text-lg font-medium mb-4 text-[#0F172A] tracking-tight">
                 {item.title}
               </h3>
 
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
@@ -137,28 +137,29 @@ export default function OQueFazemos() {
         </div>
       </section>
 
-     <section className="py-14 lg:py-20 px-6 overflow-hidden">
-  <div className="max-w-[1500px] mx-auto">
+    <section className="py-12 lg:py-16 px-6">
+      <div className="max-w-7xl mx-auto">
 
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.3 }}
-      transition={{ duration: 0.7 }}
-      className="text-center max-w-2xl mx-auto mb-12"
-    >
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-4">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.7 }}
+        className="text-center max-w-2xl mx-auto mb-10"
+      >
+        <h2 className="text-2xl lg:text-3xl font-medium text-[#0F172A] mb-4">
         Trabalhos Recentes
-      </h2>
-      <p className="text-gray-700 text-lg md:text-xl">
+        </h2>
+        <p className="text-gray-700 text-base lg:text-lg">
         Projetos que refletem estratégia, criatividade e impacto real.
-      </p>
-    </motion.div>
+        </p>
+      </motion.div>
 
-    <div className="overflow-x-auto overflow-y-hidden scrollbar-hide">
-      <div className="flex gap-4 snap-x snap-mandatory">
+      <div className="relative group">
+        <div className="overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar cursor-grab active:cursor-grabbing" id="trabalhos-scroll">
+        <div className="flex gap-4 snap-x snap-mandatory">
 
-        {trabalhos.map((item, index) => (
+          {trabalhos.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
@@ -169,47 +170,63 @@ export default function OQueFazemos() {
             shadow-lg transition-transform duration-300 hover:scale-[1.02]"
           >
             <Image
-              src={item.image}
-              alt={`Trabalho ${index + 1}`}
-              fill
-              className="object-cover"
+            src={item.image}
+            alt={`Trabalho ${index + 1}`}
+            fill
+            className="object-cover"
             />
           </motion.div>
-        ))}
+          ))}
 
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6 }}
           className="relative min-w-[200px] md:min-w-[260px] h-[280px] md:h-[520px] flex items-center justify-center"
-        >
+          >
           <a
             href="/portfolio"
             className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-yellow-500 flex items-center justify-center text-white text-3xl hover:scale-105 transition"
           >
             +
           </a>
-        </motion.div>
+          </motion.div>
+
+        </div>
+        </div>
+
+          {/* Botões navegação - Esquerda e Direita */}
+          <button
+            onClick={() => document.getElementById('trabalhos-scroll')?.scrollBy({ left: -400, behavior: 'smooth' })}
+            className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 w-10 h-10 rounded-full border border-gray-300 items-center justify-center bg-white hover:bg-gray-50 transition group-hover:opacity-100 opacity-0"
+          >
+            ←
+          </button>
+
+          <button
+            onClick={() => document.getElementById('trabalhos-scroll')?.scrollBy({ left: 400, behavior: 'smooth' })}
+            className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 w-10 h-10 rounded-full border border-gray-300 items-center justify-center bg-white hover:bg-gray-50 transition group-hover:opacity-100 opacity-0"
+          >
+            →
+          </button>
+        </div>
 
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
       {/*CTA*/}
 <section className="pb-16 px-6">
-  <div className="max-w-[1500px] mx-auto rounded-2xl border border-gray-200 flex flex-col-reverse lg:flex-row overflow-hidden">
+  <div className="max-w-7xl mx-auto rounded-2xl border border-gray-200 flex flex-col-reverse lg:flex-row overflow-hidden">
 
     <div className="flex-1 px-8 lg:px-20 py-14 flex flex-col justify-center bg-white">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] mb-6 leading-tight">
+      <h2 className="text-2xl lg:text-3xl font-medium text-[#0F172A] mb-6 leading-tight">
         Parcerias estratégicas que impulsionam crescimento.
       </h2>
 
-      <p className="text-gray-700 text-lg lg:text-xl leading-relaxed max-w-xl mb-10">
+      <p className="text-gray-700 text-base lg:text-lg leading-relaxed max-w-xl mb-10">
         Trabalhamos lado a lado com marcas que procuram consistência,
         posicionamento forte e crescimento sustentável através de
         estratégia e execução criativa.
@@ -218,7 +235,7 @@ export default function OQueFazemos() {
        <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
             <a 
               href="/enviarEmail" 
-              className="text-lg lg:text-xl font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
+              className="text-base lg:text-lg font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
             >
               Entre em contacto
             </a>

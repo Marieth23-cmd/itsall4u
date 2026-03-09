@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function Beneficios() {
   return (
-    <section className="relative w-full min-h-[700px] flex items-start text-white overflow-hidden">
+    <section className="relative w-full min-h-[80dvh] flex items-start text-white overflow-hidden">
 
       {/* Imagem com leve efeito zoom */}
       <motion.div
@@ -28,7 +28,7 @@ export default function Beneficios() {
 
       {/* Conteúdo */}
       <div className="relative z-10 w-full">
-        <div className="max-w-[1500px] mx-auto px-6 pt-20 md:pt-32">
+        <div className="max-w-7xl mx-auto px-6 pt-20 md:pt-32">
           <div className="max-w-3xl">
 
             <motion.span
@@ -44,7 +44,7 @@ export default function Beneficios() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl md:text-4xl font-semibold leading-tight mt-6 mb-6"
+              className="text-2xl md:text-3xl font-medium leading-tight mt-6 mb-6"
             >
               Transformamos marcas em referências no mercado
             </motion.h2>
@@ -53,7 +53,7 @@ export default function Beneficios() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-200 leading-relaxed mb-10"
+              className="text-base md:text-lg text-gray-200 leading-relaxed mb-10"
             >
               Trabalhar connosco significa posicionar a sua marca com estratégia,
               elegância e inteligência. Criamos experiências digitais que aumentam

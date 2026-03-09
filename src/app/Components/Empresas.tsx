@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
@@ -53,8 +53,8 @@ export default function CarrosselEmpresas() {
 
   return (
     <section className=" py-16 relative bg-white">
-      <div className="max-w-[1500px] mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black text-center mb-12">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-2xl lg:text-3xl font-medium text-black text-center mb-10">
           Marcas que confiam no nosso trabalho
         </h2>
 
@@ -63,7 +63,7 @@ export default function CarrosselEmpresas() {
           {!isAtStart && (
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-100 text-black p-4 rounded-full  z-10 transition shadow-lg hover:shadow-xl"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-100 text-black rounded-full md:p-4 p-3  z-10 transition shadow-lg hover:shadow-xl"
             >
               <CgChevronLeft className="text-2xl" />
             </button>
@@ -78,7 +78,7 @@ export default function CarrosselEmpresas() {
             {allLogos.map((logo, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-24 h-24 lg:w-28 lg:h-28 flex items-center justify-center filter grayscale 
+                className="flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center filter grayscale 
                 opacity-70 hover:grayscale-0  transition bg-black/5 rounded-full lg:p-4 p-2 "
               >
                 <Image

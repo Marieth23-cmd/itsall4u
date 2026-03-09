@@ -31,7 +31,7 @@ export default function LanguageSelect() {
   return (
     <div className="relative inline-block text-left language-select-container">
       <button
-        className="flex items-center gap-2 bg-black/40 text-white px-3 py-2 rounded-md hover:bg-gray-700 transition-colors disabled:opacity-50"
+        className="flex items-center gap-2 bg-black/5 text-white px-3 py-2 rounded-md hover:bg-black/10 transition-colors disabled:opacity-50"
         onClick={() => setIsOpen(!isOpen)}
       >
           <div className="flex items-center gap-2">
@@ -42,19 +42,19 @@ export default function LanguageSelect() {
               height={24} 
               className="rounded w-full h-auto"
             />
-            <span className="text-sm hidden sm:inline">{selected.label}</span>
+            <span className="text-sm hidden sm:inline text-[#0F172A]">{selected.label}</span>
           </div>
        
         
       </button>
 
      
-      {isOpen &&(<div className="absolute  mt-2 w-auto  bg-black/60 rounded-md shadow-lg z-50 border border-gray-700 ">
+      {isOpen &&(<div className="absolute  mt-2 w-auto  bg-white rounded-md shadow-lg z-50 border border-bg-black/5">
          
             {languages.map((l) => (
             <button
               key={l.code}
-              className={`flex items-center gap-1 w-full px-6 py-2 hover:bg-gray-700 first:rounded-t-md last:rounded-b-md transition-colors disabled:opacity-50`}
+              className={`flex items-center gap-1 w-full px-6 py-2 hover:bg-black/10 first:rounded-t-md last:rounded-b-md transition-colors disabled:opacity-50`}
               onClick={() => {
                 setSelected(l);
                 setIsOpen(false);
@@ -67,7 +67,7 @@ export default function LanguageSelect() {
                 height={24} 
                 className="rounded"
               />
-              <span className="text-sm text-white">{l.label}</span>
+              <span className="text-sm text-[#0F172A]">{l.label}</span>
             </button>
             ))}
        </div>)}  

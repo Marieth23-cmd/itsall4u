@@ -34,7 +34,7 @@ export default function EmpresaPage({ params }: Props) {
       {/* HERO */}
       {empresa.fotoPerfil && (
       <section className="pt-32 px-6">
-        <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <Image
@@ -42,7 +42,7 @@ export default function EmpresaPage({ params }: Props) {
               alt={empresa.nome}
               width={1000}
               height={1000}
-              className="w-full h-[450px] lg:h-[600px] object-cover"
+              className="w-full h-[400px] lg:h-[500px] object-cover"
             />
           </div>
 
@@ -68,7 +68,7 @@ export default function EmpresaPage({ params }: Props) {
 
         {empresa.fotoevento && (
           <section className="pt-14  px-6">
-            <div className="max-w-[1500px] mx-auto flex-col items-center">
+            <div className="max-w-7xl mx-auto flex-col items-center">
               <div onClick={() => setSelectedImage(empresa.fotoevento)} 
               className="overflow-hidden rounded-xl shadow-lg">
                 {empresa.fotoevento && (
@@ -119,7 +119,7 @@ export default function EmpresaPage({ params }: Props) {
       {/* GALERIA DINÂMICA */}
       {hasMedia && (
         <section className="pb-14 px-6">
-          <div className="max-w-[1500px] mx-auto space-y-12">
+          <div className="max-w-7xl mx-auto space-y-12">
 
             {/* GRID ITEMS (grid-based sections) */}
             <div
@@ -229,7 +229,7 @@ export default function EmpresaPage({ params }: Props) {
 
                     {/* VIDEO GRID */}
                   {item.type==="video-grid" && Array.isArray(item.videos) && (
-                      <div className="pt-4 lg:px-6 mx-auto max-w-[1500px] ">
+                      <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
                         
                         <h1 className="text-2xl lg:text-4xl text-center font-semibold mb-6 ">{item.title}</h1>
 
@@ -248,7 +248,7 @@ export default function EmpresaPage({ params }: Props) {
 
                     {/* Confira imagens de alguns momentos do evento xhx */}
                     {item.type === "image-evento" && (
-                      <div className="pt-4 lg:px-6 mx-auto max-w-[1500px] ">
+                      <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
                         <h1 className="text-2xl lg:text-4xl text-center font-semibold mb-6 ">{item.title}</h1>
                         <p className="text-lg lg:xl text-gray-600 max-w-7xl">{item.description}</p>
 
@@ -280,7 +280,7 @@ export default function EmpresaPage({ params }: Props) {
 
                         {/* CONTENT VIDEO */}
                         {item.type === "content-video" && (
-                          <div className="pt-4 lg:px-6 mx-auto max-w-[1500px] ">
+                          <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
                             <h1 className="text-2xl lg:text-4xl text-center font-semibold mb-8 ">{item.title}</h1>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center">
                               <video controls className="w-full rounded-lg  aspect-video object-contain ">
@@ -306,7 +306,7 @@ export default function EmpresaPage({ params }: Props) {
                       </div>
                      
 
-                  <div className=" flex flex-col lg:flex-row  gap-8 items-center pt-4 lg:pt-4 lg:px-6 mx-auto max-w-[1500px] "> 
+                  <div className=" flex flex-col lg:flex-row  gap-8 items-center pt-4 lg:pt-4 lg:px-6 mx-auto max-w-7xl "> 
 
                        
                       {item.image && (
@@ -337,7 +337,7 @@ export default function EmpresaPage({ params }: Props) {
                 {/* CONTENT BLOCK */}
               
                 {item.type === "content-block" && (
-                  <div className="grid grid-cols-1 gap-4 items-center pt-4 lg:pt-20 lg:px-6 mx-auto max-w-[1500px] ">
+                  <div className="grid grid-cols-1 gap-4 items-center pt-4 lg:pt-20 lg:px-6 mx-auto max-w-7xl ">
                     
                      <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">
                           {item.title}

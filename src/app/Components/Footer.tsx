@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-black">
-      <div className="max-w-[1500px] mx-auto px-8 py-20">
+      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
 
         {/* CONTEÚDO */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14">
@@ -21,7 +21,7 @@ export default function Footer() {
               priority
             />
 
-            <p className="text-gray-400 leading-relaxed text-base">
+            <p className="text-gray-300 leading-relaxed text-base">
               A ItsAll4U é uma agência criativa especializada em soluções estratégicas 
               para marcas que querem crescer com identidade, inovação e impacto real.
             </p>
@@ -29,11 +29,11 @@ export default function Footer() {
 
           {/* SERVIÇOS */}
           <div>
-            <h3 className="text-white font-semibold uppercase tracking-wider text-base mb-6">
+            <h3 className="text-white font-medium uppercase tracking-wider text-base mb-6">
               Serviços
             </h3>
 
-            <ul className="space-y-3 text-gray-400 text-base">
+            <ul className="space-y-3 text-gray-300 text-base">
               <li>Branding & Identidade Visual</li>
               <li>Gestão de Redes Sociais</li>
               <li>Produção Audiovisual</li>
@@ -43,11 +43,11 @@ export default function Footer() {
 
           {/* CONTACTO */}
           <div>
-            <h3 className="text-white font-semibold uppercase tracking-wider text-base mb-6">
+            <h3 className="text-white font-medium uppercase tracking-wider text-base mb-6">
               Contacto
             </h3>
 
-            <ul className="space-y-4 text-gray-400 text-base">
+            <ul className="space-y-4 text-gray-300 text-base">
               <li className="flex items-start gap-3">
                 <FiMapPin className="mt-1 text-yellow-400" />
                 <span>
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* REDES SOCIAIS */}
           <div>
-            <h3 className="text-white font-semibold uppercase tracking-wider text-base mb-6">
+            <h3 className="text-white font-medium uppercase tracking-wider text-base mb-6">
               Seguir
             </h3>
 
@@ -80,7 +80,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/itsall4u"
                 target="_blank"
                 className="w-11 h-11 flex items-center justify-center rounded-full 
-                border border-gray-700 
+                border border-gray-500 
                 hover:border-yellow-400 hover:text-yellow-400 
                 transition duration-300"
               >
@@ -91,7 +91,7 @@ export default function Footer() {
                 href="https://www.instagram.com/itsall4u.ao/"
                 target="_blank"
                 className="w-11 h-11 flex items-center justify-center rounded-full 
-                border border-gray-700 
+                border border-gray-500 
                 hover:border-yellow-400 hover:text-yellow-400 
                 transition duration-300"
               >
@@ -102,7 +102,7 @@ export default function Footer() {
                 href="https://www.youtube.com/@ItsAll4uangola"
                 target="_blank"
                 className="w-11 h-11 flex items-center justify-center rounded-full 
-                border border-gray-700 
+                border border-gray-500 
                 hover:border-yellow-400 hover:text-yellow-400 
                 transition duration-300"
               >
@@ -114,11 +114,11 @@ export default function Footer() {
         </div>
 
         {/* DIVISOR */}
-        <div className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-400 text-base space-y-2">
+        <div className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-300 text-base space-y-2">
           <p>
             Transformamos ideias em resultados reais para marcas que querem crescer.
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.
           </p>
         </div>

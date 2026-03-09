@@ -63,15 +63,15 @@ const CloseMenuOpen = ()=>{
     {/* RIGHT */}
     <nav className="flex items-center gap-4 whitespace-nowrap">
 
-      <a href="/OqueFizemos" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
+      <a href="/OqueFizemos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
         O que fazemos
       </a>
 
-      <a href="/SobreNos" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
+      <a href="/SobreNos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
         Sobre nós
       </a>
 
-      <Link href="/portfolio" className="hidden lg:block text-[16px] font-medium text-[#0F172A] hover:text-black/80 transition">
+      <Link href="/portfolio" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
         Portfólio
       </Link>
 
@@ -80,7 +80,7 @@ const CloseMenuOpen = ()=>{
           <a
   href="/enviarEmail"
   className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full 
-  bg-[#f5c044] text-black text-[16px] font-medium 
+  bg-yellow-500 text-black text-[16px] font-medium 
   transition-all duration-300 
   hover:opacity-90"
 >
