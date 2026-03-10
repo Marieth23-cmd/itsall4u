@@ -246,54 +246,60 @@ export default function EmpresaPage({ params }: Props) {
                       </div>
                     )}
 
-                    {/* Confira imagens de alguns momentos do evento xhx */}
-                    {item.type === "image-evento" && (
-                      <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
-                        <h1 className="text-2xl lg:text-3xl text-center font-medium mb-6 ">{item.title}</h1>
-                        <p className="text-base lg:text-lg text-gray-600 max-w-7xl">{item.description}</p>
-
-                        {item.image && Array.isArray(item.image) && (
-                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                            {item.image.map((img: string, i: number) => (
-                                <div
-                                  key={i}
-                                  className="cursor-pointer"
-                                  onClick={() => setSelectedImage(img)}
-                                >
-                                  <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    width={400}
-                                    height={300}
-                                    className="w-full h-full object-cover rounded-lg"
-                                  />
-                                </div>
-                              ))}
-                          </div>
-                        )}
-                      </div>
-
-                    )}
-
-
-
-
+                  
                         {/* CONTENT VIDEO */}
                         {item.type === "content-video" && (
                           <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
-                            <h1 className="text-2xl lg:text-4xl text-center font-semibold mb-8 ">{item.title}</h1>
+                            <h1 className="text-2xl lg:text-3xl text-center font-medium mb-8 ">{item.title}</h1>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center">
-                              <video controls className="w-full rounded-lg  aspect-video object-contain ">
-                                <source src={item.video} type={`video/${item.video.split('.').pop()}`} />
-                              </video>
-                              {item.description && (
-                                <p className="text-gray-700 text-start text-base lg:text-lg max-w-7xl mx-auto">
+                              <video controls className="w-full rounded-lg aspect-video object-contain">
+                                  <source src={item.video} type="video/mp4" />
+                                        </video>
+                                            {item.description && (
+                                <p className="text-gray-700 text-start text-base lg:text-lg max-w-6xl mx-auto">
                                   {item.description}
                                 </p>
                               )}
                             </div>
                           </div>
                         )}
+
+                          {/*CONTENT BLOCK TWO - Imagem e texto lado a lado */}
+                          {item.type ==="content-block-image" && (
+                            <div >
+                            
+                             <div>
+                              <h2 className="text-2xl lg:text-3xl text-center font-medium mb-4 ">
+                                {item.title}
+                              </h2>
+                              </div>
+                              
+                               <div>
+                                 <p className="text-gray-700 text-start text-base lg:text-lg max-w-7xl mx-auto ">
+                                  {item.description}
+                                </p>
+                                </div>
+
+                              {item.image && Array.isArray(item.image) && (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1 mt-6">
+                                  {item.image.map((img: string, i: number) => (
+                                    <div key={i}
+                                     className="cursor-pointer"
+                                     onClick={() => setSelectedImage(img)}>
+                                      <Image
+                                        src={img}
+                                        alt={item.title}
+                                        width={400}
+                                        height={300}
+                                        className="w-full h-full object-cover rounded-lg"
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
+
 
                {item.type === "content-block-two" && (
                 <div>
@@ -304,9 +310,7 @@ export default function EmpresaPage({ params }: Props) {
                        
                        
                       </div>
-                     
-
-                  <div className=" flex flex-col lg:flex-row  gap-8 items-center pt-4 lg:pt-4 lg:px-6 mx-auto max-w-7xl "> 
+                     <div className=" flex flex-col lg:flex-row  gap-8 items-center pt-4 lg:pt-4 lg:px-6 mx-auto max-w-7xl "> 
 
                        
                       {item.image && (
