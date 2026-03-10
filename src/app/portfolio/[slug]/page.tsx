@@ -47,14 +47,14 @@ export default function EmpresaPage({ params }: Props) {
           </div>
 
           <div className="space-y-8">
-            <h1 className="text-2xl lg:text-4xl font-semibold text-black">
+            <h1 className="text-2xl lg:text-3xl font-medium text-black">
               {empresa.nome}
             </h1>
 
             <div className="w-20 h-[3px] bg-yellow-400"></div>
 
             {empresa.descricaoPerfil && (
-              <p className="text-gray-700 max-w-lg">
+              <p className="text-gray-700 max-w-lg text-base lg:text-lg">
                 {empresa.descricaoPerfil}
               </p>
             ) }
@@ -85,7 +85,7 @@ export default function EmpresaPage({ params }: Props) {
 
               <div className="space-y-8">
                 {empresa.descricaoEvento && (
-                  <p className="text-gray-700 max-w-7xl mt-6">
+                  <p className="text-gray-700 max-w-7xl text-base lg:text-lg mt-6">
                     {empresa.descricaoEvento}
                   </p>
                 )}
@@ -97,7 +97,7 @@ export default function EmpresaPage({ params }: Props) {
       {/* WEBSITE */}
       {empresa.website && (
         <section className="px-6 text-center">
-          <h2 className="text-3xl font-light mb-6 mt-16">
+          <h2 className="text-2xl lg:text-3xl font-light mb-6 mt-16">
             Website Desenvolvido
           </h2>
 
@@ -154,7 +154,7 @@ export default function EmpresaPage({ params }: Props) {
                   {item.type === "logos-row" && Array.isArray(item.logos) && (
                     <div className="w-full flex flex-col items-center justify-center max-w-[1500px] mx-auto px-8">
                       {/* TÍTULO */}
-                      <h1 className="text-2xl lg:text-4xl font-semibold text-center mt-8 mb-10">
+                      <h1 className="text-2xl lg:text-3xl font-medium text-center mt-8 mb-10">
                         9 ETAPAS — 9 PATROCINADORES
                       </h1>
 
@@ -231,9 +231,9 @@ export default function EmpresaPage({ params }: Props) {
                   {item.type==="video-grid" && Array.isArray(item.videos) && (
                       <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
                         
-                        <h1 className="text-2xl lg:text-4xl text-center font-semibold mb-6 ">{item.title}</h1>
+                        <h1 className="text-2xl lg:text-3xl text-center font-medium mb-6 ">{item.title}</h1>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                           {item.videos
                             .filter((v: any) => typeof v === 'string')
                             .map((video: string, i: number) => (
@@ -249,8 +249,8 @@ export default function EmpresaPage({ params }: Props) {
                     {/* Confira imagens de alguns momentos do evento xhx */}
                     {item.type === "image-evento" && (
                       <div className="pt-4 lg:px-6 mx-auto max-w-7xl ">
-                        <h1 className="text-2xl lg:text-4xl text-center font-semibold mb-6 ">{item.title}</h1>
-                        <p className="text-lg lg:xl text-gray-600 max-w-7xl">{item.description}</p>
+                        <h1 className="text-2xl lg:text-3xl text-center font-medium mb-6 ">{item.title}</h1>
+                        <p className="text-base lg:text-lg text-gray-600 max-w-7xl">{item.description}</p>
 
                         {item.image && Array.isArray(item.image) && (
                           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
@@ -287,7 +287,7 @@ export default function EmpresaPage({ params }: Props) {
                                 <source src={item.video} type={`video/${item.video.split('.').pop()}`} />
                               </video>
                               {item.description && (
-                                <p className="text-gray-700 text-start max-w-7xl mx-auto">
+                                <p className="text-gray-700 text-start text-base lg:text-lg max-w-7xl mx-auto">
                                   {item.description}
                                 </p>
                               )}
@@ -298,7 +298,7 @@ export default function EmpresaPage({ params }: Props) {
                {item.type === "content-block-two" && (
                 <div>
                   <div>
-                        <h2 className="text-2xl lg:text-4xl text-center font-semibold mb-4 ">
+                        <h2 className="text-2xl lg:text-3xl text-center font-medium mb-4 ">
                           {item.title}
                         </h2>
                        
@@ -325,7 +325,7 @@ export default function EmpresaPage({ params }: Props) {
                        {/* TEXTO */}
                       <div>
                        
-                        <p className="text-gray-700 text-start max-w-7xl mx-auto lg:h-[500px] ">
+                        <p className="text-gray-700 text-start text-base lg:text-lg max-w-7xl mx-auto lg:h-[500px] ">
                           {item.description}
                         </p>
                        
@@ -339,12 +339,12 @@ export default function EmpresaPage({ params }: Props) {
                 {item.type === "content-block" && (
                   <div className="grid grid-cols-1 gap-4 items-center pt-4 lg:pt-20 lg:px-6 mx-auto max-w-7xl ">
                     
-                     <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-center">
+                     <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-center">
                           {item.title}
                         </h2> 
                       <div>
                         
-                        <p className="text-gray-700 text-start max-w-7xl mx-auto">
+                        <p className="text-gray-700 text-start text-base lg:text-lg max-w-7xl mx-auto">
                           {item.description}
                         </p>
                       </div>
