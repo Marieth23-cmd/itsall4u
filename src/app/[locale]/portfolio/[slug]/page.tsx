@@ -18,7 +18,7 @@ type Props = {
 
 
 export default function EmpresaPage({ params }: Props) {
-const locale = useLocale();
+ useLocale();
 const t= useTranslations("Portfolio")
 
 
