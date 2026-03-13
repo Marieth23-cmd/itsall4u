@@ -6,8 +6,8 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import { CgArrowLongRight } from "react-icons/cg"
 import { useState } from "react"
-import { getempresas} from "@/data/empresas";
-import { useTranslations } from "next-intl"
+import { getempresas } from "@/data/empresas";
+import { useTranslations , useLocale } from "next-intl"
 
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
 
 
 export default function EmpresaPage({ params }: Props) {
-
+const locale = useLocale();
 const t= useTranslations("Portfolio")
 
 

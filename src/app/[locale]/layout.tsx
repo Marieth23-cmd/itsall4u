@@ -20,6 +20,11 @@ type Props = {
 export const metadata: Metadata = {
   title: "ItsAll4U-Marketing & Comunicação",
   description: "ItsAll4U - Plataforma de Carreiras",
+  icons: {
+  icon: [
+    { url: "/itsall/logo.png", type: "image/png" }
+  ],
+},
 };
 
 
