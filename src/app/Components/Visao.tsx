@@ -1,20 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 
 export default function Visao() {
+
+  const t = useTranslations("Visao")
+
+  const itemsData = t.raw("items") as Array <{title:string , text:string}>
+
   const items = [
     {
-      title: "Visão",
-      text: "Ser referência em estratégia e comunicação, impulsionando marcas através de inovação e crescimento sustentável."
+      ...itemsData[0]
     },
     {
-      title: "Missão",
-      text: "Transformar ideias em soluções estratégicas que conectam marcas e pessoas de forma autêntica."
+       ...itemsData[1]
     },
     {
-      title: "Valores",
-      text: "Estratégia, criatividade, confiança e compromisso orientam cada projeto que desenvolvemos."
+      ...itemsData[2]
     }
   ];
 

@@ -1,36 +1,39 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+
+
+
+export default function Hero() {
+  const [current, setCurrent] = useState(0);
+  const t= useTranslations("Hero")
+
+  const slidesData= t.raw("slides") as Array <{title:string ; subtitle:string}>
 
 const slides = [
   {
     type: "image",
     src: "/equipa/testehero.jpg",
-    title: "Estratégia que impulsiona marcas",
-    subtitle: "Criatividade, tecnologia e visão para gerar crescimento real.",
+    ...slidesData[0]
   },
   {
     type: "image",
     src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772011752/fixe_czzqa4.jpg",
-    title: "Criatividade com propósito",
-    subtitle: "Design e comunicação pensados para resultados.",
+    ...slidesData[1]
   },
   {
     type: "image",
     src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015814/b1_wmvbtm.jpg",
-    title: "Resultados que fazem a diferença",
-    subtitle: "Transformamos desafios em soluções eficazes.",
+    ...slidesData[2]
   },
 ];
-
-export default function Hero() {
-  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
     <section className="relative h-[90vh] w-full overflow-hidden bg-black">

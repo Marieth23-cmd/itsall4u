@@ -1,15 +1,18 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import { CgArrowLongRight } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect, useCallback,useRef } from "react";
 import Multidioma from "./Multidioma";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
  const [isOpen, setIsOpen] = useState(false);
  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+ const h = useTranslations("Header")
 
 const boxref=useRef<HTMLDivElement>(null)
 const handleClick = useCallback ((event:MouseEvent)=>{
@@ -49,7 +52,7 @@ const CloseMenuOpen = ()=>{
   <div className=" mx-auto px-6 md:px-8 py-4 flex items-center justify-between bg-white backdrop-blur-md  shadow-sm">
 
     {/* LEFT */}
-    <a href="/" className="lg:ml-44">
+    <Link href="/" className="lg:ml-44">
       <Image
         src="/itsall/logo.png"
         alt="Logo"
@@ -58,35 +61,35 @@ const CloseMenuOpen = ()=>{
         className="object-contain"
         priority
       />
-    </a>
+    </Link>
 
     {/* RIGHT */}
     <nav className="flex items-center gap-4 whitespace-nowrap">
 
-      <a href="/OqueFizemos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
-        O que fazemos
-      </a>
+      <Link href="/OqueFizemos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
+      {h("O que fazemos")}
+      </Link>
 
-      <a href="/SobreNos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
-        Sobre nós
-      </a>
+      <Link href="/SobreNos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
+       {h("Sobre nós")}
+      </Link>
 
       <Link href="/portfolio" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
-        Portfólio
+        {h("Portfólio")}
       </Link>
 
       <Multidioma />
 
-          <a
-  href="/enviarEmail"
-  className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full 
-  bg-yellow-500 text-black text-[16px] font-medium 
-  transition-all duration-300 
-  hover:opacity-90"
->
-  Entre em contacto
-  <CgArrowLongRight className="text-2xl text-black" />
-</a>
+          <Link
+        href="/enviarEmail"
+        className="hidden lg:flex items-center gap-3 px-7 py-3 rounded-full 
+        bg-yellow-500 text-black text-[16px] font-medium 
+        transition-all duration-300 
+        hover:opacity-90"
+      >
+      {h("button")}
+        <CgArrowLongRight className="text-2xl text-black" />
+      </Link>
 
       <FaBars
         onClick={() => setIsMenuOpen(true)}
@@ -123,9 +126,9 @@ const CloseMenuOpen = ()=>{
 
         <nav className="px-6 mt-6 flex-1 overflow-y-auto">
           <ul className="flex flex-col gap-4 text-lg">
-            <li><a href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black ">O que fazemos</a></li>
-            <li><a href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Sobre nós</a></li>
-            <li><a href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">Portfólio</a></li>
+            <li><Link href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black ">{h("O que fazemos")}</Link></li>
+            <li><Link href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black"> {h("Sobre nós")}</Link></li>
+            <li><Link href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">{h("Portfólio")}</Link></li>
           <Multidioma />
           </ul>
          
@@ -138,12 +141,12 @@ const CloseMenuOpen = ()=>{
          
 
           <div className="mt-6">
-            <a href="/enviarEmail"
+            <Link href="/enviarEmail"
               onClick={CloseMenuOpen}
               className="w-full px-6 py-3 rounded-lg bg-yellow-500 text-white font-medium"
             >
-              Entre em contacto
-            </a>
+              {h("button")}
+            </Link>
           </div>
         </div>
 

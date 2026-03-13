@@ -1,9 +1,14 @@
 "use client"
-
+import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { Link } from "@/navigation"
+
+const MonoLink = motion.create(Link)
 
 export default function Beneficios() {
+
+  const t = useTranslations("Beneficios")
   return (
     <section className="relative w-full min-h-[80dvh] flex items-start text-white overflow-hidden">
 
@@ -37,7 +42,7 @@ export default function Beneficios() {
               transition={{ duration: 0.6 }}
               className="text-yellow-400 tracking-[0.3em] uppercase text-sm"
             >
-              Valor & Crescimento
+             {t("subtitle")}
             </motion.span>
 
             <motion.h2
@@ -46,7 +51,7 @@ export default function Beneficios() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl md:text-3xl font-medium leading-tight mt-6 mb-6"
             >
-              Transformamos marcas em referências no mercado
+             {t("title")}
             </motion.h2>
 
             <motion.p
@@ -55,13 +60,10 @@ export default function Beneficios() {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-base md:text-lg text-gray-200 leading-relaxed mb-10"
             >
-              Trabalhar connosco significa posicionar a sua marca com estratégia,
-              elegância e inteligência. Criamos experiências digitais que aumentam
-              autoridade, fortalecem a identidade e geram crescimento real e mensurável.
-              Não oferecemos apenas marketing — construímos presença e impacto duradouro.
+              {t("texto")}
             </motion.p>
 
-            <motion.a
+            <MonoLink
               href="/enviarEmail"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,8 +74,8 @@ export default function Beneficios() {
               text-yellow-400 hover:bg-yellow-500 hover:text-black 
               transition-all duration-300 rounded-full"
             >
-              Fale Connosco
-            </motion.a>
+             {t("button")}
+            </MonoLink>
 
           </div>
         </div>

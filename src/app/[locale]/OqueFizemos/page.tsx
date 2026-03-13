@@ -2,66 +2,18 @@
 import { CgArrowLongRight } from "react-icons/cg";
 import Image from "next/image";
 import {motion} from "framer-motion"
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import Footer from "../../Components/Footer";
+import Header from "../../Components/Header";
 import { HiOutlineChartBar, HiOutlineGlobeAlt, HiOutlineCode } from 'react-icons/hi';
 import { FiVideo } from 'react-icons/fi';
 import { MdEvent } from 'react-icons/md';
 import { AiOutlineLineChart } from 'react-icons/ai';
 import { RiGovernmentLine } from 'react-icons/ri';
 import { TfiPalette } from "react-icons/tfi";
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
 
-const servicos = [
-  {
-    icone: <HiOutlineChartBar className="w-8 h-8 text-yellow-500" />,
-    title: "Planeamento Estratégico", 
-    description:
-      "Desenvolvemos planos personalizados que unem inovação e foco em resultados, aproximando marcas do público certo.",
-  },
-  { 
-    icone: <HiOutlineGlobeAlt className="w-8 h-8 text-yellow-500" />,
-    title: "Comunicação 360°",
-     description:
-      "Criamos campanhas integradas que conectam marcas e públicos de forma eficaz e impactante.",
-  },
-  {
-   icone: <TfiPalette className="w-8 h-8 text-yellow-500" />, 
-    title: "Design e Experiências Visuais",
-    description:
-      "Construímos identidades visuais marcantes e soluções de design aplicadas ao digital e físico, sempre com modernidade.",
-  },
-  {
-    icone: <MdEvent className="w-8 h-8 text-yellow-500" />,
-     title: "Eventos & Activação",
-    description:
-      "Criamos eventos que unem criatividade e organização, transformando interações em experiências memoráveis para as marcas.",
-  },
-  {
-      icone: <FiVideo className="w-8 h-8 text-yellow-500" />,
-       title: "Media",
-      description:
-      "Planeamos canais eficazes e gerimos investimentos com inteligência, garantindo visibilidade e retorno sustentável.",
-  },
-  {
-    icone: <AiOutlineLineChart className="w-8 h-8 text-yellow-500" />,
-    title: "Gestão de Performance",
-    description:
-      "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
-  },
-  {
-    icone: <RiGovernmentLine className="w-8 h-8 text-yellow-500" />,
-     title: "Comunicação Institucional",
-    description:
-      "Desenvolvemos estratégias de comunicação que fortalecem a imagem e a reputação das marcas institucionais.",
-  },
-  {
-   icone: <HiOutlineCode className="w-8 h-8 text-yellow-500" />, 
-    title: "Desenvolvimento Web",
-    description:
-      "Desenvolvemos conteúdos e campanhas digitais que geram engajamento, fortalecem comunidades e posicionam marcas.",
-  },
-];
     
 
 const trabalhos = [
@@ -91,6 +43,45 @@ const trabalhos = [
   },
 ];
 export default function OQueFazemos() {
+  const t = useTranslations("OqueFizemos")
+
+  const servicosData = t.raw("servicos") as Array <{title:string , description:string}>
+
+
+const servicos = [
+  {
+    icone: <HiOutlineChartBar className="w-8 h-8 text-yellow-500" />,
+    ...servicosData[0]
+  },
+  { 
+    icone: <HiOutlineGlobeAlt className="w-8 h-8 text-yellow-500" />,
+    ...servicosData[1]
+  },
+  {
+   icone: <TfiPalette className="w-8 h-8 text-yellow-500" />, 
+    ...servicosData[2]
+  },
+  {
+    icone: <MdEvent className="w-8 h-8 text-yellow-500" />,
+    ...servicosData[3]
+  },
+  {
+      icone: <FiVideo className="w-8 h-8 text-yellow-500" />,
+      ...servicosData[4]
+  },
+  {
+    icone: <AiOutlineLineChart className="w-8 h-8 text-yellow-500" />,
+    ...servicosData[5]
+  },
+  {
+    icone: <RiGovernmentLine className="w-8 h-8 text-yellow-500" />,
+     ...servicosData[6]
+  },
+  {
+   icone: <HiOutlineCode className="w-8 h-8 text-yellow-500" />, 
+   ...servicosData[7]
+  },
+];
   return (
    
 <div className="bg-white">
@@ -105,7 +96,7 @@ export default function OQueFazemos() {
             transition={{ duration: 0.2 }}
             className="text-2xl lg:text-3xl font-medium text-[#0F172A]"
           >
-            Nossos Serviços
+            {t("title")}
           </motion.h1>
         </div>
       </section>
@@ -148,10 +139,10 @@ export default function OQueFazemos() {
         className="text-center max-w-2xl mx-auto mb-10"
       >
         <h2 className="text-2xl lg:text-3xl font-medium text-[#0F172A] mb-4">
-        Trabalhos Recentes
+        {t("group1.title")}
         </h2>
         <p className="text-gray-700 text-base lg:text-lg">
-        Projetos que refletem estratégia, criatividade e impacto real.
+       {t("group1.subtitle")}
         </p>
       </motion.div>
 
@@ -223,25 +214,23 @@ export default function OQueFazemos() {
 
     <div className="flex-1 px-8 lg:px-20 py-14 flex flex-col justify-center bg-white">
       <h2 className="text-2xl lg:text-3xl font-medium text-[#0F172A] mb-6 leading-tight">
-        Parcerias estratégicas que impulsionam crescimento.
+       {t("group2.title")}
       </h2>
 
       <p className="text-gray-700 text-base lg:text-lg leading-relaxed max-w-xl mb-10">
-        Trabalhamos lado a lado com marcas que procuram consistência,
-        posicionamento forte e crescimento sustentável através de
-        estratégia e execução criativa.
+       {t("group2.subtitle")}
       </p>
 
        <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
-            <a 
+            <Link 
               href="/enviarEmail" 
-              className="text-base lg:text-lg font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
+              className="text-base lg:text-lg font-medium text-yellow-400 transition-colors duration-300 group-hover:text-yellow-500"
             >
-              Entre em contacto
-            </a>
+             {t("group2.link")}
+            </Link>
 
             <CgArrowLongRight 
-              className="text-3xl text-yellow-400 transition-all duration-300 group-hover:translate-x-2" 
+              className="text-3xl text-yellow-400 transition-all duration-300 group-hover:translate-x-2 group-hover:text-yellow-500" 
             />
           </div>
     </div>

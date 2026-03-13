@@ -1,5 +1,5 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
@@ -33,6 +33,8 @@ export default function CarrosselEmpresas() {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
+  const t= useTranslations("Empresas")
+
   const checkScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -55,7 +57,7 @@ export default function CarrosselEmpresas() {
     <section className=" py-16 relative bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-2xl lg:text-3xl font-medium text-black text-center mb-10">
-          Marcas que confiam no nosso trabalho
+          {t("title")}
         </h2>
 
         <div className="relative">

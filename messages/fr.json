@@ -1,0 +1,337 @@
+{
+    "Header":{
+        "O que fazemos":"Ce que nous faisons",
+         "Sobre nós":"À propos de nous",
+         "Portfólio":"Portefeuille",
+         "button":"Entrez en contact"
+
+},
+ "Hero":{
+        "slides": [
+       {
+        "title": "Stratégie qui propulse les marques",
+        "subtitle": "Créativité, technologie et vision pour générer une croissance réelle."
+      },
+       {
+        "title": "Créativité avec un but",
+        "subtitle": "Design et communication pensés pour les résultats."
+      },
+      {
+        "title": "Les résultats qui font la différence",
+        "subtitle": "Nous transformons les défis en solutions efficaces."
+      }
+
+
+
+]
+    
+},
+
+"Apresentacao":{
+    "title":"Qui sommes-nous",
+    "texto":"Nous sommes une entreprise de marketing dédiée à la connexion des marques et des personnes de manière créative et efficace. Avec une équipe passionnée et expérimentée, nous transformons les idées en stratégies gagnantes, aidant les entreprises à croître, à renforcer leur présence numérique et à conquérir de nouveaux publics. Nous croyons en l'innovation, en l'analyse intelligente des données et en la communication personnalisée pour offrir des résultats concrets et durables.",
+    "link":"Découvrez nos services"
+},
+
+"Empresas":{
+    "title":"Les marques qui font confiance à notre travail"
+
+},
+"Beneficios":{
+    "subtitle":"Valeur & Croissance",
+    "title":"Nous transformons les marques en références du marché",
+    "texto":"Travailler avec nous signifie positionner votre marque avec stratégie, élégance et intelligence. Nous créons des expériences numériques qui augmentent l'autorité, renforcent l'identité et génèrent une croissance réelle et mesurable. Nous n'offrons pas seulement du marketing — nous construisons une présence et un impact durables.",
+    "button":"Parlons"
+
+},
+
+"Convite":{
+    "title":"Travaillez avec nous",
+    "subtitle":"Amplifiez votre entreprise avec la stratégie et l'innovation. Connectez-vous avec une équipe créative qui transforme les défis en solutions réelles.",
+    "link":"Entrez en contact"
+
+},
+
+"Footer":{
+    "descricao":"ItsAll4U est une agence créative spécialisée dans des solutions stratégiques pour les marques qui veulent croître avec identité, innovation et impact réel.",
+    "group1":{
+        "title":"Services",
+        "servico1":"Marque et Identité Visuelle",
+        "servico2":"Gestion des Réseaux Sociaux",
+         "servico3":"Production Audiovisuelle",
+          "servico4":"Web Design & Développement"
+    },
+    "group2":{
+        "title":"Contact"
+    },
+    "group3":{
+        "title":"Suivre"
+       
+    },
+    "bottom":{
+        "texto1":"Nous transformons les idées en résultats réels pour les marques qui veulent croître.",
+        "texto2":"ItsAll4U. Tous droits réservés."
+    }
+},
+
+"OqueFizemos":{
+    "title":"Nos Services",
+    "servicos":[
+        {
+            "title":"Planification Stratégique",
+            "description":"Nous développons des plans personnalisés qui allient innovation et orientation vers les résultats, rapprochant les marques du bon public."
+        },
+         {
+            "title":"Communication 360°",
+            "description":"Nous créons des campagnes intégrées qui connectent les marques et les publics de manière efficace et percutante."
+        },
+          {
+            "title":"Design et Expériences Visuelles",
+            "description":"Nous construisons des identités visuelles frappantes et des solutions de design appliquées au numérique et au physique, toujours avec modernité."
+        },
+         {
+            "title":"Événements & Activation",
+            "description":"Nous créons des événements qui allient créativité et organisation, transformant les interactions en expériences mémorables pour les marques."
+        },
+        {
+            "title":"Média",
+            "description":"Nous planifions des canaux efficaces et gérons les investissements avec intelligence, garantissant la visibilité et le retour durable."
+        },
+         {
+            "title":"Gestion de Performance",
+            "description":"Nous développons du contenu et des campagnes numériques qui génèrent l'engagement, renforcent les communautés et positionnent les marques."
+        },
+         {
+            "title":"Communication Institutionnelle",
+            "description":"Nous développons des stratégies de communication qui renforcent l'image et la réputation des marques institutionnelles."
+        },
+         {
+            "title":"Développement Web",
+            "description":"Nous développons du contenu et des campagnes numériques qui génèrent l'engagement, renforcent les communautés et positionnent les marques."
+        }
+
+    ],
+    "group1":{
+        "title":"Travaux Récents",
+        "subtitle":"Des projets qui reflètent la stratégie, la créativité et un impact réel."
+    },
+    "group2":{
+        "title":"Les partenariats stratégiques qui stimulent la croissance.",
+        "subtitle":"Nous travaillons côte à côte avec les marques qui recherchent la cohérence, un positionnement fort et une croissance durable grâce à la stratégie et à l'exécution créative.",
+        "link":"Entrez en contact"
+    }
+
+
+},
+
+"Visao":{
+    "items":[
+    {
+      "title": "Vision",
+      "text": "Être une référence en stratégie et communication, stimulant les marques par l'innovation et la croissance durable."
+    },
+    {
+      "title": "Mission",
+      "text": "Transformer les idées en solutions stratégiques qui connectent les marques et les personnes de manière authentique."
+    },
+    {
+      "title": "Valeurs",
+      "text": "La stratégie, la créativité, la confiance et l'engagement guident chaque projet que nous développons."
+    }
+  ]
+},
+
+"SobreNos":{
+    "groupHero":{
+        "title":"Nous sommes une agence créative moderne et stratégique",
+        "subtitle":"Stratégie, design et communication pour les marques qui recherchent une croissance durable."
+
+    },
+    "group2":{
+        "title":"NOUS SOMMES LE BON PARTENAIRE POUR VOTRE MARQUE",
+        "subtitle":"Nous combinons la réflexion stratégique avec l'exécution créative pour livrer des résultats mesurables. Notre équipe est spécialisée dans la création d'expériences de marque qui touchent les audiences et génèrent la croissance."
+    },
+     "group3":{
+        "title":"Rencontrez Notre Équipe",
+        "subtitle":"Nous sommes une équipe multidisciplinaire motivée par la stratégie, la créativité et le but. Nous opérons en Angola depuis près de trois ans, développant des projets qui connectent les marques et les personnes de manière authentique et percutante."
+    },
+
+    "equipa":[
+
+  {
+    "name":"Nelson Correia",
+    "funcao":"PDG"
+  },
+ {
+    "name":"Jelson Quizunda",
+    "funcao":"Directeur Créatif"
+  },
+   {
+    "name":"Jorge Miranda",
+    "funcao":"Design Graphique"
+  },
+   {
+    "name":"Alicia Vanessa",
+    "funcao":"Design Graphique"
+  },
+  {
+    "name":"Nicolas Diogo",
+    "funcao":"Développeur Fullstack"
+  }
+  
+]
+},
+
+
+"Portfolio":{
+    "title":"Portefeuille",
+    "subtitle":"Nous combinons créativité, innovation et stratégie pour renforcer les marques, élargir la visibilité et promouvoir une croissance durable. Nous agissons en tant que partenaires de confiance, engagés à comprendre chaque défi et transformer les objectifs en accomplissements réels.",
+    "texto1":"Site Web Développé",
+    "link":"Visiter le Site Web",
+    "logos":"9 ÉTAPES — 9 SPONSORS",
+    "empresas":{
+        "lucrum-trust":{
+            "descricaoPerfil":"Lucrum Trust est une société de courtage en valeurs mobilières qui agit dans l'intermédiation financière et le conseil stratégique en matière d'investissements sur le marché des capitaux.",
+            "descricaoEvento":"Couverture photographique de la participation de Lucrum Trust à des événements commerciaux importants en Angola, y compris la FILDA, l'Expo Unitel Huíla et la Foire Internationale de Benguela, enregistrant les moments marquants de la présence de la marque dans ces expositions."
+        },
+        "aipex":{
+            "descricaoPerfil":"L'AIPEX est l'institution publique responsable de la promotion de l'investissement privé et des exportations de l'Angola. L'entité agit dans la captation des investissements nationaux et étrangers, le soutien au développement de projets commerciaux et la promotion de l'internationalisation des entreprises angolaises, contribuant à la croissance économique et à la diversification de l'économie du pays.",
+            "title":"Consultez les Images de l'Événement",
+             "description":"Couverture institutionnelle de l'événement de promotion de l'investissement organisé par l'AIPEX, y compris la production de contenu visuel, l'enregistrement photographique et l'assistance à la communication de l'événement."
+
+
+        },
+        "cabship":{
+            "descricaoPerfil":"CABSHIP est une entreprise angolaise de logistique spécialisée dans l'agentage maritime et les solutions intégrées pour les secteurs portuaire, maritime et pétrolier et gazier.",
+           
+                "sections":{
+                    "title1":"Couverture Audiovisuelle de l'Événement CABSHIP à Cabinda",
+                    "description1":"Notre équipe a eu l'honneur de réaliser la couverture complète de l'événement CABSHIP à Cabinda, capturant chaque moment avec précision et créativité. Nous avons agi dans la photographie professionnelle, la filmographie et l'édition audiovisuelle, garantissant que tous les détails de la cérémonie et les interactions s'étaient déroulées impeccablement.",
+                    "description2": "La couverture a mis en lumière la structure de l'événement, la participation des invités et les moments clés, traduisant en images et en vidéos l'énergie, le professionnalisme et l'impact de la rencontre. Notre travail a permis à CABSHIP de divulguer l'événement avec un contenu de haute qualité, renforçant son image institutionnelle et promouvant ses valeurs d'entreprise." 
+                }
+
+
+                },
+
+        "mangais-resort":{
+            "descricaoPerfil":"Mangais Golf Resort est une destination touristique située à Barra do Cuanza, spécialisée dans le tourisme de golf et de nature.",
+            "descricaoEvento": "Production audiovisuelle et couverture des événements d'entreprise tenus au Mangais Golf Resort."
+
+           
+
+        },
+        "farmaclinic":{
+            "descricaoPerfil":"Entreprise angolaise de prestations de services de santé offrant diverses spécialités médicales, des examens diagnostiques et des analyses cliniques, avec une approche multidisciplinaire axée sur la qualité, la confiance et le bien-être des patients.",
+            "title": "Production de Contenu Audiovisuel en Santé"
+
+           
+
+        },
+
+         "fly-hotel":{
+            "descricaoPerfil":"Hôtel trois étoiles situé à proximité de l'aéroport international Dr. António Agostinho Neto, offrant un hébergement confortable et un emplacement stratégique pour les voyageurs.",
+            "title": "Contenu Visuel pour la Communication de la Marque",
+            "description": "Développement de pièces visuelles pour FlyHotel, créées pour renforcer la présence de la marque et communiquer ses services de manière claire et attrayante. Ces contenus ont été pensés pour mettre en avant l'identité de l'hôtel et renforcer sa communication auprès du public."
+
+        },
+
+         "hidraulica-angola":{
+            "descricaoPerfil":"Hidraulica de Angola est une entreprise angolaise fondée en 1996, spécialisée dans l'importation, la transformation et la commercialisation de tubes, de composants et de systèmes hydrauliques. L'entreprise opère dans le secteur oléo-hydraulique, offrant des solutions techniques et des services guidés par la qualité, l'efficacité et l'innovation pour différents secteurs industriels.",
+            "text": "Développement de campagnes éducatives"
+
+        },
+
+        "alianca-seguros":{
+             "title1": "CAMPAGNE MARS FEMMES",
+             "description1": "Dans le cadre de la campagne Mars Femmes, nous avons réalisé l'enregistrement photographique qui célèbre la force, le dévouement et la contribution des femmes d'ALIANÇA Seguros. L'image réunit les collaboratrices de l'entreprise dans un moment symbolique de valorisation et de reconnaissance, soulignant le rôle fondamental des femmes dans l'environnement professionnel. ItsAll4U a été responsable de la production et de la couverture visuelle de cette initiative, capturant avec sensibilité et professionnalisme un moment de célébration et d'inspiration.",
+             "title2": "SUPERBRANDS ANGOLA",
+             "description2": "Dans le cadre de l'initiative Superbrands Angola, nous avons réalisé l'enregistrement photographique d'un moment institutionnel qui met en lumière le leadership et la vision stratégique de la marque. L'image capture l'un des responsables de l'entreprise lors d'une intervention, mettant en évidence la reconnaissance et la présence de l'organisation parmi les marques de référence du pays.",
+            "description3": "Cette vidéo institutionnelle présente l'entreprise et son vaste réseau de prestataires de services de santé dans tout le pays. Avec des cliniques partenaires et un service disponible 24h/24, l'organisation souligne son engagement à garantir un accès rapide, efficace et de qualité aux soins de santé. La production et l'édition audiovisuelle de ce contenu ont été réalisées par ItsAll4U, assurant une communication claire, moderne et professionnelle de la marque."
+            
+
+        },
+          "conhecer-angola":{
+            "descricaoPerfil":"La plateforme numérique de promotion du tourisme en Angola, offrant des informations sur les destinations touristiques, les attractions culturelles, les événements et les expériences pour encourager le tourisme intérieur et international dans le pays.",
+            "title": "Campagnes vidéo"        
+         },
+
+ "academia-luanda":{
+      "title1":"LEADERSHIP",
+      "description1":"Nous avons capturé chaque moment de la conférence, enregistrant la présence de leaders et de conférenciers spéciaux dans un environnement raffiné. La couverture d'ItsAll4U met en lumière le sérieux et l'importance de l'événement, préservant l'élégance et l'engagement des participants.",
+      "title2":"FORMATION",
+      "description2":"Nous avons enregistré la remise des certificats et les moments de célébration des jeunes participants, mettant en lumière le succès et la motivation de chacun. ItsAll4U documente avec soin et professionnalisme l'énergie et l'enthousiasme de la formation."
+      },
+
+       
+    "waa":{
+    "descricaoPerfil":"What About Agency est une agence de marketing d'influenceurs axée sur la création de connexions authentiques entre les marques et les personnes. Opérant dans des domaines tels que l'art, la mode, le divertissement, la beauté et le sport, l'agence développe des campagnes personnalisées et à fort impact, transformant les histoires en expériences engageantes et fidélisant les audiences.",
+    "title":"Campagnes vidéo"
+    
+  }
+  ,
+  "bwizer":{
+    "descricaoPerfil":"Bwizer est une entreprise dédiée à la formation et au développement de professionnels de la santé et de l'exercice physique, avec l'objectif de les aider à atteindre l'excellence professionnelle et un impact positif sur la communauté. L'entreprise offre des cours, des ateliers et des programmes de formation continue, axés sur des domaines tels que la physiothérapie, la nutrition, l'entraînement sportif et le bien-être, promouvant la croissance personnelle et professionnelle de ses clients.",
+    "descricaoEvento":"Lors de cette formation, notre équipe a réalisé la couverture complète de l'événement, capturant chaque moment important, des activités pratiques à l'interaction entre formateurs et participants. L'attention aux détails et l'enregistrement soigneux des expériences ont permis que tous les moments soient documentés avec une qualité visuelle, renforçant l'engagement de l'entreprise à valoriser chaque formation et rendre chaque apprentissage mémorable.",
+    "title":"Formation",
+    "description":"Lors de cette formation organisée par Clínica Bom Senso Reabilitação, nous avons abordé des sujets fondamentaux sur les dysfonctionnements temporomandibulaires et la douleur orofaciale. Notre équipe a été responsable du captage audiovisuel complet, enregistrant chaque moment du cours, garantissant la qualité en vidéo, audio et images." 
+},
+    
+
+ 
+    "geosurveys":{
+    "descricaoPerfil":"Geosurveys est une entreprise angolaise spécialisée dans les services de géosciences, offrant des solutions intégrées pour les secteurs du pétrole, du gaz et de l'exploitation minière. L'entreprise utilise la technologie avancée et l'expertise technique pour fournir des données géologiques, géophysiques et d'ingénierie, aidant à l'exploration, au développement et à la production de ressources naturelles de manière efficace et durable.",
+    "descricaoEvento":"Nous avons capturé les meilleurs moments de GEOSURVEYS à la 3ᵉ édition de la Foire Agroalimentaire, Angola Oil & Gas FILDA 2024 et Expo Unitel Huíla. Une seule image qui réunit l'essence de ces événements, mettant en évidence la présence de l'entreprise et l'énergie des interactions. Quand il s'agit d'enregistrer des moments marquants, GEOSURVEYS fait confiance à ItsAll4U pour une couverture audiovisuelle de qualité et d'impact.",
+    "description":"Nous avons enregistré tous les moments de l'exposition, capturant les conversations, les interactions et les découvertes des participants. Chaque détail de l'événement a été documenté par ItsAll4U, garantissant que l'essence et l'atmosphère de l'occasion aient été preservées avec une qualité audiovisuelle."
+    
+  }
+
+        }
+
+     
+   
+
+ },
+ "Email":{
+    "h1":"Prêts à élever",
+    "span":"votre marque?",
+    "paragrafo":"Partagez avec nous vos objectifs commerciaux. Nous développons des stratégies qui connectent la marque, le positionnement et les résultats réels.",
+    "telefone":"Téléphone",
+    "email":"E-mail",
+    "localizacao":"Localisation",
+         "form":{
+                "h2":"Entamez une conversation",
+                "name":"Nom Complet",
+                "email":"E-mail",
+                "message":"Parlez-nous de vos objectifs",
+                "Company":"Nom de l'entreprise"
+
+                },
+
+            "Select":{
+                "option":"Services d'intérêt",
+                "option1":"Planification Stratégique",
+                "option2":"Communication 360°",
+                "option3":"Design et Expériences Visuelles",
+                "option4":"Événements & Activation",
+                "option5":"Média",
+                "option6":"Gestion de Performance",
+                "option7":"Communication Institutionnelle",
+                "option8":"Développement Web"
+            },
+    "button":"Envoyer"
+}
+
+
+
+
+   
+   
+
+}
+
+
+
+
+
+
+

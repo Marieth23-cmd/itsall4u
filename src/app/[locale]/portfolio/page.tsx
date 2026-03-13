@@ -1,7 +1,8 @@
 import Image from "next/image"
-import Footer from "../Components/Footer"
-import Header from "../Components/Header"
-import Link from "next/link"
+import Footer from "../../Components/Footer"
+import Header from "../../Components/Header"
+import {Link} from "@/navigation";
+import { useTranslations } from "next-intl";
 
  const imagensEmpresas =[
     {
@@ -90,18 +91,20 @@ import Link from "next/link"
     const asImagens=[...imagensEmpresas]
 
 export default function Portfolio(){
+
+
+const t = useTranslations("Portfolio")
+
+
     return(
         <div>
             <Header/>
             <div className="pt-36 px-6 max-w-7xl mx-auto">
                 <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-snug mb-8">
-                     Portfólio
+                    {t("title")}
                   </h1>
                   <p className="max-w-2xl text-gray-800 text-base md:text-lg leading-relaxed ">
-                    Combinamos criatividade, inovação e estratégia para fortalecer marcas, 
-                    ampliar visibilidade e promover crescimento sustentável. 
-                    Atuamos como parceiros de confiança, comprometidos em compreender 
-                    cada desafio e transformar objetivos em conquistas reais.
+                    {t("subtitle")}
                     </p>
             </div>
             {/*Imagens das Empresas  */}

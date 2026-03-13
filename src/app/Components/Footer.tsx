@@ -1,8 +1,12 @@
+"use client"
+import { useTranslations } from "next-intl";
 import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import Image from "next/image";
 
 export default function Footer() {
+
+  const t = useTranslations("Footer")
   return (
     <footer className="bg-black">
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
@@ -22,29 +26,28 @@ export default function Footer() {
             />
 
             <p className="text-gray-300 leading-relaxed text-base">
-              A ItsAll4U é uma agência criativa especializada em soluções estratégicas 
-              para marcas que querem crescer com identidade, inovação e impacto real.
+              {t("descricao")}
             </p>
           </div>
 
           {/* SERVIÇOS */}
           <div>
             <h3 className="text-white font-medium uppercase tracking-wider text-base mb-6">
-              Serviços
+             {t("group1.title")}
             </h3>
 
             <ul className="space-y-3 text-gray-300 text-base">
-              <li>Branding & Identidade Visual</li>
-              <li>Gestão de Redes Sociais</li>
-              <li>Produção Audiovisual</li>
-              <li>Web Design & Desenvolvimento</li>
+              <li>{t("group1.servico1")}</li>
+              <li>{t("group1.servico2")}</li>
+              <li>{t("group1.servico3")}</li>
+              <li>{t("group1.servico4")}</li>
             </ul>
           </div>
 
           {/* CONTACTO */}
           <div>
             <h3 className="text-white font-medium uppercase tracking-wider text-base mb-6">
-              Contacto
+             {t("group2.title")}
             </h3>
 
             <ul className="space-y-4 text-gray-300 text-base">
@@ -72,7 +75,7 @@ export default function Footer() {
           {/* REDES SOCIAIS */}
           <div>
             <h3 className="text-white font-medium uppercase tracking-wider text-base mb-6">
-              Seguir
+              {t("group3.title")}
             </h3>
 
             <div className="flex items-center gap-4 text-gray-300">
@@ -116,10 +119,10 @@ export default function Footer() {
         {/* DIVISOR */}
         <div className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-300 text-base space-y-2">
           <p>
-            Transformamos ideias em resultados reais para marcas que querem crescer.
+            {t("bottom.texto1")}
           </p>
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} ItsAll4U. Todos os direitos reservados.
+            © {new Date().getFullYear()} {t("bottom.texto2")}
           </p>
         </div>
 

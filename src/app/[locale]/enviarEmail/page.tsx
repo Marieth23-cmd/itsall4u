@@ -1,12 +1,13 @@
 "use client";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 import {toast , ToastContainer} from "react-toastify";
+import { useTranslations } from "next-intl";
 
 
 export default function Email() {
 
-  
+  const t = useTranslations("Email")
     
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,25 +50,23 @@ export default function Email() {
           <div className="flex flex-col justify-center">
 
             <h1 className="text-2xl lg:text-3xl font-medium leading-tight text-black mb-6">
-              Prontos para elevar
+              {t("h1")} 
               <span className="block text-yellow-500">
-                a sua marca?
+                {t("span")}
               </span>
             </h1>
 
             <div className="w-16 h-[3px] bg-yellow-500 mb-8"></div>
 
             <p className="text-gray-700 text-base lg:text-lg leading-relaxed mb-12 max-w-md">
-              Partilhe connosco os seus objetivos de negócio.
-              Desenvolvemos estratégias que conectam marca,
-              posicionamento e resultados reais.
+              {t("paragrafo")}
             </p>
 
             <div className="space-y-4 text-gray-700">
-              <p><span className="font-medium">Telefone:</span> + (244) 930 611 983</p>
-              <p><span className="font-medium">Email:</span> geral@itsall4u.ao</p>
+              <p><span className="font-medium">{t("telefone")}:</span> + (244) 930 611 983</p>
+              <p><span className="font-medium">{t("email")}:</span> geral@itsall4u.ao</p>
               <p>
-                <span className="font-medium">Localização:
+                <span className="font-medium">{t("localizacao")}:
                     </span> Zamba 2  Bairro Azul Rua do Banco BFA
               </p>
             </div>
@@ -78,7 +77,7 @@ export default function Email() {
           <form onSubmit={handleSubmit} className="bg-white border border-black/5 rounded-2xl p-12 shadow-[0_30px_70px_rgba(0,0,0,0.06)]">
 
             <h2 className="text-2xl lg:text-3xl font-medium mb-10 text-black">
-              Inicie uma conversa
+              {t("form.h2")}
             </h2>
 
             <div className="flex flex-col gap-2">
@@ -87,17 +86,17 @@ export default function Email() {
                 name="name"
                 id="name"
                 type="text"
-                placeholder="Nome completo"
+                placeholder={t("form.name")}
                 className="border-b border-black/30 py-4 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300
-                placeholder:text-gray-700 text-gray-800"
+                placeholder:text-gray-500 text-gray-800"
               />
 
               <input
                 id="email"
                name="email"  
                 type="email"
-                placeholder="E-mail comercial"
+                placeholder={t("form.email")}
                 className="border-b border-black/30 py-4 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300
                 placeholder:text-gray-500 text-gray-800"
@@ -107,7 +106,7 @@ export default function Email() {
                  id="company"
                  name="company"
                 type="text"
-                placeholder="Nome da empresa"
+                placeholder={t("form.Company")}
                 className="border-b border-black/30 py-4 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300
                 placeholder:text-gray-500 text-gray-800"
@@ -117,26 +116,27 @@ export default function Email() {
                 name="servico"
                 id="servico"
                 className="border-b border-black/30 py-4 bg-transparent
-                text-gray-700 outline-none
+                text-gray-500 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300"
               >
                 <option value="" disabled className="text-gray-500">
-                  Serviços de interesse
+                  {t("Select.option")}
                 </option>
-                <option>Planeamento Estratégico</option>
-                <option>Comunicação 360°</option>
-                <option>Design e Experiências Visuais</option>
-                <option>Eventos & Activação</option>
-                <option>Gestão de Performance</option>
-                <option>Comunicação Institucional</option>
-                <option>Website</option>
+                <option className="text-gray-900">{t("Select.option1")}</option>
+                <option className="text-gray-900">{t("Select.option2")}</option>
+                <option className="text-gray-900">{t("Select.option3")}</option>
+                <option className="text-gray-900">{t("Select.option4")}</option>
+                <option className="text-gray-900">{t("Select.option5")}</option>
+                <option className="text-gray-900">{t("Select.option6")}</option>
+                <option className="text-gray-900">{t("Select.option7")}</option>
+                <option className="text-gray-900">{t("Select.option8")}</option>
               </select>
 
               <textarea
                 id="message"
                 name="message"
                 rows={4}
-                placeholder="Conte-nos sobre os seus objetivos"
+                placeholder={t("form.message")}
                 className="border-b border-black/30 py-4 outline-none resize-none
                 focus:border-[#C6A75E] transition-colors duration-300
                 placeholder:text-gray-500 text-gray-800"
@@ -149,7 +149,7 @@ export default function Email() {
                 transition-all duration-300
                 hover:bg-yellow-500 hover:text-black"
               >
-                Enviar
+                {t("button")}
               </button>
 
             </div>

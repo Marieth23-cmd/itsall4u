@@ -6,7 +6,8 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import { CgArrowLongRight } from "react-icons/cg"
 import { useState } from "react"
-import { empresas } from "@/data/empresas";
+import { getempresas} from "@/data/empresas";
+import { useTranslations } from "next-intl"
 
 
 type Props = {
@@ -17,7 +18,11 @@ type Props = {
 
 
 export default function EmpresaPage({ params }: Props) {
-  const empresa = empresas.find(e => e.slug === params.slug)
+
+const t= useTranslations("Portfolio")
+
+
+  const empresa = getempresas(t).find(e => e.slug === params.slug)
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   if (!empresa) {
@@ -98,7 +103,7 @@ export default function EmpresaPage({ params }: Props) {
       {empresa.website && (
         <section className="px-6 text-center">
           <h2 className="text-2xl lg:text-3xl font-light mb-6 mt-16">
-            Website Desenvolvido
+            {t("texto1")}
           </h2>
 
           <a
@@ -110,7 +115,7 @@ export default function EmpresaPage({ params }: Props) {
             transition-all duration-300
             hover:bg-yellow-500 hover:text-black"
           >
-            Visitar Website
+            {t("link")}
             <CgArrowLongRight className="text-2xl" />
           </a>
         </section>
@@ -155,7 +160,7 @@ export default function EmpresaPage({ params }: Props) {
                     <div className="w-full flex flex-col items-center justify-center max-w-[1500px] mx-auto px-8">
                       {/* TÍTULO */}
                       <h1 className="text-2xl lg:text-3xl font-medium text-center mt-8 mb-10">
-                        9 ETAPAS — 9 PATROCINADORES
+                       {t("logos")}
                       </h1>
 
                       {/* GRID LOGOS */}

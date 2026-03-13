@@ -1,44 +1,52 @@
 "use client"
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Header from "../../Components/Header";
+import Footer from "../../Components/Footer";
 import Image from "next/image"
-import Visao from "../Components/Visao";
+import Visao from "../../Components/Visao";
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl";
 
-const equipa=[
+
+
+
+
+
+export default function SobreNos() 
+{
+  
+  
+  const t = useTranslations("SobreNos")
+   const equipaData= t.raw("equipa") as Array <{name:string , funcao:string}>
+  
+  const equipa=[
 
   {
     image:"/equipa/Nelson.png",
-    name:"Nelson Correia",
-    funcao:"CEO"
+    ...equipaData[0]
   },
  {
     image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014954/Jelson_vkgii9.jpg",
-    name:"Jelson Quizunda",
-    funcao:"Director Criativo"
+    ...equipaData[1]
   },
    {
     image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772014954/Jorge_lrfrn2.jpg",
-    name:"Jorge Miranda",
-    funcao:"Design Gráfico"
+    ...equipaData[2]
   },
    {
     image:"https://res.cloudinary.com/dhpa1juyr/image/upload/v1772111593/Alicia_zzjgz2.jpg",
-    name:"Alicia Vanessa",
-    funcao:"Design Gráfico"
+    ...equipaData[3]
   },
   {
     image:"/equipa/nicolas.png",
-    name:"Nicolas Diogo",
-    funcao:"Desenvolvedor Fullstack"
+    ...equipaData[4]
   }
   
 ]
-
 const asEquipa=[...equipa]
 
 
-export default function SobreNos() {
+
+
   return (
     <section>
       <Header />
@@ -56,11 +64,11 @@ export default function SobreNos() {
     <div className="max-w-2xl  md:text-left">
 
       <h1 className="text-2xl md:text-3xl lg:text-3xl font-medium text-white leading-snug mb-4">
-        Somos uma agência criativa moderna e estratégica
+        {t("groupHero.title")}
       </h1>
 
       <p className="text-gray-200 text-base  md:text-lg mb-6">
-        Estratégia, design e comunicação para marcas que procuram crescimento sustentável.
+       {t("groupHero.subtitle")}
       </p>
 
       
@@ -98,12 +106,11 @@ export default function SobreNos() {
   {/* TEXTO */}
   <div className="w-full lg:w-1/2 flex flex-col justify-center">
     <h1 className="font-medium text-2xl md:text-3xl lg:text-3xl leading-tight text-black mb-6">
-      NÓS SOMOS O PARCEIRO CERTO PARA A SUA MARCA
+       {t("group2.title")}
     </h1>
 
     <p className="text-base lg:text-lg leading-relaxed text-gray-700 max-w-xl">
-      Nós combinamos pensamento estratégico com execução criativa para entregar resultados mensuráveis. 
-      Nossa equipa é especializada em criar experiências de marca que impactam audiências e geram crescimento.
+        {t("group2.subtitle")}
     </p>
   </div>
 
@@ -119,7 +126,7 @@ export default function SobreNos() {
         transition={{ duration: 0.6 }}
         className="font-medium text-2xl md:text-3xl lg:text-3xl leading-tight text-black mb-6"
       >
-        Conheça Nossa Equipa
+        {t("group3.title")}
       </motion.h1>
 
       <motion.p
@@ -129,10 +136,7 @@ export default function SobreNos() {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="text-gray-700 max-w-xl leading-relaxed mb-10 text-base lg:text-lg"
       >
-        Somos uma equipa multidisciplinar movida por estratégia,
-        criatividade e propósito. Actuamos em Angola há quase três anos,
-        desenvolvendo projetos que conectam marcas e pessoas de forma
-        autêntica e impactante.
+        {t("group3.subtitle")}
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -145,7 +149,7 @@ export default function SobreNos() {
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             className="group"
           >
-            <div className="relative h-[450px] w-full lg:h-[550px] rounded-2xl overflow-hidden">
+            <div className="relative h-[450px] w-full lg:h-[550px] rounded-l-lg overflow-hidden">
               <Image
                 src={member.image}
                 alt={member.name}
@@ -155,7 +159,7 @@ export default function SobreNos() {
             </div>
 
             <div className="mt-6">
-              <p className="font-medium text-lg lg:text-xl text-gray-700">
+              <p className="font-medium text-base lg:text-lg text-gray-700">
                 {member.name}
               </p>
               <p className="text-base lg:text-lg text-yellow-400">

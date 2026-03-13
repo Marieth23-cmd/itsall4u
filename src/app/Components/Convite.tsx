@@ -1,12 +1,16 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import { CgArrowLongRight } from "react-icons/cg";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Link } from "@/navigation";
+
+
 
 export default function Convite() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const t= useTranslations("Convite")
 
   const imagens = [
     "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772122795/equipa1_ig03u1.png",
@@ -37,22 +41,21 @@ export default function Convite() {
         >
           <div>
             <h1 className="text-2xl lg:text-3xl font-medium text-black mb-4">
-              Trabalhe Conosco
+              {t("title")}
             </h1>
 
             <p className="text-gray-700 text-base lg:text-lg leading-relaxed max-w-md">
-              Potencie o seu negócio com estratégia e inovação.
-              Conecte-se com uma equipa criativa que transforma desafios em soluções reais.
+              {t("subtitle")}
             </p>
           </div>
 
           <div className="mt-10 flex items-center gap-3 group cursor-pointer w-fit">
-            <a 
+            <Link 
               href="/enviarEmail" 
-              className="text-lg lg:text-xl font-medium text-yellow-500 transition-colors duration-300 group-hover:text-[#d6b464]"
+              className="text-lg lg:text-xl font-medium text-yellow-500 transition-colors duration-300 group-hover:text-yellow-500"
             >
-              Entre em contacto
-            </a>
+              {t("link")}
+            </Link>
 
             <CgArrowLongRight 
               className="text-3xl text-yellow-400 transition-all duration-300 group-hover:translate-x-2" 
