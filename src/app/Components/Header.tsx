@@ -7,12 +7,19 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect, useCallback,useRef } from "react";
 import Multidioma from "./Multidioma";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
  const [isOpen, setIsOpen] = useState(false);
  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
  const h = useTranslations("Header")
+ const pathname = usePathname();
+ const locale = pathname.split('/')[1];
+
+ const isActive = (href: string) => {
+   return pathname === `/${locale}${href}`;
+ };
 
 const boxref=useRef<HTMLDivElement>(null)
 const handleClick = useCallback ((event:MouseEvent)=>{
@@ -66,15 +73,15 @@ const CloseMenuOpen = ()=>{
     {/* RIGHT */}
     <nav className="flex items-center gap-4 whitespace-nowrap">
 
-      <Link href="/OqueFizemos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
+      <Link href="/OqueFizemos" className={`hidden lg:block text-base font-medium ${isActive('/OqueFizemos') ? 'text-yellow-500' : 'text-[#0F172A]'} hover:text-black/80 transition`}>
       {h("O que fazemos")}
       </Link>
 
-      <Link href="/SobreNos" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
+      <Link href="/SobreNos" className={`hidden lg:block text-base font-medium ${isActive('/SobreNos') ? 'text-yellow-500' : 'text-[#0F172A]'} hover:text-black/80 transition`}>
        {h("Sobre nós")}
       </Link>
 
-      <Link href="/portfolio" className="hidden lg:block text-base font-medium text-[#0F172A] hover:text-black/80 transition">
+      <Link href="/portfolio" className={`hidden lg:block text-base font-medium ${isActive('/portfolio') ? 'text-yellow-500' : 'text-[#0F172A]'} hover:text-black/80 transition`}>
         {h("Portfólio")}
       </Link>
 
@@ -126,9 +133,9 @@ const CloseMenuOpen = ()=>{
 
         <nav className="px-6 mt-6 flex-1 overflow-y-auto">
           <ul className="flex flex-col gap-4 text-lg">
-            <li><Link href="/OqueFizemos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black ">{h("O que fazemos")}</Link></li>
-            <li><Link href="/SobreNos" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black"> {h("Sobre nós")}</Link></li>
-            <li><Link href="/portfolio" onClick={CloseMenuOpen} className="font-medium text-[#0F172A] hover:text-black">{h("Portfólio")}</Link></li>
+            <li><Link href="/OqueFizemos" onClick={CloseMenuOpen} className={`font-medium ${isActive('/OqueFizemos') ? 'text-yellow-500' : 'text-[#0F172A]'} hover:text-black `}>{h("O que fazemos")}</Link></li>
+            <li><Link href="/SobreNos" onClick={CloseMenuOpen} className={`font-medium ${isActive('/SobreNos') ? 'text-yellow-500' : 'text-[#0F172A]'} hover:text-black`}> {h("Sobre nós")}</Link></li>
+            <li><Link href="/portfolio" onClick={CloseMenuOpen} className={`font-medium ${isActive('/portfolio') ? 'text-yellow-500' : 'text-[#0F172A]'} hover:text-black`}>{h("Portfólio")}</Link></li>
           <Multidioma />
           </ul>
          

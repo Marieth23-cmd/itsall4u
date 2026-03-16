@@ -109,7 +109,7 @@ const t = useTranslations("Portfolio")
                     </p>
             </div>
             {/*Imagens das Empresas  */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-20 items-center px-6 max-w-7xl mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-2 py-20 items-center px-6 max-w-7xl mx-auto ">
             { asImagens.map((image,index)=>(
                 <Link key={index} href={`/portfolio/${image.slug}`}>
                 <div

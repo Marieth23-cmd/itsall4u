@@ -70,7 +70,7 @@ export default function Beneficios() {
               transition={{ duration: 1.1, delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-block px-10 py-6 border border-yellow-500 
+              className="inline-block px-10 py-4 border border-yellow-500 
               text-yellow-400 hover:bg-yellow-500 hover:text-black 
               transition-all duration-300 rounded-full"
             >
