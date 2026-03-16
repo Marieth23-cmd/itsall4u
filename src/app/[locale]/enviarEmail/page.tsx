@@ -116,7 +116,7 @@ export default function Email() {
                 name="servico"
                 id="servico"
                 className="border-b border-black/30 py-4 bg-transparent
-                text-gray-500 outline-none
+                text-gray-800 outline-none
                 focus:border-[#C6A75E] transition-colors duration-300"
               >
                 <option value="" disabled className="text-gray-500">
