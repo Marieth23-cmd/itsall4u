@@ -13,17 +13,17 @@ export default function Hero() {
 const slides = [
   {
     type: "image",
-    src: "/equipa/testehero.jpg",
+    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928696/Banner_1_1_yuhrqm.webp",
     ...slidesData[0]
   },
   {
     type: "image",
-    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772011752/fixe_czzqa4.jpg",
+    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928696/Banner_2_qk4v9c.webp",
     ...slidesData[1]
   },
   {
     type: "image",
-    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015814/b1_wmvbtm.jpg",
+    src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928695/Banner_3_wghs1h.webp",
     ...slidesData[2]
   },
 ];
@@ -36,7 +36,7 @@ const slides = [
   }, [slides.length]);
 
   return (
-    <section className="relative h-[90vh] w-full overflow-hidden bg-black">
+    <section className="relative h-[100vh] w-full overflow-hidden bg-black">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -67,7 +67,7 @@ const slides = [
           <div className="absolute inset-0 flex items-center">
             <div className="max-w-7xl mx-auto px-6 w-full">
               <div className="max-w-2xl text-white animate-fadeUp">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
                   {slide.title}
                 </h1>
                 <p className="text-base md:text-lg text-gray-200 mb-8">

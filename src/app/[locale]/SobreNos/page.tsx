@@ -51,10 +51,10 @@ const asEquipa=[...equipa]
     <section>
       <Header />
 
-   <div className="relative w-full h-[80vh] lg:h-[60vh]">
+   <div className="relative w-full h-[80vh] lg:h-[60vh] ">
   <div className="relative h-[80vh] md:h-[60vh] w-full">
     <Image
-      src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1772015814/b1_wmvbtm.jpg"
+      src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928695/Sobre_no%CC%81s_zhzghy.webp"
       alt="Equipe"
       fill
       className="object-cover"
@@ -63,7 +63,7 @@ const asEquipa=[...equipa]
   <div className="max-w-7xl mx-auto px-6 w-full">
     <div className="max-w-2xl  md:text-left">
 
-      <h1 className="text-2xl md:text-3xl lg:text-3xl font-medium text-white leading-snug mb-4">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-snug mb-4">
         {t("groupHero.title")}
       </h1>
 

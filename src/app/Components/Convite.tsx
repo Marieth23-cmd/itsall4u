@@ -36,7 +36,7 @@ export default function Convite() {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.3 }} // anima sempre que entra, não só 1 vez
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="border border-yellow-100 rounded-xl p-10 flex flex-col justify-between 
+          className="border border-yellow-200 rounded-xl p-10 flex flex-col justify-between 
                      hover:border-yellow-100 hover:bg-yellow-50 cursor-pointer"
         >
           <div>

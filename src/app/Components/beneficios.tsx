@@ -20,7 +20,7 @@ export default function Beneficios() {
         className="absolute inset-0"
       >
         <Image
-          src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1772013470/bene_bvaova.jpg"
+          src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928695/Valor_e_crescimento_pc5yaf.webp"
           alt="Elegância e Crescimento"
           fill
           className="object-cover"

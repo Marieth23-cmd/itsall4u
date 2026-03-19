@@ -237,7 +237,7 @@ const servicos = [
 
     <div className="w-full lg:flex-1 relative h-[280px] sm:h-[320px] lg:h-[550px] bg-[#F8FAFC]">
       <Image
-        src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1772123563/planeamento_auaq6b.webp"
+        src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928695/Parcerias_e0d9gz.webp"
         alt="Planeamento estratégico"
         fill
         className="object-cover"
