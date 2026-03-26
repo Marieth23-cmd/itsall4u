@@ -51,13 +51,13 @@ const asEquipa=[...equipa]
     <section>
       <Header />
 
-   <div className="relative w-full h-[80vh] lg:h-[60vh] ">
-  <div className="relative h-[80vh] md:h-[60vh] w-full">
+   <div className="relative w-full h-[80vh] lg:h-[75vh] ">
+  <div className="relative h-[80vh] md:h-[75vh] w-full">
     <Image
       src="https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928695/Sobre_no%CC%81s_zhzghy.webp"
       alt="Equipe"
       fill
-      className="object-cover"
+      className="object-cover object-[80%_center]"
     />
     <div className="absolute inset-0 flex items-center">
   <div className="max-w-7xl mx-auto px-6 w-full">
@@ -149,7 +149,7 @@ const asEquipa=[...equipa]
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             className="group"
           >
-            <div className="relative h-[450px] w-full lg:h-[550px] rounded-l-lg overflow-hidden">
+            <div className="relative h-[500px] w-full lg:h-[550px] rounded-lg overflow-hidden">
               <Image
                 src={member.image}
                 alt={member.name}

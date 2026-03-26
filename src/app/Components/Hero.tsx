@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 
-
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const t= useTranslations("Hero")
@@ -14,17 +13,20 @@ const slides = [
   {
     type: "image",
     src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928696/Banner_1_1_yuhrqm.webp",
-    ...slidesData[0]
+    ...slidesData[0],
+     position: "62% center "
   },
   {
     type: "image",
     src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928696/Banner_2_qk4v9c.webp",
+    position: "65% center",
     ...slidesData[1]
   },
   {
     type: "image",
     src: "https://res.cloudinary.com/dhpa1juyr/image/upload/v1773928695/Banner_3_wghs1h.webp",
-    ...slidesData[2]
+    ...slidesData[2],
+    position: "65% center"
   },
 ];
 
@@ -36,7 +38,7 @@ const slides = [
   }, [slides.length]);
 
   return (
-    <section className="relative h-[100vh] w-full overflow-hidden bg-black">
+    <section className="relative h-[80vh] lg:h-[90vh] w-full overflow-hidden bg-black">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -47,8 +49,8 @@ const slides = [
           {/* BACKGROUND */}
           {slide.type === "image" ? (
             <div
-              className="absolute inset-0 bg-cover bg-center animate-kenBurns"
-              style={{ backgroundImage: `url(${slide.src})` }}
+              className="absolute inset-0 bg-cover animate-kenBurns "
+              style={{ backgroundImage: `url(${slide.src})` , backgroundPosition: slide.position }}
             />
           ) : (
             <video
@@ -56,7 +58,7 @@ const slides = [
               autoPlay
               loop
               muted
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain "
             />
           )}
 
